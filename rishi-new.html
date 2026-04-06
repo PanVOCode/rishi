@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RISHI — Дизайнерская одежда из Санкт-Петербурга</title>
+<meta name="description" content="Дизайнерская одежда из переработанных материалов. Пэчворк джинсы, корсеты, платья. Бренд из Санкт-Петербурга.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ── RESET & BASE ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --black: #0A0A0A;
+  --white: #F9F7F4;
+  --cream: #EDE8E0;
+  --cream-dark: #D9D3C8;
+  --gold: #B8A16B;
+  --gold-light: #D4BC8A;
+  --gray: #6B6B6B;
+  --gray-light: #A8A49E;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 150ms;
+  --dur-mid: 300ms;
+  --dur-slow: 600ms;
+  --dur-xslow: 1000ms;
+}
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--white);
+  color: var(--black);
+  cursor: none;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+/* account for fixed header height on non-hero pages */
+main { padding-top: 0; }
+a { color: inherit; text-decoration: none; }
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
+button { background: none; border: none; cursor: none; font-family: inherit; }
+ul { list-style: none; }
+
+/* ── CUSTOM CURSOR ───────────────────────────────────────── */
+.cursor {
+  width: 40px; height: 40px;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  position: fixed; top: 0; left: 0;
+  pointer-events: none; z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width var(--dur-mid) var(--ease-out),
+              height var(--dur-mid) var(--ease-out),
+              border-color var(--dur-mid) var(--ease-out),
+              background var(--dur-mid) var(--ease-out),
+              opacity var(--dur-mid) var(--ease-out);
+  mix-blend-mode: multiply;
+}
+.cursor-dot {
+  width: 5px; height: 5px;
+  background: var(--black);
+  border-radius: 50%;
+  position: fixed; top: 0; left: 0;
+  pointer-events: none; z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+.cursor.is-hover { width: 60px; height: 60px; background: var(--black); opacity: 0.08; border-color: transparent; }
+.cursor.is-link { width: 70px; height: 70px; background: var(--gold); border-color: transparent; opacity: 0.15; }
+
+/* ── NAVIGATION ──────────────────────────────────────────── */
+.site-header {
+  position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+}
+.announce {
+  background: var(--black); color: var(--white);
+  text-align: center; padding: 9px 40px;
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  transition: height var(--dur-mid) var(--ease-out),
+              opacity var(--dur-mid) var(--ease-out),
+              padding var(--dur-mid) var(--ease-out);
+}
+.announce a { border-bottom: 1px solid rgba(255,255,255,0.35); transition: border-color var(--dur-fast); }
+.announce a:hover { border-color: rgba(255,255,255,0.8); }
+.site-header.scrolled .announce { height: 0; padding-top: 0; padding-bottom: 0; opacity: 0; overflow: hidden; }
+
+.nav {
+  height: 60px; padding: 0 40px;
+  display: grid; grid-template-columns: 200px 1fr 200px;
+  align-items: center;
+  background: rgba(249, 247, 244, 0);
+  border-bottom: 1px solid transparent;
+  transition: background var(--dur-slow) var(--ease-out),
+              border-color var(--dur-slow) var(--ease-out);
+}
+.site-header.scrolled .nav {
+  background: rgba(249, 247, 244, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom-color: var(--cream-dark);
+}
+/* Search mode */
+.site-header.search-open .nav { border-bottom-color: var(--black); }
+
+/* Logo */
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px; font-weight: 400;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  white-space: nowrap; line-height: 1;
+  transition: opacity var(--dur-fast);
+}
+.nav-logo:hover { opacity: 0.6; }
+
+/* Center links */
+.nav-center {
+  display: flex; align-items: center; justify-content: center;
+  gap: 40px;
+}
+.nav-link {
+  font-size: 11px; font-weight: 400; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--black);
+  position: relative; padding: 4px 0;
+  white-space: nowrap;
+}
+.nav-link::after {
+  content: ''; position: absolute; bottom: 0; left: 0;
+  width: 0; height: 1px; background: var(--black);
+  transition: width var(--dur-mid) var(--ease-out);
+}
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
+.nav-link.sale { color: var(--gold); }
+.nav-link.sale::after { background: var(--gold); }
+
+/* Right icons */
+.nav-actions {
+  display: flex; align-items: center; justify-content: flex-end;
+  gap: 20px;
+}
+.nav-btn {
+  display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; position: relative;
+  color: var(--black);
+  transition: opacity var(--dur-fast);
+}
+.nav-btn:hover { opacity: 0.5; }
+.nav-btn svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.3; }
+.nav-cart-count {
+  position: absolute; top: 4px; right: 4px;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--black); color: var(--white);
+  font-size: 8px; font-weight: 500; letter-spacing: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.burger-btn {
+  display: none; flex-direction: column; gap: 5px;
+  width: 36px; height: 36px; align-items: center; justify-content: center;
+}
+.burger-btn span {
+  display: block; width: 20px; height: 1px; background: var(--black);
+  transition: transform var(--dur-mid) var(--ease-out),
+              opacity var(--dur-mid) var(--ease-out),
+              width var(--dur-mid) var(--ease-out);
+}
+
+/* ── MEGA MENU ───────────────────────────────────────────── */
+.mega {
+  position: absolute; left: 0; right: 0;
+  top: 100%; /* below header */
+  background: var(--white);
+  border-bottom: 1px solid var(--cream-dark);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.07);
+  opacity: 0; pointer-events: none;
+  transform: translateY(-4px);
+  transition: opacity var(--dur-mid) var(--ease-out),
+              transform var(--dur-mid) var(--ease-out);
+}
+.mega.open {
+  opacity: 1; pointer-events: all;
+  transform: translateY(0);
+}
+.mega-inner {
+  display: grid; grid-template-columns: 1fr 1fr 1fr 280px;
+  gap: 0; max-width: 1200px; margin: 0 auto;
+  padding: 48px 40px;
+}
+.mega-col { padding-right: 40px; }
+.mega-col-label {
+  font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gray-light); margin-bottom: 20px;
+  padding-bottom: 12px; border-bottom: 1px solid var(--cream-dark);
+}
+.mega-col-links { display: flex; flex-direction: column; gap: 0; }
+.mega-col-link {
+  font-size: 13px; font-weight: 300; letter-spacing: 0.03em;
+  color: var(--black); padding: 7px 0;
+  border-bottom: 1px solid transparent;
+  transition: color var(--dur-fast), padding-left var(--dur-mid) var(--ease-out);
+  display: flex; align-items: center; gap: 8px;
+}
+.mega-col-link:hover { color: var(--gray); padding-left: 6px; }
+.mega-col-link.highlight { color: var(--gold); font-weight: 400; }
+.mega-col-link .mega-link-badge {
+  font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase;
+  background: var(--gold); color: var(--white); padding: 2px 5px;
+  border-radius: 2px;
+}
+/* Featured image column */
+.mega-featured {
+  position: relative; overflow: hidden;
+  border-radius: 0;
+}
+.mega-featured-img {
+  width: 100%; aspect-ratio: 3/4; overflow: hidden; background: var(--cream);
+  margin-bottom: 12px;
+}
+.mega-featured-img img { transition: transform var(--dur-xslow) var(--ease-out); }
+.mega-featured:hover .mega-featured-img img { transform: scale(1.04); }
+.mega-featured-label {
+  font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--gray); margin-bottom: 4px;
+}
+.mega-featured-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; font-weight: 300; margin-bottom: 12px;
+}
+.mega-featured-link {
+  font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+  border-bottom: 1px solid var(--black); padding-bottom: 2px;
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: gap var(--dur-mid) var(--ease-out);
+}
+.mega-featured-link:hover { gap: 12px; }
+.mega-featured-link::after { content: '→'; }
+
+/* ── SEARCH PANEL ────────────────────────────────────────── */
+.search-panel {
+  position: absolute; left: 0; right: 0; top: 100%;
+  background: var(--white); border-bottom: 1px solid var(--cream-dark);
+  padding: 0 40px;
+  display: flex; align-items: center; gap: 16px;
+  height: 0; overflow: hidden;
+  transition: height var(--dur-mid) var(--ease-out);
+}
+.search-panel.open { height: 64px; }
+.search-icon-sm { flex-shrink: 0; color: var(--gray); }
+.search-icon-sm svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.3; }
+.search-input {
+  flex: 1; border: none; background: transparent;
+  font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 300;
+  letter-spacing: 0.04em; color: var(--black);
+  outline: none;
+}
+.search-input::placeholder { color: var(--gray-light); }
+.search-close {
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gray); padding: 4px 0;
+  transition: color var(--dur-fast);
+}
+.search-close:hover { color: var(--black); }
+
+/* ── MOBILE DRAWER ───────────────────────────────────────── */
+.drawer-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0);
+  z-index: 1100; pointer-events: none;
+  transition: background var(--dur-mid) var(--ease-out);
+}
+.drawer-overlay.open { background: rgba(0,0,0,0.3); pointer-events: all; }
+.drawer {
+  position: fixed; top: 0; right: 0; bottom: 0;
+  width: min(340px, 90vw);
+  background: var(--white); z-index: 1200;
+  transform: translateX(100%);
+  transition: transform var(--dur-slow) var(--ease-out);
+  display: flex; flex-direction: column;
+  box-shadow: -20px 0 60px rgba(0,0,0,0.12);
+}
+.drawer.open { transform: translateX(0); }
+.drawer-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 24px; border-bottom: 1px solid var(--cream-dark);
+}
+.drawer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 400; letter-spacing: 0.25em;
+}
+.drawer-close {
+  width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+  color: var(--black);
+}
+.drawer-close svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.3; }
+.drawer-body { flex: 1; overflow-y: auto; padding: 8px 0; }
+.drawer-body::-webkit-scrollbar { display: none; }
+/* Accordion */
+.acc-item { border-bottom: 1px solid var(--cream-dark); }
+.acc-trigger {
+  width: 100%; display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 24px; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--black);
+  transition: color var(--dur-fast);
+}
+.acc-trigger:hover { color: var(--gray); }
+.acc-arrow {
+  width: 14px; height: 14px; position: relative; flex-shrink: 0;
+  transition: transform var(--dur-mid) var(--ease-out);
+}
+.acc-arrow::before, .acc-arrow::after {
+  content: ''; position: absolute; background: currentColor;
+  transition: transform var(--dur-mid) var(--ease-out);
+}
+.acc-arrow::before { width: 14px; height: 1px; top: 50%; left: 0; }
+.acc-arrow::after { width: 1px; height: 14px; left: 50%; top: 0; }
+.acc-item.open .acc-arrow::after { transform: scaleY(0); }
+.acc-panel {
+  height: 0; overflow: hidden;
+  transition: height var(--dur-mid) var(--ease-out);
+}
+.acc-panel-inner { padding: 4px 24px 16px; display: flex; flex-direction: column; gap: 0; }
+.acc-link {
+  font-size: 13px; font-weight: 300; letter-spacing: 0.02em;
+  color: var(--gray); padding: 8px 0;
+  border-bottom: 1px solid transparent;
+  transition: color var(--dur-fast), padding-left var(--dur-mid) var(--ease-out);
+}
+.acc-link:hover { color: var(--black); padding-left: 4px; }
+.acc-link.highlight { color: var(--gold); }
+/* Top-level drawer links (no accordion) */
+.drawer-link {
+  display: block; padding: 16px 24px;
+  font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--black); border-bottom: 1px solid var(--cream-dark);
+  transition: color var(--dur-fast), padding-left var(--dur-mid) var(--ease-out);
+}
+.drawer-link:hover { color: var(--gray); padding-left: 28px; }
+.drawer-foot {
+  padding: 20px 24px; border-top: 1px solid var(--cream-dark);
+  display: flex; gap: 20px;
+}
+.drawer-foot a {
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gray); transition: color var(--dur-fast);
+}
+.drawer-foot a:hover { color: var(--black); }
+
+/* Burger open state */
+.burger-btn.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+.burger-btn.open span:nth-child(2) { opacity: 0; width: 0; }
+.burger-btn.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+
+/* ── HERO ────────────────────────────────────────────────── */
+.hero {
+  position: relative; height: 100vh; min-height: 600px;
+  display: flex; align-items: flex-end;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: var(--cream);
+}
+.hero-images {
+  position: absolute; inset: 0;
+  display: grid; grid-template-columns: 1fr 1fr;
+}
+.hero-img-wrap {
+  overflow: hidden;
+  transform: scale(1.05);
+  animation: heroReveal 1.4s var(--ease-out) forwards;
+}
+.hero-img-wrap:first-child { animation-delay: 0.1s; }
+.hero-img-wrap:last-child { animation-delay: 0.3s; }
+@keyframes heroReveal {
+  from { transform: scale(1.1); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.hero-img-wrap img { object-position: top center; }
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(249,247,244,0.7) 85%, var(--white) 100%);
+}
+.hero-content {
+  position: relative; z-index: 2;
+  width: 100%; padding: 0 40px 80px;
+  display: flex; align-items: flex-end; justify-content: space-between;
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(72px, 10vw, 140px);
+  font-weight: 300; font-style: italic;
+  line-height: 0.9;
+  animation: fadeUp 1s var(--ease-out) 0.6s both;
+}
+.hero-meta {
+  display: flex; flex-direction: column; gap: 20px; align-items: flex-end;
+  animation: fadeUp 1s var(--ease-out) 0.8s both;
+}
+.hero-subtitle {
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gray);
+}
+.hero-cta {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  border-bottom: 1px solid var(--black); padding-bottom: 4px;
+  transition: gap var(--dur-mid) var(--ease-out);
+}
+.hero-cta:hover { gap: 20px; }
+.hero-cta::after { content: '→'; }
+.hero-scroll-hint {
+  position: absolute; bottom: 40px; left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gray);
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  animation: fadeUp 1s var(--ease-out) 1.2s both;
+}
+.hero-scroll-line {
+  width: 1px; height: 48px; background: var(--gray);
+  animation: scrollLine 2s ease-in-out 1.5s infinite;
+}
+@keyframes scrollLine {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+/* ── MARQUEE ─────────────────────────────────────────────── */
+.marquee-wrap {
+  border-top: 1px solid var(--cream-dark);
+  border-bottom: 1px solid var(--cream-dark);
+  padding: 12px 0; overflow: hidden;
+  background: var(--cream);
+}
+.marquee-track {
+  display: flex; gap: 0; white-space: nowrap;
+  animation: marquee 28s linear infinite;
+}
+.marquee-item {
+  display: flex; align-items: center; gap: 32px;
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gray); padding: 0 32px;
+  flex-shrink: 0;
+}
+.marquee-dot { width: 4px; height: 4px; background: var(--gold); border-radius: 50%; }
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── SECTION COMMON ──────────────────────────────────────── */
+.section { padding: 100px 40px; }
+.section-header {
+  display: flex; align-items: baseline; justify-content: space-between;
+  margin-bottom: 48px;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(40px, 5vw, 72px); font-weight: 300;
+}
+.section-link {
+  font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--dur-mid);
+}
+.section-link:hover { border-color: var(--black); }
+
+/* ── PRODUCT GRID ────────────────────────────────────────── */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+.product-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+
+.product-card {
+  position: relative; display: block;
+  opacity: 0; transform: translateY(30px);
+  transition: opacity var(--dur-slow) var(--ease-out),
+              transform var(--dur-slow) var(--ease-out);
+}
+.product-card.visible { opacity: 1; transform: translateY(0); }
+
+.product-img-wrap {
+  position: relative; overflow: hidden;
+  aspect-ratio: 3/4;
+  background: var(--cream);
+}
+.product-img-wrap img {
+  transition: transform var(--dur-xslow) var(--ease-out);
+}
+.product-card:hover .product-img-wrap img { transform: scale(1.04); }
+
+.product-overlay {
+  position: absolute; inset: 0;
+  background: rgba(10,10,10,0);
+  display: flex; align-items: flex-end; padding: 20px;
+  transition: background var(--dur-mid) var(--ease-out);
+}
+.product-card:hover .product-overlay { background: rgba(10,10,10,0.03); }
+.product-quick-add {
+  width: 100%; padding: 12px;
+  background: var(--white); border: 1px solid var(--black);
+  font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+  opacity: 0; transform: translateY(8px);
+  transition: opacity var(--dur-mid) var(--ease-out),
+              transform var(--dur-mid) var(--ease-out);
+  text-align: center;
+}
+.product-card:hover .product-quick-add { opacity: 1; transform: translateY(0); }
+
+.product-badge {
+  position: absolute; top: 12px; left: 12px;
+  background: var(--black); color: var(--white);
+  font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 4px 8px;
+}
+.product-badge.sale { background: var(--gold); }
+
+.product-info { padding: 14px 0 28px; }
+.product-name {
+  font-size: 12px; font-weight: 400; letter-spacing: 0.04em;
+  line-height: 1.4; text-transform: lowercase;
+  margin-bottom: 6px; color: var(--black);
+}
+.product-price {
+  font-size: 12px; font-weight: 400; letter-spacing: 0.06em;
+  color: var(--gray);
+}
+.product-price-old {
+  text-decoration: line-through; margin-right: 8px;
+  color: var(--gray-light);
+}
+.product-price-new { color: var(--gold); }
+
+/* ── CATEGORIES GRID ─────────────────────────────────────── */
+.categories-section { padding: 0 40px 100px; }
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 2px;
+}
+.cat-card {
+  position: relative; overflow: hidden;
+  background: var(--cream);
+  display: block;
+}
+.cat-card:first-child {
+  grid-column: 1 / 2; grid-row: 1 / 3;
+}
+.cat-img-wrap {
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+.cat-card:first-child .cat-img-wrap { aspect-ratio: unset; height: 100%; }
+.cat-card:not(:first-child) .cat-img-wrap { aspect-ratio: 3/2.8; }
+
+.cat-img-wrap img { transition: transform var(--dur-xslow) var(--ease-out); }
+.cat-card:hover .cat-img-wrap img { transform: scale(1.04); }
+
+.cat-info {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 16px 20px;
+  background: linear-gradient(to top, rgba(10,10,10,0.4) 0%, transparent 100%);
+}
+.cat-name {
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--white); font-weight: 400;
+}
+.cat-count { font-size: 10px; color: rgba(255,255,255,0.6); margin-top: 2px; }
+
+/* ── EDITORIAL BAND ──────────────────────────────────────── */
+.editorial {
+  padding: 120px 40px;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: center;
+  background: var(--cream);
+}
+.editorial-text {}
+.editorial-eyebrow {
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 24px;
+}
+.editorial-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(44px, 4.5vw, 72px); font-weight: 300; font-style: italic;
+  line-height: 1.1; margin-bottom: 32px;
+}
+.editorial-body {
+  font-size: 14px; font-weight: 300; line-height: 1.9;
+  color: var(--gray); max-width: 420px; margin-bottom: 40px;
+}
+.editorial-img-wrap {
+  aspect-ratio: 4/5; overflow: hidden;
+}
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 14px 32px; border: 1px solid var(--black);
+  transition: background var(--dur-mid) var(--ease-out),
+              color var(--dur-mid) var(--ease-out);
+}
+.btn-outline:hover { background: var(--black); color: var(--white); }
+.btn-fill {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 14px 32px; background: var(--black); color: var(--white);
+  transition: background var(--dur-mid) var(--ease-out);
+}
+.btn-fill:hover { background: #2a2a2a; }
+
+/* ── COLLECTIONS HORIZONTAL ──────────────────────────────── */
+.collections-section { padding: 100px 0 100px 40px; overflow: hidden; }
+.collections-inner { overflow-x: auto; cursor: grab; }
+.collections-inner:active { cursor: grabbing; }
+.collections-inner::-webkit-scrollbar { display: none; }
+.collections-track {
+  display: flex; gap: 2px;
+  width: max-content; padding-right: 40px;
+}
+.collection-card {
+  width: 340px; flex-shrink: 0;
+  opacity: 0; transform: translateX(40px);
+  transition: opacity var(--dur-slow) var(--ease-out),
+              transform var(--dur-slow) var(--ease-out);
+}
+.collection-card.visible { opacity: 1; transform: translateX(0); }
+.coll-img-wrap { aspect-ratio: 3/4; overflow: hidden; background: var(--cream); }
+.coll-img-wrap img { transition: transform var(--dur-xslow) var(--ease-out); }
+.collection-card:hover .coll-img-wrap img { transform: scale(1.04); }
+.coll-info { padding: 14px 0; }
+.coll-name { font-size: 12px; text-transform: lowercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+.coll-price { font-size: 12px; color: var(--gray); }
+
+/* ── BRAND NUMBERS ───────────────────────────────────────── */
+.brand-numbers {
+  padding: 80px 40px;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 2px; border-top: 1px solid var(--cream-dark); border-bottom: 1px solid var(--cream-dark);
+}
+.number-item { padding: 40px 20px; text-align: center; border-right: 1px solid var(--cream-dark); }
+.number-item:last-child { border-right: none; }
+.number-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 4vw, 56px); font-weight: 300; display: block; margin-bottom: 8px;
+}
+.number-label { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gray); }
+
+/* ── FOOTER ──────────────────────────────────────────────── */
+footer {
+  background: var(--black); color: var(--white);
+  padding: 80px 40px 40px;
+}
+.footer-top {
+  display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px; margin-bottom: 80px;
+}
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px; font-weight: 300; letter-spacing: 0.25em;
+  margin-bottom: 16px;
+}
+.footer-tagline { font-size: 12px; color: rgba(255,255,255,0.4); line-height: 1.6; max-width: 200px; }
+.footer-heading {
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(255,255,255,0.4); margin-bottom: 20px;
+}
+.footer-nav { display: flex; flex-direction: column; gap: 10px; }
+.footer-nav a {
+  font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.7);
+  transition: color var(--dur-fast);
+}
+.footer-nav a:hover { color: var(--white); }
+.footer-bottom {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1);
+}
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.3); }
+.footer-social { display: flex; gap: 20px; }
+.footer-social a { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); transition: color var(--dur-fast); }
+.footer-social a:hover { color: var(--white); }
+
+/* ── ANNOUNCE BAR ────────────────────────────────────────── */
+.announce {
+  background: var(--black); color: var(--white);
+  text-align: center; padding: 10px 40px;
+  font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+}
+.announce a { border-bottom: 1px solid rgba(255,255,255,0.4); }
+
+/* ── ANIMATIONS ──────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  opacity: 0; transform: translateY(32px);
+  transition: opacity var(--dur-slow) var(--ease-out),
+              transform var(--dur-slow) var(--ease-out);
+}
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .nav { grid-template-columns: 160px 1fr 160px; }
+  .nav-center { gap: 28px; }
+  .mega-inner { grid-template-columns: 1fr 1fr 1fr 240px; padding: 36px 24px; }
+}
+@media (max-width: 900px) {
+  .nav { grid-template-columns: 1fr auto 1fr; padding: 0 20px; }
+  .nav-logo { order: 2; justify-self: center; }
+  .nav-center { display: none; }
+  .nav-actions { order: 3; justify-self: flex-end; }
+  .burger-btn { display: flex; }
+  .nav-btn:not(.burger-btn) { width: 32px; height: 32px; }
+  /* Hide search and account on small screens, keep cart + burger */
+  #searchBtn { display: none; }
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+  .categories-grid { grid-template-columns: 1fr 1fr; }
+  .cat-card:first-child { grid-column: 1; grid-row: 1; }
+  .cat-card:first-child .cat-img-wrap { aspect-ratio: 3/4; }
+  .editorial { grid-template-columns: 1fr; gap: 40px; }
+  .brand-numbers { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .hero-content { padding: 0 20px 60px; }
+  .hero-images { grid-template-columns: 1fr; }
+  .hero-img-wrap:last-child { display: none; }
+  .section { padding: 60px 20px; }
+  .categories-section { padding: 0 20px 60px; }
+  .section-header { flex-direction: column; gap: 12px; }
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+  .categories-grid { grid-template-columns: 1fr; }
+  .editorial { padding: 60px 20px; }
+  .editorial-img-wrap { order: -1; }
+  .brand-numbers { grid-template-columns: repeat(2, 1fr); }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .collections-section { padding: 60px 0 60px 20px; }
+  .collection-card { width: 260px; }
+  .hero-title { font-size: clamp(52px, 12vw, 80px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- SITE HEADER -->
+<div class="site-header" id="siteHeader">
+
+  <!-- Announce bar -->
+  <div class="announce">
+    Бесплатная доставка по России при заказе от 10 000 ₽ &nbsp;·&nbsp;
+    <a href="#">Узнать подробнее</a>
+  </div>
+
+  <!-- Main nav -->
+  <nav class="nav" id="nav">
+    <!-- Logo -->
+    <a href="/" class="nav-logo">RISHI</a>
+
+    <!-- Center links -->
+    <div class="nav-center" id="navCenter">
+      <a class="nav-link" id="catalogTrigger" href="#catalog">Каталог</a>
+      <a class="nav-link" href="#collections">Коллекции</a>
+      <a class="nav-link" href="#about">О бренде</a>
+      <a class="nav-link" href="#contacts">Контакты</a>
+      <a class="nav-link sale" href="#sale">Sale</a>
+    </div>
+
+    <!-- Right actions -->
+    <div class="nav-actions">
+      <button class="nav-btn" id="searchBtn" aria-label="Поиск">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7.5"/><path d="M20.5 20.5l-4-4" stroke-linecap="round"/></svg>
+      </button>
+      <button class="nav-btn" aria-label="Аккаунт">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      </button>
+      <button class="nav-btn" aria-label="Корзина" style="position:relative">
+        <svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg>
+        <span class="nav-cart-count">0</span>
+      </button>
+      <button class="burger-btn" id="burgerBtn" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mega menu (Каталог) -->
+  <div class="mega" id="megaMenu" role="dialog" aria-label="Каталог">
+    <div class="mega-inner">
+      <!-- Col 1: Женщинам -->
+      <div class="mega-col">
+        <p class="mega-col-label">Женщинам</p>
+        <div class="mega-col-links">
+          <a class="mega-col-link" href="https://rishi-store.com/all" target="_blank">Всё</a>
+          <a class="mega-col-link" href="https://rishi-store.com/jeans" target="_blank">Джинсы</a>
+          <a class="mega-col-link" href="https://rishi-store.com/corsets" target="_blank">Корсеты</a>
+          <a class="mega-col-link" href="https://rishi-store.com/dresses" target="_blank">Платья</a>
+          <a class="mega-col-link" href="https://rishi-store.com/skirts" target="_blank">Юбки</a>
+          <a class="mega-col-link" href="https://rishi-store.com/tops" target="_blank">Топы</a>
+          <a class="mega-col-link" href="https://rishi-store.com/longsleaves" target="_blank">Лонгсливы</a>
+          <a class="mega-col-link" href="https://rishi-store.com/hoodies" target="_blank">Толстовки</a>
+          <a class="mega-col-link" href="https://rishi-store.com/coats" target="_blank">Верхняя одежда</a>
+          <a class="mega-col-link" href="https://rishi-store.com/accessories" target="_blank">Аксессуары</a>
+        </div>
+      </div>
+      <!-- Col 2: Коллекции -->
+      <div class="mega-col">
+        <p class="mega-col-label">Коллекции</p>
+        <div class="mega-col-links">
+          <a class="mega-col-link" href="https://rishi-store.com/aw25" target="_blank">AW 2025</a>
+          <a class="mega-col-link" href="https://rishi-store.com/rishixonlyme" target="_blank">RISHI × ONLY ME</a>
+          <a class="mega-col-link" href="https://rishi-store.com/bitte" target="_blank">RISHI × Bitte Ruhe</a>
+          <a class="mega-col-link" href="https://rishi-store.com/neprostovesh" target="_blank">RISHI × Не просто вещь</a>
+        </div>
+        <p class="mega-col-label" style="margin-top:28px">Для него</p>
+        <div class="mega-col-links">
+          <a class="mega-col-link" href="https://rishi-store.com/menonly" target="_blank">Мужская одежда</a>
+        </div>
+      </div>
+      <!-- Col 3: Ещё -->
+      <div class="mega-col">
+        <p class="mega-col-label">Особое</p>
+        <div class="mega-col-links">
+          <a class="mega-col-link highlight" href="https://rishi-store.com/new" target="_blank">
+            Новинки <span class="mega-link-badge">New</span>
+          </a>
+          <a class="mega-col-link highlight" href="https://rishi-store.com/sale" target="_blank">
+            Sale <span class="mega-link-badge" style="background:var(--black)">−%</span>
+          </a>
+          <a class="mega-col-link" href="https://rishi-store.com/shooting" target="_blank">Лукбуки</a>
+          <a class="mega-col-link" href="https://rishi-store.com/giftcard" target="_blank">Подарочный сертификат</a>
+        </div>
+        <p class="mega-col-label" style="margin-top:28px">Бренд</p>
+        <div class="mega-col-links">
+          <a class="mega-col-link" href="https://rishi-store.com/about" target="_blank">О нас</a>
+          <a class="mega-col-link" href="https://rishi-store.com/customer" target="_blank">Клиенту</a>
+          <a class="mega-col-link" href="https://rishi-store.com/contacts" target="_blank">Контакты</a>
+        </div>
+      </div>
+      <!-- Featured -->
+      <div class="mega-featured">
+        <a href="https://rishi-store.com/jeans" target="_blank">
+          <div class="mega-featured-img">
+            <img src="img/61eb4fb48052ae2ed00820978e424bdb.jpg" alt="Новинки" loading="eager">
+          </div>
+        </a>
+        <p class="mega-featured-label">Новая коллекция</p>
+        <p class="mega-featured-title">Пэчворк джинсы AW 25</p>
+        <a href="https://rishi-store.com/jeans" class="mega-featured-link" target="_blank">Смотреть</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search panel -->
+  <div class="search-panel" id="searchPanel">
+    <div class="search-icon-sm">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7.5"/><path d="M20.5 20.5l-4-4" stroke-linecap="round"/></svg>
+    </div>
+    <input class="search-input" id="searchInput" type="text" placeholder="Поиск по каталогу..." autocomplete="off">
+    <button class="search-close" id="searchClose">Закрыть</button>
+  </div>
+
+</div><!-- /site-header -->
+
+<!-- Mobile Drawer -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-head">
+    <span class="drawer-logo">RISHI</span>
+    <button class="drawer-close" id="drawerClose" aria-label="Закрыть">
+      <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div class="drawer-body">
+    <!-- Catalog accordion -->
+    <div class="acc-item" id="accCatalog">
+      <button class="acc-trigger">
+        Каталог
+        <span class="acc-arrow"></span>
+      </button>
+      <div class="acc-panel">
+        <div class="acc-panel-inner">
+          <a class="acc-link" href="https://rishi-store.com/all" target="_blank">Всё</a>
+          <a class="acc-link" href="https://rishi-store.com/jeans" target="_blank">Джинсы</a>
+          <a class="acc-link" href="https://rishi-store.com/corsets" target="_blank">Корсеты</a>
+          <a class="acc-link" href="https://rishi-store.com/dresses" target="_blank">Платья</a>
+          <a class="acc-link" href="https://rishi-store.com/skirts" target="_blank">Юбки</a>
+          <a class="acc-link" href="https://rishi-store.com/tops" target="_blank">Топы</a>
+          <a class="acc-link" href="https://rishi-store.com/hoodies" target="_blank">Толстовки</a>
+          <a class="acc-link" href="https://rishi-store.com/coats" target="_blank">Верхняя одежда</a>
+          <a class="acc-link" href="https://rishi-store.com/accessories" target="_blank">Аксессуары</a>
+          <a class="acc-link" href="https://rishi-store.com/menonly" target="_blank">Мужчинам</a>
+          <a class="acc-link highlight" href="https://rishi-store.com/sale" target="_blank">Sale</a>
+          <a class="acc-link highlight" href="https://rishi-store.com/new" target="_blank">Новинки</a>
+        </div>
+      </div>
+    </div>
+    <!-- Collections accordion -->
+    <div class="acc-item" id="accCollections">
+      <button class="acc-trigger">
+        Коллекции
+        <span class="acc-arrow"></span>
+      </button>
+      <div class="acc-panel">
+        <div class="acc-panel-inner">
+          <a class="acc-link" href="https://rishi-store.com/aw25" target="_blank">AW 2025</a>
+          <a class="acc-link" href="https://rishi-store.com/rishixonlyme" target="_blank">RISHI × ONLY ME</a>
+          <a class="acc-link" href="https://rishi-store.com/bitte" target="_blank">RISHI × Bitte Ruhe</a>
+          <a class="acc-link" href="https://rishi-store.com/neprostovesh" target="_blank">RISHI × Не просто вещь</a>
+        </div>
+      </div>
+    </div>
+    <a class="drawer-link" href="https://rishi-store.com/about" target="_blank">О бренде</a>
+    <a class="drawer-link" href="https://rishi-store.com/customer" target="_blank">Клиенту</a>
+    <a class="drawer-link" href="https://rishi-store.com/contacts" target="_blank">Контакты</a>
+  </div>
+  <div class="drawer-foot">
+    <a href="#">Instagram</a>
+    <a href="#">VKontakte</a>
+    <a href="#">Telegram</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-images">
+    <div class="hero-img-wrap">
+      <img src="img/61eb4fb48052ae2ed00820978e424bdb.jpg" alt="RISHI AW25" loading="eager">
+    </div>
+    <div class="hero-img-wrap">
+      <img src="img/669a245411c6ab780b4e39ecb663bdc8.jpg" alt="RISHI Corset" loading="eager">
+    </div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">AW<br>2025</h1>
+    <div class="hero-meta">
+      <p class="hero-subtitle">Новая коллекция</p>
+      <a href="#catalog" class="hero-cta">Смотреть коллекцию</a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <div class="hero-scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track" id="marqueeTrack">
+    <!-- set x2 for seamless loop -->
+    <div class="marquee-item">RISHI Store <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Санкт-Петербург <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Из переработанных материалов <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Пэчворк деним <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Апсайкл дизайн <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Ручная работа <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Экологичная мода <span class="marquee-dot"></span></div>
+    <div class="marquee-item">RISHI Store <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Санкт-Петербург <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Из переработанных материалов <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Пэчворк деним <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Апсайкл дизайн <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Ручная работа <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Экологичная мода <span class="marquee-dot"></span></div>
+  </div>
+</div>
+
+<!-- FEATURED PRODUCTS — ДЖИНСЫ -->
+<section class="section" id="jeans">
+  <div class="section-header fade-up">
+    <h2 class="section-title">Джинсы</h2>
+    <a href="#all" class="section-link">Вся категория →</a>
+  </div>
+  <div class="product-grid">
+    <a class="product-card" href="https://rishi-store.com/jeans/tproduct/1484002591-500711905622-zhenskie-pechvork-dzhinsi-so-vstavkami" target="_blank">
+      <div class="product-img-wrap">
+        <img src="img/61eb4fb48052ae2ed00820978e424bdb.jpg" alt="пэчворк джинсы со вставками" loading="eager">
+        <div class="product-overlay"><span class="product-quick-add">Выбрать размер</span></div>
+      </div>
+      <div class="product-info">
+        <p class="product-name">женские пэчворк джинсы со вставками</p>
+        <p class="product-price">22 000 ₽</p>
+      </div>
+    </a>
+    <a class="product-card" href="https://rishi-store.com/jeans/tproduct/1484002591-761540810271-zhenskie-pryamie-pechvork-dzhinsi-golubi" target="_blank">
+      <div class="product-img-wrap">
+        <img src="img/1bcf368c10dff36d63b4585073c911a8.jpg" alt="прямые пэчворк джинсы голубые" loading="eager">
+        <div class="product-overlay"><span class="product-quick-add">Выбрать размер</span></div>
+      </div>
+      <div class="product-info">
+        <p class="product-name">женские прямые пэчворк джинсы голубые</p>
+        <p class="product-price">20 000 ₽</p>
+      </div>
+    </a>
+    <a class="product-card" href="https://rishi-store.com/jeans/tproduct/1484002591-746783304482-zhenskie-pechvork-dzhinsi-v-polosku-bebi" target="_blank">
+      <div class="product-img-wrap">
+        <img src="img/6a5eba4b2df0b27a8a296926bddf9da7.jpg" alt="пэчворк джинсы в полоску бэби блу" loading="eager">
+        <div class="product-overlay"><span class="product-quick-add">Выбрать размер</span></div>
+        <span class="product-badge">New</span>
+      </div>
+      <div class="product-info">
+        <p class="product-name">женские пэчворк джинсы в полоску бэби блу</p>
+        <p class="product-price">20 000 ₽</p>
+      </div>
+    </a>
+    <a class="product-card" href="https://rishi-store.com/jeans/tproduct/1484002591-363835287242-zhenskie-pechvork-dzhinsi-v-polosku-chyo" target="_blank">
+      <div class="product-img-wrap">
+        <img src="img/16ea7280ff825b0e4417dfb35d7584e3.jpg" alt="пэчворк джинсы чёрный контраст" loading="eager">
+        <div class="product-overlay"><span class="product-quick-add">Выбрать размер</span></div>
+      </div>
+      <div class="product-info">
+        <p class="product-name">женские пэчворк джинсы в полоску чёрный</p>
+        <p class="product-price">20 000 ₽</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- EDITORIAL BAND — ABOUT -->
+<section class="editorial fade-up" id="about">
+  <div class="editorial-text">
+    <p class="editorial-eyebrow">О бренде</p>
+    <h2 class="editorial-title">Мода, которая<br>уважает прошлое</h2>
+    <p class="editorial-body">
+      Бренд начинает каждую историю с подбора и выбора пары старинных джинсов. В среде производства одежды из исторически настоящей старой одежды стараемся сохранить традиции дизайнеров-конструкторов, дизайнеров и технологов.
+    </p>
+    <p class="editorial-body">
+      Дизайн — отдел 5 портных, 3 закройщика, 5 дизайнеров. Мастер производство, руководитель производства, конструктор, технолог. Мы создаём технологичную одежду из вторично используемых материалов, переосмысляя исторический крой.
+    </p>
+    <a href="https://rishi-store.com/about" class="btn-outline" target="_blank">Читать историю бренда</a>
+  </div>
+  <div class="editorial-img-wrap">
+    <img src="img/19769670.jpg" alt="RISHI editorial" loading="eager">
+  </div>
+</section>
+
+<!-- CATEGORIES GRID -->
+<section class="categories-section" id="catalog">
+  <div class="section-header fade-up" style="padding:0 0 48px;">
+    <h2 class="section-title">Каталог</h2>
+  </div>
+  <div class="categories-grid">
+    <a class="cat-card fade-up" href="https://rishi-store.com/corsets" target="_blank">
+      <div class="cat-img-wrap">
+        <img src="img/669a245411c6ab780b4e39ecb663bdc8.jpg" alt="Корсеты" loading="eager">
+      </div>
+      <div class="cat-info"><p class="cat-name">Корсеты</p><p class="cat-count">14 моделей</p></div>
+    </a>
+    <a class="cat-card fade-up" href="https://rishi-store.com/dresses" target="_blank">
+      <div class="cat-img-wrap">
+        <img src="img/19769670.jpg" alt="Платья" loading="eager">
+      </div>
+      <div class="cat-info"><p class="cat-name">Платья</p><p class="cat-count">5 моделей</p></div>
+    </a>
+    <a class="cat-card fade-up" href="https://rishi-store.com/skirts" target="_blank">
+      <div class="cat-img-wrap">
+        <img src="img/19880214.jpg" alt="Юбки" loading="eager">
+      </div>
+      <div class="cat-info"><p class="cat-name">Юбки</p><p class="cat-count">6 моделей</p></div>
+    </a>
+    <a class="cat-card fade-up" href="https://rishi-store.com/coats" target="_blank">
+      <div class="cat-img-wrap">
+        <img src="img/8b05b7da137da69bcedad9126b19b43b.jpg" alt="Верхняя одежда" loading="eager">
+      </div>
+      <div class="cat-info"><p class="cat-name">Верхняя одежда</p><p class="cat-count">3 модели</p></div>
+    </a>
+    <a class="cat-card fade-up" href="https://rishi-store.com/accessories" target="_blank">
+      <div class="cat-img-wrap">
+        <img src="img/ce87aa176b3c37466fe954646eeb9c73.jpg" alt="Аксессуары" loading="eager">
+      </div>
+      <div class="cat-info"><p class="cat-name">Аксессуары</p><p class="cat-count">4 модели</p></div>
+    </a>
+  </div>
+</section>
+
+<!-- CORSETS -->
+<section class="section" id="corsets">
+  <div class="section-header fade-up">
+    <h2 class="section-title">Корсеты</h2>
+    <a href="https://rishi-store.com/corsets" class="section-link" target="_blank">Вся категория →</a>
+  </div>
+  <div class="product-grid">
+    <a class="product-card" href="https://rishi-store.com/corsets/tproduct/1397196711-701541461932-dzhinsovii-korset-rishi-x-bitteruhe" target="_blank">
+      <div class="product-img-wrap">
+        <img src="img/669a245411c6ab780b4e39ecb663bdc8.jpg" alt="корсет RISHI x BITTE RUHE" loading="eager">
+        <div class="product-overlay"><span class="product-quick-add">Выбрать размер</span></div>
+      </div>
+      <div class="product-info">
+        <p class="product-name">джинсовый корсет `RISHI x BITTE_RUHE</p>
+        <p class="product-price">18 000 ₽</p>
+      </div>
+    </a>
+    <a class="product-card" href="https://rishi-store.com/corsets" target="_blank">
+      <div class="product-img-wrap">
+        <img src="img/669a245411c6ab780b4e39ecb663bdc8.jpg" alt="корсет с фигурным низом черный" loading="eager">
+        <div class="product-overlay"><span class="product-quick-add">Выбрать размер</span></div>
+        <span class="product-badge sale">Sale</span>
+      </div>
+      <div class="product-info">
+        <p class="product-name">джинсовый апсайкл корсет с фигурным низом черный</p>
+        <p class="product-price"><span class="product-price-old">18 750 ₽</span><span class="product-price-new">15 000 ₽</span></p>
+      </div>
+    </a>
+    <a class="product-card" href="https://rishi-store.com/corsets" target="_blank">
+      <div class="product-img-wrap">
+        <img src="img/25637047.png" alt="корсет с фигурным низом синий" loading="eager">
+        <div class="product-overlay"><span class="product-quick-add">Выбрать размер</span></div>
+        <span class="product-badge sale">Sale</span>
+      </div>
+      <div class="product-info">
+        <p class="product-name">джинсовый апсайкл корсет с фигурным низом синий</p>
+        <p class="product-price"><span class="product-price-old">18 750 ₽</span><span class="product-price-new">15 000 ₽</span></p>
+      </div>
+    </a>
+    <a class="product-card" href="https://rishi-store.com/corsets" target="_blank">
+      <div class="product-img-wrap">
+        <img src="img/45167421.png" alt="классический джинсовый корсет черный" loading="eager">
+        <div class="product-overlay"><span class="product-quick-add">Выбрать размер</span></div>
+      </div>
+      <div class="product-info">
+        <p class="product-name">классический джинсовый корсет черный</p>
+        <p class="product-price">12 000 ₽</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- HORIZONTAL SCROLL — ПЛАТЬЯ & ЮБКИ -->
+<section class="collections-section" id="dresses">
+  <div class="section-header fade-up" style="padding-right:40px;">
+    <h2 class="section-title">Платья и юбки</h2>
+    <a href="https://rishi-store.com/dresses" class="section-link" target="_blank">Смотреть все →</a>
+  </div>
+  <div class="collections-inner" id="collectionsScroll">
+    <div class="collections-track">
+      <div class="collection-card">
+        <a href="https://rishi-store.com/dresses" target="_blank">
+          <div class="coll-img-wrap"><img src="img/19769670.jpg" alt="платье нецирк черное" loading="eager"></div>
+          <div class="coll-info"><p class="coll-name">платье нецирк черное</p><p class="coll-price">25 000 ₽</p></div>
+        </a>
+      </div>
+      <div class="collection-card">
+        <a href="https://rishi-store.com/dresses" target="_blank">
+          <div class="coll-img-wrap"><img src="img/9a17714de974728b26c2fd015eba9aad.jpg" alt="платье нецирк синее" loading="eager"></div>
+          <div class="coll-info"><p class="coll-name">платье нецирк синее</p><p class="coll-price">25 000 ₽</p></div>
+        </a>
+      </div>
+      <div class="collection-card">
+        <a href="https://rishi-store.com/dresses" target="_blank">
+          <div class="coll-img-wrap"><img src="img/21bb332e807b0700d81f20b052d62cb7.jpg" alt="мини-платье с кружевом" loading="eager"></div>
+          <div class="coll-info"><p class="coll-name">мини-платье с кружевом</p><p class="coll-price">25 000 ₽</p></div>
+        </a>
+      </div>
+      <div class="collection-card">
+        <a href="https://rishi-store.com/skirts" target="_blank">
+          <div class="coll-img-wrap"><img src="img/19880214.jpg" alt="юбка в пол джипси" loading="eager"></div>
+          <div class="coll-info"><p class="coll-name">юбка в пол джипси с кружевом</p><p class="coll-price">25 000 ₽</p></div>
+        </a>
+      </div>
+      <div class="collection-card">
+        <a href="https://rishi-store.com/skirts" target="_blank">
+          <div class="coll-img-wrap"><img src="img/442206bad87aaff335b2f7d95aa3a248.jpg" alt="юбка со шлейфом" loading="eager"></div>
+          <div class="coll-info"><p class="coll-name">юбка со шлейфом</p><p class="coll-price">25 000 ₽</p></div>
+        </a>
+      </div>
+      <div class="collection-card">
+        <a href="https://rishi-store.com/dresses" target="_blank">
+          <div class="coll-img-wrap"><img src="img/76357016.jpg" alt="платье волна" loading="eager"></div>
+          <div class="coll-info"><p class="coll-name">платье волна</p><p class="coll-price">15 000 ₽</p></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRAND NUMBERS -->
+<div class="brand-numbers">
+  <div class="number-item fade-up">
+    <span class="number-val">2019</span>
+    <p class="number-label">Год основания</p>
+  </div>
+  <div class="number-item fade-up">
+    <span class="number-val">100%</span>
+    <p class="number-label">Переработанный деним</p>
+  </div>
+  <div class="number-item fade-up">
+    <span class="number-val">14</span>
+    <p class="number-label">Человек в команде</p>
+  </div>
+  <div class="number-item fade-up">
+    <span class="number-val">Спб</span>
+    <p class="number-label">Производство</p>
+  </div>
+</div>
+
+<!-- ACCESSORIES -->
+<section class="section" id="accessories">
+  <div class="section-header fade-up">
+    <h2 class="section-title">Аксессуары</h2>
+    <a href="https://rishi-store.com/accessories" class="section-link" target="_blank">Вся категория →</a>
+  </div>
+  <div class="product-grid cols-3">
+    <a class="product-card" href="https://rishi-store.com/accessories" target="_blank">
+      <div class="product-img-wrap">
+        <img src="img/ce87aa176b3c37466fe954646eeb9c73.jpg" alt="сумка-полумесяц пион" loading="eager">
+        <div class="product-overlay"><span class="product-quick-add">В корзину</span></div>
+      </div>
+      <div class="product-info">
+        <p class="product-name">сумка-полумесяц пион</p>
+        <p class="product-price">13 000 ₽</p>
+      </div>
+    </a>
+    <a class="product-card" href="https://rishi-store.com/accessories" target="_blank">
+      <div class="product-img-wrap">
+        <img src="img/01ece6e37a745cf43994349371c0be16.jpg" alt="сумка-полумесяц розовый" loading="eager">
+        <div class="product-overlay"><span class="product-quick-add">В корзину</span></div>
+      </div>
+      <div class="product-info">
+        <p class="product-name">сумка-полумесяц креольский розовый</p>
+        <p class="product-price">13 000 ₽</p>
+      </div>
+    </a>
+    <a class="product-card" href="https://rishi-store.com/accessories" target="_blank">
+      <div class="product-img-wrap">
+        <img src="img/f067d94584eb2b502c94a71fadbb472d.jpg" alt="сумка-полумесяц асфальт" loading="eager">
+        <div class="product-overlay"><span class="product-quick-add">В корзину</span></div>
+      </div>
+      <div class="product-info">
+        <p class="product-name">сумка-полумесяц асфальт</p>
+        <p class="product-price">13 000 ₽</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <p class="footer-logo">RISHI</p>
+      <p class="footer-tagline">Дизайнерская одежда из переработанных материалов. Санкт-Петербург, с 2019 года.</p>
+    </div>
+    <div>
+      <p class="footer-heading">Каталог</p>
+      <nav class="footer-nav">
+        <a href="https://rishi-store.com/jeans" target="_blank">Джинсы</a>
+        <a href="https://rishi-store.com/corsets" target="_blank">Корсеты</a>
+        <a href="https://rishi-store.com/dresses" target="_blank">Платья</a>
+        <a href="https://rishi-store.com/skirts" target="_blank">Юбки</a>
+        <a href="https://rishi-store.com/coats" target="_blank">Верхняя одежда</a>
+        <a href="https://rishi-store.com/accessories" target="_blank">Аксессуары</a>
+        <a href="https://rishi-store.com/sale" target="_blank">Sale</a>
+      </nav>
+    </div>
+    <div>
+      <p class="footer-heading">Информация</p>
+      <nav class="footer-nav">
+        <a href="https://rishi-store.com/about" target="_blank">О бренде</a>
+        <a href="https://rishi-store.com/customer" target="_blank">Клиенту</a>
+        <a href="https://rishi-store.com/contacts" target="_blank">Контакты</a>
+        <a href="https://rishi-store.com/shooting" target="_blank">Коллекции</a>
+        <a href="https://rishi-store.com/giftcard" target="_blank">Подарочный сертификат</a>
+      </nav>
+    </div>
+    <div>
+      <p class="footer-heading">Следите за нами</p>
+      <nav class="footer-nav">
+        <a href="#" target="_blank">Instagram</a>
+        <a href="#" target="_blank">VKontakte</a>
+        <a href="#" target="_blank">Telegram</a>
+      </nav>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 RISHI Store. Все права защищены.</p>
+    <div class="footer-social">
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">VK</a>
+      <a href="#" target="_blank">TG</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── CURSOR ────────────────────────────────────────────────
+const cursor = document.getElementById('cursor');
+const cursorDot = document.getElementById('cursorDot');
+let mouseX = 0, mouseY = 0;
+let curX = 0, curY = 0;
+
+document.addEventListener('mousemove', e => {
+  mouseX = e.clientX; mouseY = e.clientY;
+  cursorDot.style.left = mouseX + 'px';
+  cursorDot.style.top = mouseY + 'px';
+});
+
+(function animateCursor() {
+  curX += (mouseX - curX) * 0.12;
+  curY += (mouseY - curY) * 0.12;
+  cursor.style.left = curX + 'px';
+  cursor.style.top = curY + 'px';
+  requestAnimationFrame(animateCursor);
+})();
+
+document.querySelectorAll('a, button, .product-card, .cat-card, .collection-card').forEach(el => {
+  el.addEventListener('mouseenter', () => cursor.classList.add('is-link'));
+  el.addEventListener('mouseleave', () => cursor.classList.remove('is-link'));
+});
+
+// ── HEADER SCROLL ─────────────────────────────────────────
+const siteHeader = document.getElementById('siteHeader');
+window.addEventListener('scroll', () => {
+  siteHeader.classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
+
+// ── MEGA MENU ─────────────────────────────────────────────
+const catalogTrigger = document.getElementById('catalogTrigger');
+const megaMenu = document.getElementById('megaMenu');
+let megaTimer;
+
+function openMega() {
+  clearTimeout(megaTimer);
+  megaMenu.classList.add('open');
+  catalogTrigger.classList.add('active');
+}
+function closeMega() {
+  megaTimer = setTimeout(() => {
+    megaMenu.classList.remove('open');
+    catalogTrigger.classList.remove('active');
+  }, 120);
+}
+
+catalogTrigger.addEventListener('mouseenter', openMega);
+catalogTrigger.addEventListener('mouseleave', closeMega);
+megaMenu.addEventListener('mouseenter', openMega);
+megaMenu.addEventListener('mouseleave', closeMega);
+
+// Close mega on Escape
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { megaMenu.classList.remove('open'); closeSearch(); closeDrawer(); }
+});
+
+// ── SEARCH ────────────────────────────────────────────────
+const searchBtn = document.getElementById('searchBtn');
+const searchPanel = document.getElementById('searchPanel');
+const searchInput = document.getElementById('searchInput');
+const searchClose = document.getElementById('searchClose');
+let searchOpen = false;
+
+function openSearch() {
+  searchOpen = true;
+  searchPanel.classList.add('open');
+  siteHeader.classList.add('search-open');
+  megaMenu.classList.remove('open');
+  setTimeout(() => searchInput.focus(), 300);
+}
+function closeSearch() {
+  searchOpen = false;
+  searchPanel.classList.remove('open');
+  siteHeader.classList.remove('search-open');
+  searchInput.value = '';
+}
+
+searchBtn?.addEventListener('click', () => searchOpen ? closeSearch() : openSearch());
+searchClose.addEventListener('click', closeSearch);
+
+// ── MOBILE DRAWER ─────────────────────────────────────────
+const burgerBtn = document.getElementById('burgerBtn');
+const drawer = document.getElementById('drawer');
+const drawerOverlay = document.getElementById('drawerOverlay');
+const drawerClose = document.getElementById('drawerClose');
+
+function openDrawer() {
+  drawer.classList.add('open');
+  drawer.setAttribute('aria-hidden', 'false');
+  drawerOverlay.classList.add('open');
+  burgerBtn.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeDrawer() {
+  drawer.classList.remove('open');
+  drawer.setAttribute('aria-hidden', 'true');
+  drawerOverlay.classList.remove('open');
+  burgerBtn.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+burgerBtn.addEventListener('click', () => drawer.classList.contains('open') ? closeDrawer() : openDrawer());
+drawerClose.addEventListener('click', closeDrawer);
+drawerOverlay.addEventListener('click', closeDrawer);
+
+// ── ACCORDION ─────────────────────────────────────────────
+document.querySelectorAll('.acc-item').forEach(item => {
+  const trigger = item.querySelector('.acc-trigger');
+  const panel = item.querySelector('.acc-panel');
+  trigger.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.acc-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.acc-panel').style.height = '0';
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      panel.style.height = panel.scrollHeight + 'px';
+    }
+  });
+});
+
+// ── INTERSECTION OBSERVER ─────────────────────────────────
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      // Stagger children if product grid
+      const cards = entry.target.querySelectorAll('.product-card, .collection-card');
+      cards.forEach((card, i) => {
+        setTimeout(() => card.classList.add('visible'), i * 80);
+      });
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+document.querySelectorAll('.fade-up, .product-grid, .collections-track').forEach(el => observer.observe(el));
+
+// Also observe individual cards
+document.querySelectorAll('.product-card').forEach(card => observer.observe(card));
+
+// ── HORIZONTAL DRAG SCROLL ────────────────────────────────
+const slider = document.getElementById('collectionsScroll');
+let isDown = false, startX, scrollLeft;
+slider.addEventListener('mousedown', e => {
+  isDown = true; slider.style.cursor = 'grabbing';
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener('mouseleave', () => { isDown = false; slider.style.cursor = 'grab'; });
+slider.addEventListener('mouseup', () => { isDown = false; slider.style.cursor = 'grab'; });
+slider.addEventListener('mousemove', e => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  slider.scrollLeft = scrollLeft - (x - startX) * 1.5;
+});
+
+// ── NUMBER COUNTER ANIMATION ──────────────────────────────
+const numObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      numObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.number-item').forEach(el => numObserver.observe(el));
+
+// ── COLLECTION CARDS VISIBILITY ───────────────────────────
+const collTrackObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('.collection-card').forEach((card, i) => {
+        setTimeout(() => card.classList.add('visible'), i * 100);
+      });
+    }
+  });
+}, { threshold: 0.05 });
+document.querySelectorAll('.collections-track').forEach(el => collTrackObserver.observe(el));
+
+// ── PREVENT DRAG CLICK ON LINKS ───────────────────────────
+slider.querySelectorAll('a').forEach(a => {
+  let moved = false;
+  a.addEventListener('mousedown', () => moved = false);
+  a.addEventListener('mousemove', () => moved = true);
+  a.addEventListener('click', e => { if (moved) e.preventDefault(); });
+});
+</script>
+</body>
+</html>

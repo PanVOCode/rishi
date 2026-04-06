@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RISHI — Дизайнерская одежда из Санкт-Петербурга</title>
+<meta name="description" content="Дизайнерская одежда из переработанных материалов. Пэчворк джинсы, корсеты, платья. Бренд из Санкт-Петербурга.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#0A0A0A;--white:#F9F7F4;--cream:#EDE8E0;--cream-dark:#D9D3C8;
+  --gold:#B8A16B;--gold-light:#D4BC8A;--gray:#6B6B6B;--gray-light:#A8A49E;
+  --ease-out:cubic-bezier(0.16,1,0.3,1);--ease-in-out:cubic-bezier(0.65,0,0.35,1);
+  --dur-fast:150ms;--dur-mid:300ms;--dur-slow:600ms;--dur-xslow:1000ms;
+}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--white);color:var(--black);cursor:none;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:100%;object-fit:cover}
+button{background:none;border:none;cursor:none;font-family:inherit}
+ul{list-style:none}
+
+/* CURSOR */
+.cursor{width:40px;height:40px;border:1px solid var(--black);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width var(--dur-mid) var(--ease-out),height var(--dur-mid) var(--ease-out),border-color var(--dur-mid) var(--ease-out),background var(--dur-mid) var(--ease-out),opacity var(--dur-mid) var(--ease-out);mix-blend-mode:multiply}
+.cursor-dot{width:5px;height:5px;background:var(--black);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform var(--dur-fast) var(--ease-out)}
+.cursor.is-link{width:70px;height:70px;background:var(--gold);border-color:transparent;opacity:0.15}
+
+/* HEADER */
+.site-header{position:fixed;top:0;left:0;width:100%;z-index:1000}
+.announce{background:var(--black);color:var(--white);text-align:center;padding:9px 40px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;overflow:hidden;transition:height var(--dur-mid) var(--ease-out),opacity var(--dur-mid) var(--ease-out),padding var(--dur-mid) var(--ease-out)}
+.announce a{border-bottom:1px solid rgba(255,255,255,0.35)}
+.site-header.scrolled .announce{height:0;padding-top:0;padding-bottom:0;opacity:0}
+.nav{height:60px;padding:0 40px;display:grid;grid-template-columns:200px 1fr 200px;align-items:center;background:rgba(249,247,244,0);border-bottom:1px solid transparent;transition:background var(--dur-slow) var(--ease-out),border-color var(--dur-slow) var(--ease-out)}
+.site-header.scrolled .nav{background:rgba(249,247,244,0.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom-color:var(--cream-dark)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;letter-spacing:0.3em;text-transform:uppercase;white-space:nowrap;line-height:1;transition:opacity var(--dur-fast)}
+.nav-logo:hover{opacity:0.6}
+.nav-center{display:flex;align-items:center;justify-content:center;gap:40px}
+.nav-link{font-size:11px;font-weight:400;letter-spacing:0.14em;text-transform:uppercase;color:var(--black);position:relative;padding:4px 0;white-space:nowrap}
+.nav-link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--black);transition:width var(--dur-mid) var(--ease-out)}
+.nav-link:hover::after,.nav-link.active::after{width:100%}
+.nav-link.sale{color:var(--gold)}.nav-link.sale::after{background:var(--gold)}
+.nav-actions{display:flex;align-items:center;justify-content:flex-end;gap:20px}
+.nav-btn{display:flex;align-items:center;justify-content:center;width:36px;height:36px;position:relative;color:var(--black);transition:opacity var(--dur-fast)}
+.nav-btn:hover{opacity:0.5}
+.nav-btn svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.3}
+.nav-cart-count{position:absolute;top:4px;right:4px;width:14px;height:14px;border-radius:50%;background:var(--black);color:var(--white);font-size:8px;font-weight:500;display:flex;align-items:center;justify-content:center}
+.burger-btn{display:none;flex-direction:column;gap:5px;width:36px;height:36px;align-items:center;justify-content:center}
+.burger-btn span{display:block;width:20px;height:1px;background:var(--black);transition:transform var(--dur-mid) var(--ease-out),opacity var(--dur-mid) var(--ease-out),width var(--dur-mid) var(--ease-out)}
+.burger-btn.open span:nth-child(1){transform:rotate(45deg) translate(4px,4px)}
+.burger-btn.open span:nth-child(2){opacity:0;width:0}
+.burger-btn.open span:nth-child(3){transform:rotate(-45deg) translate(4px,-4px)}
+
+/* MEGA MENU */
+.mega{position:absolute;left:0;right:0;top:100%;background:var(--white);border-bottom:1px solid var(--cream-dark);box-shadow:0 24px 64px rgba(0,0,0,0.07);opacity:0;pointer-events:none;transform:translateY(-4px);transition:opacity var(--dur-mid) var(--ease-out),transform var(--dur-mid) var(--ease-out)}
+.mega.open{opacity:1;pointer-events:all;transform:translateY(0)}
+.mega-inner{display:grid;grid-template-columns:1fr 1fr 1fr 280px;max-width:1200px;margin:0 auto;padding:48px 40px}
+.mega-col{padding-right:40px}
+.mega-col-label{font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gray-light);margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--cream-dark)}
+.mega-col-links{display:flex;flex-direction:column}
+.mega-col-link{font-size:13px;font-weight:300;color:var(--black);padding:7px 0;display:flex;align-items:center;gap:8px;transition:color var(--dur-fast),padding-left var(--dur-mid) var(--ease-out)}
+.mega-col-link:hover{color:var(--gray);padding-left:6px}
+.mega-col-link.highlight{color:var(--gold);font-weight:400}
+.mega-link-badge{font-size:8px;letter-spacing:0.1em;text-transform:uppercase;background:var(--gold);color:var(--white);padding:2px 5px;border-radius:2px}
+.mega-featured{}
+.mega-featured-img{width:100%;aspect-ratio:3/4;overflow:hidden;background:var(--cream);margin-bottom:12px}
+.mega-featured-img img{transition:transform var(--dur-xslow) var(--ease-out)}
+.mega-featured:hover .mega-featured-img img{transform:scale(1.04)}
+.mega-featured-label{font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gray);margin-bottom:4px}
+.mega-featured-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;margin-bottom:12px}
+.mega-featured-link{font-size:10px;letter-spacing:0.16em;text-transform:uppercase;border-bottom:1px solid var(--black);padding-bottom:2px;display:inline-flex;align-items:center;gap:6px;transition:gap var(--dur-mid) var(--ease-out)}
+.mega-featured-link:hover{gap:12px}
+.mega-featured-link::after{content:'→'}
+
+/* SEARCH */
+.search-panel{position:absolute;left:0;right:0;top:100%;background:var(--white);border-bottom:1px solid var(--cream-dark);padding:0 40px;display:flex;align-items:center;gap:16px;height:0;overflow:hidden;transition:height var(--dur-mid) var(--ease-out)}
+.search-panel.open{height:64px}
+.search-icon-sm svg{width:18px;height:18px;stroke:var(--gray);fill:none;stroke-width:1.3}
+.search-input{flex:1;border:none;background:transparent;font-family:'Inter',sans-serif;font-size:14px;font-weight:300;color:var(--black);outline:none}
+.search-input::placeholder{color:var(--gray-light)}
+.search-close{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);transition:color var(--dur-fast)}
+.search-close:hover{color:var(--black)}
+
+/* DRAWER */
+.drawer-overlay{position:fixed;inset:0;background:rgba(0,0,0,0);z-index:1100;pointer-events:none;transition:background var(--dur-mid) var(--ease-out)}
+.drawer-overlay.open{background:rgba(0,0,0,0.3);pointer-events:all}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(340px,90vw);background:var(--white);z-index:1200;transform:translateX(100%);transition:transform var(--dur-slow) var(--ease-out);display:flex;flex-direction:column;box-shadow:-20px 0 60px rgba(0,0,0,0.12)}
+.drawer.open{transform:translateX(0)}
+.drawer-head{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid var(--cream-dark)}
+.drawer-logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;letter-spacing:0.25em}
+.drawer-close{width:36px;height:36px;display:flex;align-items:center;justify-content:center;color:var(--black)}
+.drawer-close svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.3}
+.drawer-body{flex:1;overflow-y:auto;padding:8px 0}
+.drawer-body::-webkit-scrollbar{display:none}
+.acc-item{border-bottom:1px solid var(--cream-dark)}
+.acc-trigger{width:100%;display:flex;align-items:center;justify-content:space-between;padding:16px 24px;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--black);transition:color var(--dur-fast)}
+.acc-trigger:hover{color:var(--gray)}
+.acc-arrow{width:14px;height:14px;position:relative;flex-shrink:0}
+.acc-arrow::before,.acc-arrow::after{content:'';position:absolute;background:currentColor;transition:transform var(--dur-mid) var(--ease-out)}
+.acc-arrow::before{width:14px;height:1px;top:50%;left:0}
+.acc-arrow::after{width:1px;height:14px;left:50%;top:0}
+.acc-item.open .acc-arrow::after{transform:scaleY(0)}
+.acc-panel{height:0;overflow:hidden;transition:height var(--dur-mid) var(--ease-out)}
+.acc-panel-inner{padding:4px 24px 16px;display:flex;flex-direction:column}
+.acc-link{font-size:13px;font-weight:300;color:var(--gray);padding:8px 0;transition:color var(--dur-fast),padding-left var(--dur-mid) var(--ease-out)}
+.acc-link:hover{color:var(--black);padding-left:4px}
+.acc-link.highlight{color:var(--gold)}
+.drawer-link{display:block;padding:16px 24px;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--black);border-bottom:1px solid var(--cream-dark);transition:color var(--dur-fast),padding-left var(--dur-mid) var(--ease-out)}
+.drawer-link:hover{color:var(--gray);padding-left:28px}
+.drawer-foot{padding:20px 24px;border-top:1px solid var(--cream-dark);display:flex;gap:20px}
+.drawer-foot a{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);transition:color var(--dur-fast)}
+.drawer-foot a:hover{color:var(--black)}
+
+/* PAGE CONTENT */
+#page{min-height:100vh}
+#page>*{animation:pageIn 0.4s var(--ease-out) both}
+@keyframes pageIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+/* HERO */
+.hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:flex-end;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:var(--cream)}
+.hero-images{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr}
+.hero-img-wrap{overflow:hidden;animation:heroReveal 1.4s var(--ease-out) forwards}
+.hero-img-wrap:first-child{animation-delay:0.1s}
+.hero-img-wrap:last-child{animation-delay:0.3s}
+@keyframes heroReveal{from{transform:scale(1.1);opacity:0}to{transform:scale(1);opacity:1}}
+.hero-img-wrap img{object-position:top center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(249,247,244,0.7) 85%,var(--white) 100%)}
+.hero-content{position:relative;z-index:2;width:100%;padding:0 40px 80px;display:flex;align-items:flex-end;justify-content:space-between}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(72px,10vw,140px);font-weight:300;font-style:italic;line-height:0.9;animation:fadeUp 1s var(--ease-out) 0.6s both}
+.hero-meta{display:flex;flex-direction:column;gap:20px;align-items:flex-end;animation:fadeUp 1s var(--ease-out) 0.8s both}
+.hero-subtitle{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray)}
+.hero-cta{display:inline-flex;align-items:center;gap:12px;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;border-bottom:1px solid var(--black);padding-bottom:4px;transition:gap var(--dur-mid) var(--ease-out)}
+.hero-cta:hover{gap:20px}
+.hero-cta::after{content:'→'}
+.hero-scroll-hint{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);display:flex;flex-direction:column;align-items:center;gap:8px;animation:fadeUp 1s var(--ease-out) 1.2s both}
+.hero-scroll-line{width:1px;height:48px;background:var(--gray);animation:scrollLine 2s ease-in-out 1.5s infinite}
+@keyframes scrollLine{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* MARQUEE */
+.marquee-wrap{border-top:1px solid var(--cream-dark);border-bottom:1px solid var(--cream-dark);padding:12px 0;overflow:hidden;background:var(--cream)}
+.marquee-track{display:flex;white-space:nowrap;animation:marquee 28s linear infinite}
+.marquee-item{display:flex;align-items:center;gap:32px;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gray);padding:0 32px;flex-shrink:0}
+.marquee-dot{width:4px;height:4px;background:var(--gold);border-radius:50%}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* SECTIONS */
+.section{padding:100px 40px}
+.section-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:48px}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,72px);font-weight:300}
+.section-link{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;border-bottom:1px solid transparent;transition:border-color var(--dur-mid)}
+.section-link:hover{border-color:var(--black)}
+
+/* PRODUCT GRID */
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.product-grid.cols-3{grid-template-columns:repeat(3,1fr)}
+.product-card{position:relative;display:block;opacity:0;transform:translateY(30px);transition:opacity var(--dur-slow) var(--ease-out),transform var(--dur-slow) var(--ease-out)}
+.product-card.visible{opacity:1;transform:translateY(0)}
+.product-img-wrap{position:relative;overflow:hidden;aspect-ratio:3/4;background:var(--cream)}
+.product-img-wrap img{transition:transform var(--dur-xslow) var(--ease-out)}
+.product-card:hover .product-img-wrap img{transform:scale(1.04)}
+.product-overlay{position:absolute;inset:0;background:rgba(10,10,10,0);display:flex;align-items:flex-end;padding:20px;transition:background var(--dur-mid) var(--ease-out)}
+.product-card:hover .product-overlay{background:rgba(10,10,10,0.03)}
+.product-quick-add{width:100%;padding:12px;background:var(--white);border:1px solid var(--black);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;opacity:0;transform:translateY(8px);transition:opacity var(--dur-mid) var(--ease-out),transform var(--dur-mid) var(--ease-out);text-align:center}
+.product-card:hover .product-quick-add{opacity:1;transform:translateY(0)}
+.product-badge{position:absolute;top:12px;left:12px;background:var(--black);color:var(--white);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;padding:4px 8px}
+.product-badge.sale{background:var(--gold)}
+.product-info{padding:14px 0 28px}
+.product-name{font-size:12px;font-weight:400;letter-spacing:0.04em;line-height:1.4;text-transform:lowercase;margin-bottom:6px;color:var(--black)}
+.product-price{font-size:12px;font-weight:400;letter-spacing:0.06em;color:var(--gray)}
+.product-price-old{text-decoration:line-through;margin-right:8px;color:var(--gray-light)}
+.product-price-new{color:var(--gold)}
+
+/* CATEGORIES GRID */
+.categories-section{padding:0 40px 100px}
+.categories-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:auto auto;gap:2px}
+.cat-card{position:relative;overflow:hidden;background:var(--cream);display:block}
+.cat-card:first-child{grid-column:1/2;grid-row:1/3}
+.cat-img-wrap{aspect-ratio:3/4;overflow:hidden}
+.cat-card:first-child .cat-img-wrap{aspect-ratio:unset;height:100%}
+.cat-card:not(:first-child) .cat-img-wrap{aspect-ratio:3/2.8}
+.cat-img-wrap img{transition:transform var(--dur-xslow) var(--ease-out)}
+.cat-card:hover .cat-img-wrap img{transform:scale(1.04)}
+.cat-info{position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(to top,rgba(10,10,10,0.4) 0%,transparent 100%)}
+.cat-name{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);font-weight:400}
+.cat-count{font-size:10px;color:rgba(255,255,255,0.6);margin-top:2px}
+
+/* EDITORIAL */
+.editorial{padding:120px 40px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;background:var(--cream)}
+.editorial-eyebrow{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
+.editorial-title{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,4.5vw,72px);font-weight:300;font-style:italic;line-height:1.1;margin-bottom:32px}
+.editorial-body{font-size:14px;font-weight:300;line-height:1.9;color:var(--gray);max-width:420px;margin-bottom:40px}
+.editorial-img-wrap{aspect-ratio:4/5;overflow:hidden}
+.btn-outline{display:inline-flex;align-items:center;gap:12px;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;padding:14px 32px;border:1px solid var(--black);transition:background var(--dur-mid) var(--ease-out),color var(--dur-mid) var(--ease-out)}
+.btn-outline:hover{background:var(--black);color:var(--white)}
+
+/* HORIZONTAL SCROLL */
+.collections-section{padding:100px 0 100px 40px;overflow:hidden}
+.collections-inner{overflow-x:auto;cursor:grab}
+.collections-inner:active{cursor:grabbing}
+.collections-inner::-webkit-scrollbar{display:none}
+.collections-track{display:flex;gap:2px;width:max-content;padding-right:40px}
+.collection-card{width:340px;flex-shrink:0;opacity:0;transform:translateX(40px);transition:opacity var(--dur-slow) var(--ease-out),transform var(--dur-slow) var(--ease-out)}
+.collection-card.visible{opacity:1;transform:translateX(0)}
+.coll-img-wrap{aspect-ratio:3/4;overflow:hidden;background:var(--cream)}
+.coll-img-wrap img{transition:transform var(--dur-xslow) var(--ease-out)}
+.collection-card:hover .coll-img-wrap img{transform:scale(1.04)}
+.coll-info{padding:14px 0}
+.coll-name{font-size:12px;text-transform:lowercase;letter-spacing:0.04em;margin-bottom:4px}
+.coll-price{font-size:12px;color:var(--gray)}
+
+/* NUMBERS */
+.brand-numbers{padding:80px 40px;display:grid;grid-template-columns:repeat(4,1fr);gap:2px;border-top:1px solid var(--cream-dark);border-bottom:1px solid var(--cream-dark)}
+.number-item{padding:40px 20px;text-align:center;border-right:1px solid var(--cream-dark)}
+.number-item:last-child{border-right:none}
+.number-val{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4vw,56px);font-weight:300;display:block;margin-bottom:8px}
+.number-label{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gray)}
+
+/* FOOTER */
+footer{background:var(--black);color:var(--white);padding:80px 40px 40px}
+.footer-top{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:40px;margin-bottom:80px}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;letter-spacing:0.25em;margin-bottom:16px}
+.footer-tagline{font-size:12px;color:rgba(255,255,255,0.4);line-height:1.6;max-width:200px}
+.footer-heading{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:20px}
+.footer-nav{display:flex;flex-direction:column;gap:10px}
+.footer-nav a{font-size:13px;font-weight:300;color:rgba(255,255,255,0.7);transition:color var(--dur-fast)}
+.footer-nav a:hover{color:var(--white)}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:32px;border-top:1px solid rgba(255,255,255,0.1)}
+.footer-copy{font-size:11px;color:rgba(255,255,255,0.3)}
+.footer-social{display:flex;gap:20px}
+.footer-social a{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);transition:color var(--dur-fast)}
+.footer-social a:hover{color:var(--white)}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{opacity:0;transform:translateY(32px);transition:opacity var(--dur-slow) var(--ease-out),transform var(--dur-slow) var(--ease-out)}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* CATEGORY PAGE */
+.page-header{padding-top:120px;padding-bottom:0;background:var(--white)}
+.breadcrumb{padding:0 40px 0;display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:0.1em;color:var(--gray-light);text-transform:uppercase;margin-bottom:0}
+.breadcrumb a{transition:color var(--dur-fast)}
+.breadcrumb a:hover{color:var(--black)}
+.breadcrumb-sep{font-size:9px;color:var(--gray-light)}
+.cat-page-hero{padding:32px 40px 40px;display:flex;align-items:flex-end;justify-content:space-between}
+.cat-page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,7vw,96px);font-weight:300;font-style:italic;line-height:0.95}
+.cat-page-count{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);align-self:flex-end;padding-bottom:12px}
+.cat-toolbar{padding:0 40px 32px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--cream-dark)}
+.cat-toolbar-count{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray)}
+.sort-select{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;border:none;background:transparent;color:var(--black);outline:none;cursor:pointer;appearance:none;-webkit-appearance:none;padding-right:16px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%236B6B6B'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right center}
+.cat-grid-wrap{padding:40px 40px 100px}
+
+/* FILTER TABS */
+.filter-tabs{display:flex;gap:0;overflow-x:auto;padding:0 40px;border-bottom:1px solid var(--cream-dark);margin-bottom:0}
+.filter-tabs::-webkit-scrollbar{display:none}
+.filter-tab{flex-shrink:0;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;padding:16px 20px;color:var(--gray-light);border-bottom:2px solid transparent;transition:color var(--dur-fast),border-color var(--dur-fast);cursor:pointer}
+.filter-tab:hover{color:var(--black)}
+.filter-tab.active{color:var(--black);border-bottom-color:var(--black)}
+
+/* ABOUT PAGE */
+.about-hero{position:relative;height:70vh;min-height:500px;overflow:hidden;display:flex;align-items:flex-end}
+.about-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.about-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,10,0.1) 0%,rgba(10,10,10,0.5) 100%)}
+.about-hero-content{position:relative;z-index:2;padding:60px 40px;width:100%}
+.about-hero-label{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:16px}
+.about-hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,7vw,100px);font-weight:300;font-style:italic;color:var(--white);line-height:0.9}
+.about-body{padding:100px 40px;display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.about-text p{font-size:15px;font-weight:300;line-height:1.9;color:var(--gray);margin-bottom:24px}
+.about-quote{padding:80px 40px;background:var(--cream);text-align:center}
+.about-quote-text{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,48px);font-weight:300;font-style:italic;line-height:1.3;max-width:800px;margin:0 auto 24px;color:var(--black)}
+.about-quote-author{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gray)}
+.about-team{padding:100px 40px;display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.team-col{padding:40px;background:var(--cream)}
+.team-col-title{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.team-col-text{font-size:13px;font-weight:300;line-height:1.8;color:var(--gray)}
+
+/* COLLECTIONS PAGE */
+.collections-grid-page{padding:120px 40px 100px;display:grid;grid-template-columns:repeat(2,1fr);gap:2px}
+.coll-page-card{position:relative;overflow:hidden;background:var(--cream);display:block;aspect-ratio:4/5}
+.coll-page-card img{transition:transform var(--dur-xslow) var(--ease-out)}
+.coll-page-card:hover img{transform:scale(1.04)}
+.coll-page-info{position:absolute;bottom:0;left:0;right:0;padding:32px;background:linear-gradient(to top,rgba(10,10,10,0.6) 0%,transparent 100%)}
+.coll-page-eyebrow{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:8px}
+.coll-page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3vw,40px);font-weight:300;font-style:italic;color:var(--white);line-height:1.1;margin-bottom:12px}
+.coll-page-link{font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.8);border-bottom:1px solid rgba(255,255,255,0.4);padding-bottom:2px;display:inline-flex;align-items:center;gap:6px;transition:gap var(--dur-mid) var(--ease-out)}
+.coll-page-link:hover{gap:12px}
+.coll-page-link::after{content:'→'}
+
+/* CONTACTS PAGE */
+.contacts-page{padding:140px 40px 100px;display:grid;grid-template-columns:1fr 1fr;gap:80px;min-height:80vh;align-items:start}
+.contacts-left{}
+.contacts-label{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
+.contacts-title{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,6vw,80px);font-weight:300;font-style:italic;line-height:0.95;margin-bottom:60px}
+.contacts-row{margin-bottom:32px}
+.contacts-row-label{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gray-light);margin-bottom:8px}
+.contacts-row-val{font-size:14px;font-weight:300;color:var(--black);line-height:1.6}
+.contacts-row-val a{border-bottom:1px solid transparent;transition:border-color var(--dur-fast)}
+.contacts-row-val a:hover{border-bottom-color:var(--black)}
+.contacts-social{display:flex;flex-direction:column;gap:12px;margin-top:40px}
+.contacts-social a{font-size:13px;font-weight:300;color:var(--gray);display:flex;align-items:center;gap:12px;transition:color var(--dur-fast),gap var(--dur-mid) var(--ease-out)}
+.contacts-social a:hover{color:var(--black);gap:20px}
+.contacts-social a::after{content:'→';font-size:11px}
+.contacts-map{background:var(--cream);display:flex;align-items:center;justify-content:center;min-height:400px;font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;font-style:italic;color:var(--gray-light)}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .nav{grid-template-columns:160px 1fr 160px}
+  .nav-center{gap:28px}
+  .mega-inner{grid-template-columns:1fr 1fr 1fr 240px;padding:36px 24px}
+  .about-body{grid-template-columns:1fr;gap:40px}
+  .about-team{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  .nav{grid-template-columns:1fr auto 1fr;padding:0 20px}
+  .nav-logo{order:2;justify-self:center}
+  .nav-center{display:none}
+  .nav-actions{order:3;justify-self:flex-end}
+  .burger-btn{display:flex}
+  #searchBtn{display:none}
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .categories-grid{grid-template-columns:1fr 1fr}
+  .cat-card:first-child{grid-column:1;grid-row:1}
+  .cat-card:first-child .cat-img-wrap{aspect-ratio:3/4}
+  .editorial{grid-template-columns:1fr;gap:40px}
+  .brand-numbers{grid-template-columns:repeat(2,1fr)}
+  .about-team{grid-template-columns:1fr}
+  .contacts-page{grid-template-columns:1fr;gap:40px}
+  .collections-grid-page{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .hero-content{padding:0 20px 60px}
+  .hero-images{grid-template-columns:1fr}
+  .hero-img-wrap:last-child{display:none}
+  .section{padding:60px 20px}
+  .categories-section{padding:0 20px 60px}
+  .section-header{flex-direction:column;gap:12px}
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .categories-grid{grid-template-columns:1fr}
+  .editorial{padding:60px 20px}
+  .editorial-img-wrap{order:-1}
+  .brand-numbers{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+  .collections-section{padding:60px 0 60px 20px}
+  .collection-card{width:260px}
+  .hero-title{font-size:clamp(52px,12vw,80px)}
+  .breadcrumb,.cat-page-hero,.cat-toolbar,.cat-grid-wrap,.filter-tabs{padding-left:20px;padding-right:20px}
+  .about-body,.about-team,.about-quote,.contacts-page,.collections-grid-page{padding-left:20px;padding-right:20px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important}}
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- HEADER -->
+<div class="site-header" id="siteHeader">
+  <div class="announce">
+    Бесплатная доставка по России при заказе от 10 000 ₽ &nbsp;·&nbsp;
+    <a href="#/about">Узнать подробнее</a>
+  </div>
+  <nav class="nav" id="nav">
+    <a href="#/" class="nav-logo">RISHI</a>
+    <div class="nav-center">
+      <a class="nav-link" id="catalogTrigger" href="#/catalog">Каталог</a>
+      <a class="nav-link" href="#/collections">Коллекции</a>
+      <a class="nav-link" href="#/about">О бренде</a>
+      <a class="nav-link" href="#/contacts">Контакты</a>
+      <a class="nav-link sale" href="#/sale">Sale</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-btn" id="searchBtn" aria-label="Поиск">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7.5"/><path d="M20.5 20.5l-4-4" stroke-linecap="round"/></svg>
+      </button>
+      <button class="nav-btn" aria-label="Аккаунт">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      </button>
+      <button class="nav-btn" aria-label="Корзина" style="position:relative">
+        <svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg>
+        <span class="nav-cart-count">0</span>
+      </button>
+      <button class="burger-btn" id="burgerBtn" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MEGA MENU -->
+  <div class="mega" id="megaMenu">
+    <div class="mega-inner">
+      <div class="mega-col">
+        <p class="mega-col-label">Женщинам</p>
+        <div class="mega-col-links">
+          <a class="mega-col-link" href="#/catalog">Весь каталог</a>
+          <a class="mega-col-link" href="#/jeans">Джинсы</a>
+          <a class="mega-col-link" href="#/corsets">Корсеты</a>
+          <a class="mega-col-link" href="#/dresses">Платья</a>
+          <a class="mega-col-link" href="#/skirts">Юбки</a>
+          <a class="mega-col-link" href="#/coats">Верхняя одежда</a>
+          <a class="mega-col-link" href="#/accessories">Аксессуары</a>
+        </div>
+      </div>
+      <div class="mega-col">
+        <p class="mega-col-label">Коллекции</p>
+        <div class="mega-col-links">
+          <a class="mega-col-link" href="#/collections">AW 2025</a>
+          <a class="mega-col-link" href="#/collections">RISHI × ONLY ME</a>
+          <a class="mega-col-link" href="#/collections">RISHI × Bitte Ruhe</a>
+          <a class="mega-col-link" href="#/collections">RISHI × Не просто вещь</a>
+        </div>
+      </div>
+      <div class="mega-col">
+        <p class="mega-col-label">Особое</p>
+        <div class="mega-col-links">
+          <a class="mega-col-link highlight" href="#/sale">
+            Sale <span class="mega-link-badge" style="background:var(--black)">−%</span>
+          </a>
+          <a class="mega-col-link" href="#/collections">Лукбуки</a>
+        </div>
+        <p class="mega-col-label" style="margin-top:28px">Бренд</p>
+        <div class="mega-col-links">
+          <a class="mega-col-link" href="#/about">О нас</a>
+          <a class="mega-col-link" href="#/contacts">Контакты</a>
+        </div>
+      </div>
+      <div class="mega-featured">
+        <a href="#/jeans">
+          <div class="mega-featured-img">
+            <img src="img/61eb4fb48052ae2ed00820978e424bdb.jpg" alt="AW25" loading="eager">
+          </div>
+        </a>
+        <p class="mega-featured-label">Новая коллекция</p>
+        <p class="mega-featured-title">Пэчворк джинсы AW 25</p>
+        <a href="#/jeans" class="mega-featured-link">Смотреть</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEARCH -->
+  <div class="search-panel" id="searchPanel">
+    <div class="search-icon-sm"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7.5"/><path d="M20.5 20.5l-4-4" stroke-linecap="round"/></svg></div>
+    <input class="search-input" id="searchInput" type="text" placeholder="Поиск по каталогу..." autocomplete="off">
+    <button class="search-close" id="searchClose">Закрыть</button>
+  </div>
+</div>
+
+<!-- MOBILE DRAWER -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-head">
+    <span class="drawer-logo">RISHI</span>
+    <button class="drawer-close" id="drawerClose">
+      <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div class="drawer-body">
+    <div class="acc-item" id="accCatalog">
+      <button class="acc-trigger">Каталог <span class="acc-arrow"></span></button>
+      <div class="acc-panel">
+        <div class="acc-panel-inner">
+          <a class="acc-link" href="#/catalog">Весь каталог</a>
+          <a class="acc-link" href="#/jeans">Джинсы</a>
+          <a class="acc-link" href="#/corsets">Корсеты</a>
+          <a class="acc-link" href="#/dresses">Платья</a>
+          <a class="acc-link" href="#/skirts">Юбки</a>
+          <a class="acc-link" href="#/coats">Верхняя одежда</a>
+          <a class="acc-link" href="#/accessories">Аксессуары</a>
+          <a class="acc-link highlight" href="#/sale">Sale</a>
+        </div>
+      </div>
+    </div>
+    <div class="acc-item">
+      <button class="acc-trigger">Коллекции <span class="acc-arrow"></span></button>
+      <div class="acc-panel">
+        <div class="acc-panel-inner">
+          <a class="acc-link" href="#/collections">AW 2025</a>
+          <a class="acc-link" href="#/collections">RISHI × ONLY ME</a>
+          <a class="acc-link" href="#/collections">RISHI × Bitte Ruhe</a>
+        </div>
+      </div>
+    </div>
+    <a class="drawer-link" href="#/about">О бренде</a>
+    <a class="drawer-link" href="#/contacts">Контакты</a>
+  </div>
+  <div class="drawer-foot">
+    <a href="#">Instagram</a>
+    <a href="#">VKontakte</a>
+    <a href="#">Telegram</a>
+  </div>
+</div>
+
+<!-- PAGE CONTENT -->
+<main id="page"></main>
+
+<script>
+// ── DATA ──────────────────────────────────────────────────
+const PRODUCTS = [
+  {id:1,name:"женские пэчворк джинсы со вставками",price:22000,oldPrice:null,category:"jeans",image:"img/61eb4fb48052ae2ed00820978e424bdb.jpg"},
+  {id:2,name:"женские прямые пэчворк джинсы голубые",price:20000,oldPrice:null,category:"jeans",image:"img/1bcf368c10dff36d63b4585073c911a8.jpg"},
+  {id:3,name:"женские пэчворк джинсы в полоску бэби блу",price:20000,oldPrice:null,category:"jeans",image:"img/6a5eba4b2df0b27a8a296926bddf9da7.jpg"},
+  {id:4,name:"женские пэчворк джинсы в полоску чёрный",price:20000,oldPrice:null,category:"jeans",image:"img/16ea7280ff825b0e4417dfb35d7584e3.jpg"},
+  {id:5,name:"женские широкие пэчворк джинсы черные",price:20000,oldPrice:null,category:"jeans",image:"img/1b620cfffc73d262fec50979dc77abe7.jpg"},
+  {id:6,name:"женские широкие пэчворк джинсы синие",price:20000,oldPrice:null,category:"jeans",image:"img/55441e67df3f8a2b8bf3de11a9f3df3e.jpg"},
+  {id:7,name:"унисекс пэчворк джинсы с бахромой черные",price:21800,oldPrice:null,category:"jeans",image:"img/de0263db523dc4c6.jpg"},
+  {id:8,name:"джинсы клеш",price:20000,oldPrice:null,category:"jeans",image:"img/16083115.jpg"},
+  {id:9,name:"прямые пэчворк джинсы",price:18750,oldPrice:null,category:"jeans",image:"img/41930730.jpg"},
+  {id:10,name:"джинсовый корсет RISHI × BITTE RUHE",price:18000,oldPrice:null,category:"corsets",image:"img/669a245411c6ab780b4e39ecb663bdc8.jpg"},
+  {id:11,name:"джинсовый апсайкл корсет с фигурным низом черный",price:15000,oldPrice:18750,category:"corsets",image:"img/25637047.png"},
+  {id:12,name:"джинсовый апсайкл корсет с фигурным низом синий",price:15000,oldPrice:18750,category:"corsets",image:"img/45167421.png"},
+  {id:13,name:"классический джинсовый корсет черный",price:12000,oldPrice:null,category:"corsets",image:"img/85996c5e0f0f2cae.jpg"},
+  {id:14,name:"джинсовый апсайкл корсет с бретелями черный",price:6000,oldPrice:9000,category:"corsets",image:"img/15202719.png"},
+  {id:15,name:"джинсовый апсайкл корсет с бретелями красный",price:10000,oldPrice:null,category:"corsets",image:"img/40891559.png"},
+  {id:16,name:"корсет пэчворк с открытой спиной",price:16000,oldPrice:null,category:"corsets",image:"img/5a5ea51d4b0c8ff6b9349be8c0b6d498.png"},
+  {id:17,name:"джинсовый апсайкл корсет с цепочкой",price:14000,oldPrice:null,category:"corsets",image:"img/3a2a26ecb585d29d4b716dcfae19375a.png"},
+  {id:18,name:"джинсовый корсет с воланом",price:15000,oldPrice:null,category:"corsets",image:"img/30077084.jpg"},
+  {id:19,name:"корсет трансформер джинсовый",price:18000,oldPrice:null,category:"corsets",image:"img/29653652.jpg"},
+  {id:20,name:"платье нецирк черное",price:25000,oldPrice:null,category:"dresses",image:"img/19769670.jpg"},
+  {id:21,name:"платье нецирк синее",price:25000,oldPrice:null,category:"dresses",image:"img/9a17714de974728b.jpg"},
+  {id:22,name:"мини-платье с кружевом",price:25000,oldPrice:null,category:"dresses",image:"img/21bb332e807b0700d81f20b052d62cb7.jpg"},
+  {id:23,name:"платье волна",price:15000,oldPrice:null,category:"dresses",image:"img/76357016.jpg"},
+  {id:24,name:"платье-бандо",price:20000,oldPrice:null,category:"dresses",image:"img/73861130.jpg"},
+  {id:25,name:"юбка в пол джипси с кружевом",price:25000,oldPrice:null,category:"skirts",image:"img/19880214.jpg"},
+  {id:26,name:"юбка-волна черный",price:15000,oldPrice:null,category:"skirts",image:"img/442206bad87aaff3.jpg"},
+  {id:27,name:"юбка нецирк черная",price:10000,oldPrice:15000,category:"skirts",image:"img/92764177.jpg"},
+  {id:28,name:"юбка нецирк голубая",price:10000,oldPrice:15000,category:"skirts",image:"img/6b01fa6af82b2bc3.jpg"},
+  {id:29,name:"юбка-волна голубой",price:15000,oldPrice:null,category:"skirts",image:"img/90937f2ae8c3b4d7.jpg"},
+  {id:30,name:"юбка со шлейфом",price:25000,oldPrice:null,category:"skirts",image:"img/72786c7b.jpg"},
+  {id:31,name:"джинсовая куртка с рельефами",price:25000,oldPrice:null,category:"coats",image:"img/8b05b7da137da69b.jpg"},
+  {id:32,name:"женская куртка с капюшоном утеплённая",price:25000,oldPrice:null,category:"coats",image:"img/7b46bdfbf98af228.jpg"},
+  {id:33,name:"джинсовая куртка со шнуровкой на спине",price:22500,oldPrice:null,category:"coats",image:"img/99417910.jpg"},
+  {id:34,name:"куртка-косуха RISHI × Only me",price:29980,oldPrice:null,category:"coats",image:"img/de0263db523dc4c6.jpg"},
+  {id:35,name:"сумка-полумесяц пион",price:13000,oldPrice:null,category:"accessories",image:"img/ce87aa176b3c3746.jpg"},
+  {id:36,name:"сумка-полумесяц креольский розовый",price:13000,oldPrice:null,category:"accessories",image:"img/01ece6e37a745cf4.jpg"},
+  {id:37,name:"сумка-полумесяц французский серый",price:13000,oldPrice:null,category:"accessories",image:"img/f067d94584eb2b50.jpg"},
+  {id:38,name:"сумка-полумесяц асфальт",price:13000,oldPrice:null,category:"accessories",image:"img/9f014ffd.jpg"}
+];
+
+const CATEGORIES = {
+  jeans:       {label:'Джинсы',         hero:'img/61eb4fb48052ae2ed00820978e424bdb.jpg'},
+  corsets:     {label:'Корсеты',        hero:'img/669a245411c6ab780b4e39ecb663bdc8.jpg'},
+  dresses:     {label:'Платья',         hero:'img/19769670.jpg'},
+  skirts:      {label:'Юбки',           hero:'img/19880214.jpg'},
+  coats:       {label:'Верхняя одежда', hero:'img/8b05b7da137da69b.jpg'},
+  accessories: {label:'Аксессуары',     hero:'img/ce87aa176b3c3746.jpg'}
+};
+
+// ── HELPERS ───────────────────────────────────────────────
+function fmt(n){return n.toLocaleString('ru-RU')+' ₽'}
+
+function sortProducts(arr, by){
+  if(by==='price_asc') return [...arr].sort((a,b)=>a.price-b.price);
+  if(by==='price_desc') return [...arr].sort((a,b)=>b.price-a.price);
+  return [...arr];
+}
+
+function renderCard(p){
+  return `<a class="product-card visible" href="#/product-${p.id}">
+    <div class="product-img-wrap">
+      <img src="${p.image}" alt="${p.name}" loading="lazy">
+      <div class="product-overlay"><span class="product-quick-add">Выбрать размер</span></div>
+      ${p.oldPrice?'<span class="product-badge sale">Sale</span>':''}
+    </div>
+    <div class="product-info">
+      <p class="product-name">${p.name}</p>
+      <p class="product-price">
+        ${p.oldPrice?`<span class="product-price-old">${fmt(p.oldPrice)}</span><span class="product-price-new">${fmt(p.price)}</span>`:fmt(p.price)}
+      </p>
+    </div>
+  </a>`;
+}
+
+function renderProductGrid(items, cols){
+  return `<div class="product-grid${cols===3?' cols-3':''}">${items.map(renderCard).join('')}</div>`;
+}
+
+function renderFooter(){
+  return `<footer>
+    <div class="footer-top">
+      <div>
+        <p class="footer-logo">RISHI</p>
+        <p class="footer-tagline">Дизайнерская одежда из переработанных материалов. Санкт-Петербург, с 2019 года.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Каталог</p>
+        <nav class="footer-nav">
+          <a href="#/jeans">Джинсы</a>
+          <a href="#/corsets">Корсеты</a>
+          <a href="#/dresses">Платья</a>
+          <a href="#/skirts">Юбки</a>
+          <a href="#/coats">Верхняя одежда</a>
+          <a href="#/accessories">Аксессуары</a>
+          <a href="#/sale">Sale</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer-heading">Информация</p>
+        <nav class="footer-nav">
+          <a href="#/about">О бренде</a>
+          <a href="#/collections">Коллекции</a>
+          <a href="#/contacts">Контакты</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer-heading">Соцсети</p>
+        <nav class="footer-nav">
+          <a href="#">Instagram</a>
+          <a href="#">VKontakte</a>
+          <a href="#">Telegram</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 RISHI Store. Все права защищены.</p>
+      <div class="footer-social">
+        <a href="#">Instagram</a><a href="#">VK</a><a href="#">TG</a>
+      </div>
+    </div>
+  </footer>`;
+}
+
+function renderMarquee(){
+  const items = ['RISHI Store','Санкт-Петербург','Из переработанных материалов','Пэчворк деним','Апсайкл дизайн','Ручная работа'];
+  const all = [...items,...items].map(t=>`<div class="marquee-item">${t} <span class="marquee-dot"></span></div>`).join('');
+  return `<div class="marquee-wrap"><div class="marquee-track">${all}</div></div>`;
+}
+
+function renderBrandNumbers(){
+  return `<div class="brand-numbers">
+    <div class="number-item"><span class="number-val">2019</span><p class="number-label">Год основания</p></div>
+    <div class="number-item"><span class="number-val">100%</span><p class="number-label">Переработанный деним</p></div>
+    <div class="number-item"><span class="number-val">14</span><p class="number-label">Человек в команде</p></div>
+    <div class="number-item"><span class="number-val">СПБ</span><p class="number-label">Производство</p></div>
+  </div>`;
+}
+
+function renderBreadcrumb(items){
+  return `<div class="breadcrumb">
+    <a href="#/">Главная</a>
+    <span class="breadcrumb-sep">/</span>
+    ${items.map((it,i)=>i===items.length-1
+      ?`<span style="color:var(--black)">${it.label}</span>`
+      :`<a href="${it.href}">${it.label}</a><span class="breadcrumb-sep">/</span>`
+    ).join('')}
+  </div>`;
+}
+
+// ── PAGES ─────────────────────────────────────────────────
+function renderHome(){
+  const jeans = PRODUCTS.filter(p=>p.category==='jeans').slice(0,4);
+  const corsets = PRODUCTS.filter(p=>p.category==='corsets').slice(0,4);
+  const accessories = PRODUCTS.filter(p=>p.category==='accessories').slice(0,3);
+  const dressesSkirts = [
+    ...PRODUCTS.filter(p=>p.category==='dresses'),
+    ...PRODUCTS.filter(p=>p.category==='skirts')
+  ].slice(0,6);
+
+  return `
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-images">
+      <div class="hero-img-wrap"><img src="img/61eb4fb48052ae2ed00820978e424bdb.jpg" alt="RISHI AW25" loading="eager"></div>
+      <div class="hero-img-wrap"><img src="img/669a245411c6ab780b4e39ecb663bdc8.jpg" alt="RISHI Corset" loading="eager"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">AW<br>2025</h1>
+      <div class="hero-meta">
+        <p class="hero-subtitle">Новая коллекция</p>
+        <a href="#/catalog" class="hero-cta">Смотреть коллекцию</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint"><div class="hero-scroll-line"></div><span>Scroll</span></div>
+  </section>
+
+  ${renderMarquee()}
+
+  <section class="section">
+    <div class="section-header fade-up">
+      <h2 class="section-title">Джинсы</h2>
+      <a href="#/jeans" class="section-link">Вся категория →</a>
+    </div>
+    ${renderProductGrid(jeans)}
+  </section>
+
+  <section class="editorial fade-up">
+    <div class="editorial-text">
+      <p class="editorial-eyebrow">О бренде</p>
+      <h2 class="editorial-title">Мода, которая<br>уважает прошлое</h2>
+      <p class="editorial-body">Бренд начинает свою историю с выбора подхода и выбора материала. В среде производства апсайклинг из хаотичного кастома старой одежды становится упорядоченной работой конструкторов, дизайнеров и технологов.</p>
+      <p class="editorial-body">Мы отказываемся от концепций «осознанность», «новая жизнь» — в пользу рациональной концепции: снизить количество ненужных вещей и превратить их в одну любимую.</p>
+      <a href="#/about" class="btn-outline">Читать историю бренда</a>
+    </div>
+    <div class="editorial-img-wrap">
+      <img src="img/19769670.jpg" alt="RISHI editorial" loading="lazy">
+    </div>
+  </section>
+
+  <section class="categories-section">
+    <div class="section-header fade-up" style="padding:80px 0 48px">
+      <h2 class="section-title">Каталог</h2>
+    </div>
+    <div class="categories-grid">
+      <a class="cat-card fade-up" href="#/corsets">
+        <div class="cat-img-wrap"><img src="img/669a245411c6ab780b4e39ecb663bdc8.jpg" alt="Корсеты" loading="lazy"></div>
+        <div class="cat-info"><p class="cat-name">Корсеты</p><p class="cat-count">${PRODUCTS.filter(p=>p.category==='corsets').length} моделей</p></div>
+      </a>
+      <a class="cat-card fade-up" href="#/dresses">
+        <div class="cat-img-wrap"><img src="img/19769670.jpg" alt="Платья" loading="lazy"></div>
+        <div class="cat-info"><p class="cat-name">Платья</p><p class="cat-count">${PRODUCTS.filter(p=>p.category==='dresses').length} моделей</p></div>
+      </a>
+      <a class="cat-card fade-up" href="#/skirts">
+        <div class="cat-img-wrap"><img src="img/19880214.jpg" alt="Юбки" loading="lazy"></div>
+        <div class="cat-info"><p class="cat-name">Юбки</p><p class="cat-count">${PRODUCTS.filter(p=>p.category==='skirts').length} моделей</p></div>
+      </a>
+      <a class="cat-card fade-up" href="#/coats">
+        <div class="cat-img-wrap"><img src="img/8b05b7da137da69b.jpg" alt="Верхняя одежда" loading="lazy"></div>
+        <div class="cat-info"><p class="cat-name">Верхняя одежда</p><p class="cat-count">${PRODUCTS.filter(p=>p.category==='coats').length} модели</p></div>
+      </a>
+      <a class="cat-card fade-up" href="#/accessories">
+        <div class="cat-img-wrap"><img src="img/ce87aa176b3c3746.jpg" alt="Аксессуары" loading="lazy"></div>
+        <div class="cat-info"><p class="cat-name">Аксессуары</p><p class="cat-count">${PRODUCTS.filter(p=>p.category==='accessories').length} модели</p></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header fade-up">
+      <h2 class="section-title">Корсеты</h2>
+      <a href="#/corsets" class="section-link">Вся категория →</a>
+    </div>
+    ${renderProductGrid(corsets)}
+  </section>
+
+  <section class="collections-section">
+    <div class="section-header fade-up" style="padding-right:40px">
+      <h2 class="section-title">Платья и юбки</h2>
+      <a href="#/dresses" class="section-link">Смотреть все →</a>
+    </div>
+    <div class="collections-inner" id="hscroll">
+      <div class="collections-track">
+        ${dressesSkirts.map(p=>`
+          <div class="collection-card visible">
+            <a href="#/product-${p.id}">
+              <div class="coll-img-wrap"><img src="${p.image}" alt="${p.name}" loading="lazy"></div>
+              <div class="coll-info">
+                <p class="coll-name">${p.name}</p>
+                <p class="coll-price">${fmt(p.price)}</p>
+              </div>
+            </a>
+          </div>`).join('')}
+      </div>
+    </div>
+  </section>
+
+  ${renderBrandNumbers()}
+
+  <section class="section">
+    <div class="section-header fade-up">
+      <h2 class="section-title">Аксессуары</h2>
+      <a href="#/accessories" class="section-link">Вся категория →</a>
+    </div>
+    ${renderProductGrid(accessories, 3)}
+  </section>
+
+  ${renderFooter()}`;
+}
+
+function renderCategory(cat, sortBy){
+  sortBy = sortBy || 'default';
+  const cfg = CATEGORIES[cat];
+  if(!cfg) return renderNotFound();
+  let items = sortProducts(PRODUCTS.filter(p=>p.category===cat), sortBy);
+  return `
+  <div class="page-header">
+    ${renderBreadcrumb([{label:'Каталог',href:'#/catalog'},{label:cfg.label}])}
+    <div class="cat-page-hero">
+      <h1 class="cat-page-title">${cfg.label}</h1>
+      <span class="cat-page-count">${items.length} ${items.length===1?'товар':items.length<5?'товара':'товаров'}</span>
+    </div>
+    <div class="cat-toolbar">
+      <span class="cat-toolbar-count">${items.length} товаров</span>
+      <select class="sort-select" id="sortSelect" onchange="resort('${cat}',this.value)">
+        <option value="default">По умолчанию</option>
+        <option value="price_asc" ${sortBy==='price_asc'?'selected':''}>Цена: сначала дешевле</option>
+        <option value="price_desc" ${sortBy==='price_desc'?'selected':''}>Цена: сначала дороже</option>
+      </select>
+    </div>
+  </div>
+  <div class="cat-grid-wrap">${renderProductGrid(items)}</div>
+  ${renderFooter()}`;
+}
+
+function renderCatalog(activeTab, sortBy){
+  activeTab = activeTab || 'all';
+  sortBy = sortBy || 'default';
+  const tabs = [
+    {key:'all',label:'Все'},
+    {key:'jeans',label:'Джинсы'},
+    {key:'corsets',label:'Корсеты'},
+    {key:'dresses',label:'Платья'},
+    {key:'skirts',label:'Юбки'},
+    {key:'coats',label:'Верхняя одежда'},
+    {key:'accessories',label:'Аксессуары'},
+  ];
+  let items = activeTab==='all' ? PRODUCTS : PRODUCTS.filter(p=>p.category===activeTab);
+  items = sortProducts(items, sortBy);
+
+  return `
+  <div class="page-header">
+    ${renderBreadcrumb([{label:'Каталог'}])}
+    <div class="cat-page-hero">
+      <h1 class="cat-page-title">Весь каталог</h1>
+      <span class="cat-page-count">${items.length} товаров</span>
+    </div>
+    <div class="filter-tabs">
+      ${tabs.map(t=>`<button class="filter-tab${activeTab===t.key?' active':''}" onclick="filterCatalog('${t.key}','${sortBy}')">${t.label}</button>`).join('')}
+    </div>
+    <div class="cat-toolbar">
+      <span class="cat-toolbar-count">${items.length} товаров</span>
+      <select class="sort-select" onchange="filterCatalog('${activeTab}',this.value)">
+        <option value="default">По умолчанию</option>
+        <option value="price_asc" ${sortBy==='price_asc'?'selected':''}>Цена: сначала дешевле</option>
+        <option value="price_desc" ${sortBy==='price_desc'?'selected':''}>Цена: сначала дороже</option>
+      </select>
+    </div>
+  </div>
+  <div class="cat-grid-wrap">${renderProductGrid(items)}</div>
+  ${renderFooter()}`;
+}
+
+function renderSale(){
+  const items = PRODUCTS.filter(p=>p.oldPrice);
+  return `
+  <div class="page-header">
+    ${renderBreadcrumb([{label:'Sale'}])}
+    <div class="cat-page-hero">
+      <h1 class="cat-page-title" style="color:var(--gold)">Sale</h1>
+      <span class="cat-page-count">${items.length} товаров</span>
+    </div>
+    <div class="cat-toolbar">
+      <span class="cat-toolbar-count">Скидки до 35%</span>
+    </div>
+  </div>
+  <div class="cat-grid-wrap">${renderProductGrid(items)}</div>
+  ${renderFooter()}`;
+}
+
+function renderAbout(){
+  return `
+  <div class="about-hero">
+    <img src="img/61eb4fb48052ae2ed00820978e424bdb.jpg" alt="RISHI" loading="eager">
+    <div class="about-hero-overlay"></div>
+    <div class="about-hero-content">
+      <p class="about-hero-label">О бренде</p>
+      <h1 class="about-hero-title">Мода, которая<br>уважает прошлое</h1>
+    </div>
+  </div>
+  <section class="about-body">
+    <div class="about-text">
+      <p>Бренд начинает свою историю с выбора подхода и выбора материала. В среде производства апсайклинг из хаотичного кастома старой одежды становится упорядоченной работой конструкторов, дизайнеров и технологов. Индивидуальность, необходимая в жанре, сохраняется за счёт творческой работы по сбору пэчворк-полотен.</p>
+      <p>Деним, по словам арт-директора Риты Резниковой, — вневременный материал. Так что идеология бренда заключается в том, чтобы смотреть вокруг. Сосредоточиться на настоящем, вместо того, чтобы смотреть вперёд и пытаться опережать время.</p>
+    </div>
+    <div class="about-text">
+      <p>Бренд прозрачен в своих инициативах в эпоху гринвошинга. Мы отказываемся от концепций «осознанность», «новая жизнь» — в пользу рациональной концепции: снизить количество ненужных вещей и превратить их в одну любимую.</p>
+      <p>Мы создаём технологичную одежду из вторично используемых материалов, переосмысляя исторический крой. Каждое изделие — штучная работа, результат совместного труда дизайнеров, конструкторов и производственной команды.</p>
+    </div>
+  </section>
+  <div class="about-quote">
+    <p class="about-quote-text">«Снизить количество ненужных вещей и превратить их в одну любимую»</p>
+    <p class="about-quote-author">— Рита Резникова, арт-директор RISHI</p>
+  </div>
+  <section class="about-team">
+    <div class="team-col">
+      <p class="team-col-title">Дизайн-студия</p>
+      <p class="team-col-text">3 портные · 3 закройщика · 3 дизайнера. Каждое изделие проходит ручную работу по сбору пэчворк-полотен из отобранного денима.</p>
+    </div>
+    <div class="team-col">
+      <p class="team-col-title">Производство</p>
+      <p class="team-col-text">Мастер производства · руководитель производства · конструктор · технолог. Полный цикл от концепции до готового изделия.</p>
+    </div>
+    <div class="team-col">
+      <p class="team-col-title">Миссия</p>
+      <p class="team-col-text">Каждая вещь RISHI начинает жизнь как использованный деним. Мы работаем с историей материала, сохраняя и переосмысляя её.</p>
+    </div>
+  </section>
+  ${renderBrandNumbers()}
+  ${renderFooter()}`;
+}
+
+function renderCollections(){
+  const colls = [
+    {title:'AW 2025',year:'Осень / Зима',img:'img/61eb4fb48052ae2ed00820978e424bdb.jpg',href:'#/jeans'},
+    {title:'RISHI × ONLY ME',year:'Коллаборация',img:'img/669a245411c6ab780b4e39ecb663bdc8.jpg',href:'#/corsets'},
+    {title:'RISHI × Bitte Ruhe',year:'Коллаборация',img:'img/19769670.jpg',href:'#/dresses'},
+    {title:'RISHI × Не просто вещь',year:'Коллаборация',img:'img/8b05b7da137da69b.jpg',href:'#/coats'},
+  ];
+  return `
+  <div class="page-header">
+    ${renderBreadcrumb([{label:'Коллекции'}])}
+    <div class="cat-page-hero">
+      <h1 class="cat-page-title">Коллекции</h1>
+    </div>
+  </div>
+  <div class="collections-grid-page">
+    ${colls.map(c=>`
+      <a class="coll-page-card" href="${c.href}">
+        <img src="${c.img}" alt="${c.title}" loading="lazy">
+        <div class="coll-page-info">
+          <p class="coll-page-eyebrow">${c.year}</p>
+          <p class="coll-page-title">${c.title}</p>
+          <span class="coll-page-link">Смотреть</span>
+        </div>
+      </a>`).join('')}
+  </div>
+  ${renderFooter()}`;
+}
+
+function renderContacts(){
+  return `
+  <div class="contacts-page">
+    <div class="contacts-left">
+      <p class="contacts-label">Свяжитесь с нами</p>
+      <h1 class="contacts-title">Контакты</h1>
+      <div class="contacts-row">
+        <p class="contacts-row-label">Город</p>
+        <p class="contacts-row-val">Санкт-Петербург, Россия</p>
+      </div>
+      <div class="contacts-row">
+        <p class="contacts-row-label">Email</p>
+        <p class="contacts-row-val"><a href="mailto:info@rishi-store.com">info@rishi-store.com</a></p>
+      </div>
+      <div class="contacts-row">
+        <p class="contacts-row-label">Сайт</p>
+        <p class="contacts-row-val"><a href="https://rishi-store.com" target="_blank">rishi-store.com</a></p>
+      </div>
+      <div class="contacts-social">
+        <a href="#">Instagram</a>
+        <a href="#">VKontakte</a>
+        <a href="#">Telegram</a>
+      </div>
+    </div>
+    <div class="contacts-map">Санкт-Петербург</div>
+  </div>
+  ${renderFooter()}`;
+}
+
+function renderNotFound(){
+  return `<div style="padding:200px 40px;text-align:center">
+    <p style="font-family:'Cormorant Garamond',serif;font-size:80px;font-weight:300;opacity:0.2">404</p>
+    <p style="margin-top:16px;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray)">Страница не найдена</p>
+    <a href="#/" style="display:inline-block;margin-top:32px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:2px">На главную</a>
+  </div>${renderFooter()}`;
+}
+
+// ── ROUTER ────────────────────────────────────────────────
+function route(){
+  const hash = (location.hash||'#/').replace('#','') || '/';
+  const path = hash.startsWith('/') ? hash : '/'+hash;
+  const page = document.getElementById('page');
+  let html = '';
+
+  if(path==='/'||path==='') html = renderHome();
+  else if(path==='/catalog') html = renderCatalog();
+  else if(path==='/jeans') html = renderCategory('jeans');
+  else if(path==='/corsets') html = renderCategory('corsets');
+  else if(path==='/dresses') html = renderCategory('dresses');
+  else if(path==='/skirts') html = renderCategory('skirts');
+  else if(path==='/coats') html = renderCategory('coats');
+  else if(path==='/accessories') html = renderCategory('accessories');
+  else if(path==='/sale') html = renderSale();
+  else if(path==='/about') html = renderAbout();
+  else if(path==='/collections') html = renderCollections();
+  else if(path==='/contacts') html = renderContacts();
+  else html = renderNotFound();
+
+  page.innerHTML = html;
+  window.scrollTo({top:0,behavior:'instant'});
+  initPage();
+  updateActiveNav(path);
+
+  // Update title
+  const titles = {'/':'Главная','/catalog':'Каталог','/jeans':'Джинсы','/corsets':'Корсеты','/dresses':'Платья','/skirts':'Юбки','/coats':'Верхняя одежда','/accessories':'Аксессуары','/sale':'Sale','/about':'О бренде','/collections':'Коллекции','/contacts':'Контакты'};
+  document.title = (titles[path]||'') + (titles[path]?' — ':'' )+'RISHI Store';
+}
+
+function resort(cat, sortBy){
+  document.getElementById('page').innerHTML = renderCategory(cat, sortBy);
+  window.scrollTo({top:0,behavior:'instant'});
+  initPage();
+}
+
+function filterCatalog(tab, sortBy){
+  document.getElementById('page').innerHTML = renderCatalog(tab, sortBy);
+  window.scrollTo({top:0,behavior:'instant'});
+  initPage();
+}
+
+function updateActiveNav(path){
+  document.querySelectorAll('.nav-link').forEach(a=>{
+    a.classList.remove('active');
+    const href = a.getAttribute('href')||'';
+    if(href==='#'+path||(path==='/'&&href==='#/')){
+      a.classList.add('active');
+    }
+  });
+}
+
+// ── INIT PAGE INTERACTIONS ────────────────────────────────
+function initPage(){
+  // Cursor on new elements
+  document.querySelectorAll('#page a, #page button').forEach(el=>{
+    el.addEventListener('mouseenter',()=>cursor.classList.add('is-link'));
+    el.addEventListener('mouseleave',()=>cursor.classList.remove('is-link'));
+  });
+
+  // IntersectionObserver for fade-up
+  const obs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting) e.target.classList.add('visible');
+    });
+  },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+
+  // Horizontal scroll drag
+  const hscroll = document.getElementById('hscroll');
+  if(hscroll){
+    let isDown=false,startX,scrollLeft;
+    hscroll.addEventListener('mousedown',e=>{isDown=true;startX=e.pageX-hscroll.offsetLeft;scrollLeft=hscroll.scrollLeft;hscroll.style.cursor='grabbing'});
+    hscroll.addEventListener('mouseleave',()=>{isDown=false;hscroll.style.cursor='grab'});
+    hscroll.addEventListener('mouseup',()=>{isDown=false;hscroll.style.cursor='grab'});
+    hscroll.addEventListener('mousemove',e=>{if(!isDown)return;e.preventDefault();const x=e.pageX-hscroll.offsetLeft;hscroll.scrollLeft=scrollLeft-(x-startX)*1.5});
+    hscroll.querySelectorAll('a').forEach(a=>{
+      let moved=false;
+      a.addEventListener('mousedown',()=>moved=false);
+      a.addEventListener('mousemove',()=>moved=true);
+      a.addEventListener('click',e=>{if(moved)e.preventDefault()});
+    });
+  }
+
+  // Intercept internal links in page content — prevent closing drawer etc.
+  document.querySelectorAll('#page a[href^="#/"]').forEach(a=>{
+    a.addEventListener('click',()=>{
+      if(drawer.classList.contains('open')) closeDrawer();
+      megaMenu.classList.remove('open');
+    });
+  });
+}
+
+// ── GLOBAL INTERACTIONS ───────────────────────────────────
+
+// Cursor
+const cursor = document.getElementById('cursor');
+const cursorDot = document.getElementById('cursorDot');
+let mouseX=0,mouseY=0,curX=0,curY=0;
+document.addEventListener('mousemove',e=>{
+  mouseX=e.clientX;mouseY=e.clientY;
+  cursorDot.style.left=mouseX+'px';cursorDot.style.top=mouseY+'px';
+});
+(function anim(){curX+=(mouseX-curX)*0.12;curY+=(mouseY-curY)*0.12;cursor.style.left=curX+'px';cursor.style.top=curY+'px';requestAnimationFrame(anim)})();
+document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>cursor.classList.add('is-link'));
+  el.addEventListener('mouseleave',()=>cursor.classList.remove('is-link'));
+});
+
+// Scroll header
+const siteHeader = document.getElementById('siteHeader');
+window.addEventListener('scroll',()=>siteHeader.classList.toggle('scrolled',window.scrollY>20),{passive:true});
+
+// Mega menu
+const catalogTrigger = document.getElementById('catalogTrigger');
+const megaMenu = document.getElementById('megaMenu');
+let megaT;
+function openMega(){clearTimeout(megaT);megaMenu.classList.add('open');catalogTrigger.classList.add('active')}
+function closeMega(){megaT=setTimeout(()=>{megaMenu.classList.remove('open');catalogTrigger.classList.remove('active')},120)}
+catalogTrigger.addEventListener('mouseenter',openMega);
+catalogTrigger.addEventListener('mouseleave',closeMega);
+megaMenu.addEventListener('mouseenter',openMega);
+megaMenu.addEventListener('mouseleave',closeMega);
+megaMenu.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',()=>megaMenu.classList.remove('open')));
+
+// Search
+const searchBtn = document.getElementById('searchBtn');
+const searchPanel = document.getElementById('searchPanel');
+const searchInput = document.getElementById('searchInput');
+const searchClose = document.getElementById('searchClose');
+let searchOpen=false;
+function openSearch(){searchOpen=true;searchPanel.classList.add('open');siteHeader.classList.add('search-open');megaMenu.classList.remove('open');setTimeout(()=>searchInput.focus(),300)}
+function closeSearch(){searchOpen=false;searchPanel.classList.remove('open');siteHeader.classList.remove('search-open');searchInput.value=''}
+searchBtn.addEventListener('click',()=>searchOpen?closeSearch():openSearch());
+searchClose.addEventListener('click',closeSearch);
+
+// Drawer
+const burgerBtn = document.getElementById('burgerBtn');
+const drawer = document.getElementById('drawer');
+const drawerOverlay = document.getElementById('drawerOverlay');
+const drawerClose = document.getElementById('drawerClose');
+function openDrawer(){drawer.classList.add('open');drawer.setAttribute('aria-hidden','false');drawerOverlay.classList.add('open');burgerBtn.classList.add('open');document.body.style.overflow='hidden'}
+function closeDrawer(){drawer.classList.remove('open');drawer.setAttribute('aria-hidden','true');drawerOverlay.classList.remove('open');burgerBtn.classList.remove('open');document.body.style.overflow=''}
+burgerBtn.addEventListener('click',()=>drawer.classList.contains('open')?closeDrawer():openDrawer());
+drawerClose.addEventListener('click',closeDrawer);
+drawerOverlay.addEventListener('click',closeDrawer);
+drawer.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',closeDrawer));
+
+// Accordion
+document.querySelectorAll('.acc-item').forEach(item=>{
+  const trigger=item.querySelector('.acc-trigger');
+  const panel=item.querySelector('.acc-panel');
+  trigger.addEventListener('click',()=>{
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.acc-item').forEach(i=>{i.classList.remove('open');i.querySelector('.acc-panel').style.height='0'});
+    if(!isOpen){item.classList.add('open');panel.style.height=panel.scrollHeight+'px'}
+  });
+});
+
+// Escape key
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){closeSearch();closeMega();closeDrawer()}
+});
+
+// ── BOOT ─────────────────────────────────────────────────
+window.addEventListener('hashchange',route);
+window.addEventListener('load',route);
+</script>
+</body>
+</html>

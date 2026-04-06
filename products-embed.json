@@ -1,0 +1,461 @@
+[
+  {
+    "id": 1,
+    "name": "женские пэчворк джинсы со вставками",
+    "price": 22000,
+    "oldPrice": null,
+    "category": "jeans",
+    "image": "img/61eb4fb48052ae2ed00820978e424bdb.jpg",
+    "tags": []
+  },
+  {
+    "id": 2,
+    "name": "женские прямые пэчворк джинсы голубые",
+    "price": 20000,
+    "oldPrice": null,
+    "category": "jeans",
+    "image": "img/1bcf368c10dff36d63b4585073c911a8.jpg",
+    "tags": []
+  },
+  {
+    "id": 3,
+    "name": "женские пэчворк джинсы в полоску бэби блу контраст",
+    "price": 20000,
+    "oldPrice": null,
+    "category": "jeans",
+    "image": "img/6a5eba4b2df0b27a8a296926bddf9da7.jpg",
+    "tags": []
+  },
+  {
+    "id": 4,
+    "name": "женские пэчворк джинсы в полоску чёрный контраст",
+    "price": 20000,
+    "oldPrice": null,
+    "category": "jeans",
+    "image": "img/16ea7280ff825b0e4417dfb35d7584e3.jpg",
+    "tags": []
+  },
+  {
+    "id": 5,
+    "name": "женские широкие пэчворк джинсы черные",
+    "price": 20000,
+    "oldPrice": null,
+    "category": "jeans",
+    "image": "img/1b620cfffc73d262fec50979dc77abe7.jpg",
+    "tags": []
+  },
+  {
+    "id": 6,
+    "name": "женские широкие пэчворк джинсы синие",
+    "price": 20000,
+    "oldPrice": null,
+    "category": "jeans",
+    "image": "img/55441876.png",
+    "tags": []
+  },
+  {
+    "id": 7,
+    "name": "женские прямые пэчворк джинсы синие",
+    "price": 20000,
+    "oldPrice": null,
+    "category": "jeans",
+    "image": "img/7431bc1c4b402c5c218b46010af21fa7.jpg",
+    "tags": []
+  },
+  {
+    "id": 8,
+    "name": "женские прямые пэчворк джинсы черные",
+    "price": 20000,
+    "oldPrice": null,
+    "category": "jeans",
+    "image": "img/ea22d61f1dac03354804868f6669c03b.jpg",
+    "tags": []
+  },
+  {
+    "id": 9,
+    "name": "унисекс пэчворк джинсы с бахромой черные",
+    "price": 21800,
+    "oldPrice": null,
+    "category": "jeans",
+    "image": "img/de0263db523dc4c6afcad226337e89ec.jpg",
+    "tags": []
+  },
+  {
+    "id": 10,
+    "name": "лосины с апсайкл кружевом",
+    "price": 10000,
+    "oldPrice": null,
+    "category": "jeans",
+    "image": "img/92764177.jpg",
+    "tags": []
+  },
+  {
+    "id": 11,
+    "name": "лосины со штрипками",
+    "price": 7000,
+    "oldPrice": null,
+    "category": "jeans",
+    "image": "img/41930730.jpg",
+    "tags": []
+  },
+  {
+    "id": 12,
+    "name": "джинсы клеш",
+    "price": 20000,
+    "oldPrice": null,
+    "category": "jeans",
+    "image": "img/16083115.jpg",
+    "tags": []
+  },
+  {
+    "id": 13,
+    "name": "прямые пэчворк джинсы",
+    "price": 18750,
+    "oldPrice": null,
+    "category": "jeans",
+    "image": "img/IMG_1455.JPG",
+    "tags": []
+  },
+  {
+    "id": 14,
+    "name": "мужские карго джинсы",
+    "price": 6000,
+    "oldPrice": 11000,
+    "category": "jeans",
+    "image": "img/29653652.jpg",
+    "tags": []
+  },
+  {
+    "id": 15,
+    "name": "подарочный сертификат `RISHI",
+    "price": 20000,
+    "oldPrice": null,
+    "category": "gift",
+    "image": "img/b896eb43403434cdee3852b2be31a53b.png",
+    "tags": []
+  },
+  {
+    "id": 16,
+    "name": "подарочный сертификат `RISHI",
+    "price": 5000,
+    "oldPrice": null,
+    "category": "gift",
+    "image": "img/927efd79897503df8b039f29064365e9.png",
+    "tags": []
+  },
+  {
+    "id": 17,
+    "name": "подарочный сертификат `RISHI",
+    "price": 3000,
+    "oldPrice": null,
+    "category": "gift",
+    "image": "img/5a5ea51d4b0c8ff6b9349be8c0b6d498.png",
+    "tags": []
+  },
+  {
+    "id": 18,
+    "name": "подарочный сертификат `RISHI",
+    "price": 10000,
+    "oldPrice": null,
+    "category": "gift",
+    "image": "img/3a2a26ecb585d29d4b716dcfae19375a.png",
+    "tags": []
+  },
+  {
+    "id": 19,
+    "name": "джинсовый корсет `RISHI x BITTE_RUHE",
+    "price": 18000,
+    "oldPrice": null,
+    "category": "corsets",
+    "image": "img/669a245411c6ab780b4e39ecb663bdc8.jpg",
+    "tags": []
+  },
+  {
+    "id": 20,
+    "name": "джинсовый апсайкл корсет c фигурным низом черный",
+    "price": 15000,
+    "oldPrice": 18750,
+    "category": "corsets",
+    "image": "img/25637047.png",
+    "tags": []
+  },
+  {
+    "id": 21,
+    "name": "джинсовый апсайкл корсет c фигурным низом синий",
+    "price": 15000,
+    "oldPrice": 18750,
+    "category": "corsets",
+    "image": "img/45167421.png",
+    "tags": []
+  },
+  {
+    "id": 22,
+    "name": "классический джинсовый корсет черный",
+    "price": 12000,
+    "oldPrice": null,
+    "category": "corsets",
+    "image": "img/85996627.png",
+    "tags": []
+  },
+  {
+    "id": 23,
+    "name": "джинсовый апсайкл корсет с бретелями черный",
+    "price": 6000,
+    "oldPrice": 9000,
+    "category": "corsets",
+    "image": "img/15202719.png",
+    "tags": []
+  },
+  {
+    "id": 24,
+    "name": "джинсовый апсайкл корсет с бретелями красный",
+    "price": 10000,
+    "oldPrice": null,
+    "category": "corsets",
+    "image": "img/40891559.png",
+    "tags": []
+  },
+  {
+    "id": 25,
+    "name": "джинсовый апсайкл корсет с бретелями розовый",
+    "price": 6000,
+    "oldPrice": 9300,
+    "category": "corsets",
+    "image": "img/52250921.png",
+    "tags": []
+  },
+  {
+    "id": 26,
+    "name": "джинсовый апсайкл корсет с бретелями белый",
+    "price": 7000,
+    "oldPrice": 10500,
+    "category": "corsets",
+    "image": "img/64568846.png",
+    "tags": []
+  },
+  {
+    "id": 27,
+    "name": "джинсовый апсайкл корсет с бретелями мультиколор",
+    "price": 6000,
+    "oldPrice": 9300,
+    "category": "corsets",
+    "image": "img/62863336.jpg",
+    "tags": []
+  },
+  {
+    "id": 28,
+    "name": "джинсовый апсайкл корсет с бретелями мультиколор",
+    "price": 4500,
+    "oldPrice": 9300,
+    "category": "corsets",
+    "image": "img/56308553.png",
+    "tags": []
+  },
+  {
+    "id": 29,
+    "name": "джинсовый апсайкл корсет с бретелями змеиный принт",
+    "price": 6000,
+    "oldPrice": 9300,
+    "category": "corsets",
+    "image": "img/88423820.png",
+    "tags": []
+  },
+  {
+    "id": 30,
+    "name": "джинсовый апсайкл корсет с бантами черный",
+    "price": 5000,
+    "oldPrice": 12500,
+    "category": "corsets",
+    "image": "img/47707396.png",
+    "tags": []
+  },
+  {
+    "id": 31,
+    "name": "джинсовый апсайкл корсет с асимметричным верхом синий",
+    "price": 4000,
+    "oldPrice": 8100,
+    "category": "corsets",
+    "image": "img/59027232.png",
+    "tags": []
+  },
+  {
+    "id": 32,
+    "name": "джинсовый апсайкл корсет с асимметричным верхом голубой",
+    "price": 4000,
+    "oldPrice": 8100,
+    "category": "corsets",
+    "image": "img/94967536.png",
+    "tags": []
+  },
+  {
+    "id": 33,
+    "name": "джинсовая куртка с рельефами",
+    "price": 25000,
+    "oldPrice": null,
+    "category": "coats",
+    "image": "img/8b05b7da137da69bcedad9126b19b43b.jpg",
+    "tags": []
+  },
+  {
+    "id": 34,
+    "name": "женская куртка с капюшоном утеплённая",
+    "price": 25000,
+    "oldPrice": null,
+    "category": "coats",
+    "image": "img/7b46bdfbf98af228c4f2bbfc76d35940.jpg",
+    "tags": []
+  },
+  {
+    "id": 35,
+    "name": "платье нецирк черное",
+    "price": 25000,
+    "oldPrice": null,
+    "category": "dresses",
+    "image": "img/19769670.jpg",
+    "tags": []
+  },
+  {
+    "id": 36,
+    "name": "джинсовая куртка со шнуровкой на спине черный",
+    "price": 22500,
+    "oldPrice": null,
+    "category": "coats",
+    "image": "img/99417910.jpg",
+    "tags": []
+  },
+  {
+    "id": 37,
+    "name": "куртка-косуха 'RISHI x Only me",
+    "price": 29980,
+    "oldPrice": null,
+    "category": "coats",
+    "image": "img/30077084.jpg",
+    "tags": []
+  },
+  {
+    "id": 38,
+    "name": "сумка-полумесяц пион",
+    "price": 13000,
+    "oldPrice": null,
+    "category": "accessories",
+    "image": "img/ce87aa176b3c37466fe954646eeb9c73.jpg",
+    "tags": []
+  },
+  {
+    "id": 39,
+    "name": "сумка-полумесяц креольский розовый",
+    "price": 13000,
+    "oldPrice": null,
+    "category": "accessories",
+    "image": "img/01ece6e37a745cf43994349371c0be16.jpg",
+    "tags": []
+  },
+  {
+    "id": 40,
+    "name": "сумка-полумесяц французский серый",
+    "price": 13000,
+    "oldPrice": null,
+    "category": "accessories",
+    "image": "img/f067d94584eb2b502c94a71fadbb472d.jpg",
+    "tags": []
+  },
+  {
+    "id": 41,
+    "name": "сумка-полумесяц асфальт",
+    "price": 13000,
+    "oldPrice": null,
+    "category": "accessories",
+    "image": "img/9f0144f9fd11f8787aada619d016d46a.jpg",
+    "tags": []
+  },
+  {
+    "id": 42,
+    "name": "платье нецирк синее",
+    "price": 25000,
+    "oldPrice": null,
+    "category": "dresses",
+    "image": "img/9a17714de974728b26c2fd015eba9aad.jpg",
+    "tags": []
+  },
+  {
+    "id": 43,
+    "name": "юбка в пол джипси с кружевом",
+    "price": 25000,
+    "oldPrice": null,
+    "category": "skirts",
+    "image": "img/19880214.jpg",
+    "tags": []
+  },
+  {
+    "id": 44,
+    "name": "мини-платье с кружевом",
+    "price": 25000,
+    "oldPrice": null,
+    "category": "dresses",
+    "image": "img/21bb332e807b0700d81f20b052d62cb7.jpg",
+    "tags": []
+  },
+  {
+    "id": 45,
+    "name": "юбка-волна черный",
+    "price": 15000,
+    "oldPrice": null,
+    "category": "skirts",
+    "image": "img/442206bad87aaff335b2f7d95aa3a248.jpg",
+    "tags": []
+  },
+  {
+    "id": 46,
+    "name": "платье волна",
+    "price": 15000,
+    "oldPrice": null,
+    "category": "dresses",
+    "image": "img/76357016.jpg",
+    "tags": []
+  },
+  {
+    "id": 47,
+    "name": "платье-бандо",
+    "price": 20000,
+    "oldPrice": null,
+    "category": "dresses",
+    "image": "img/73861130.jpg",
+    "tags": []
+  },
+  {
+    "id": 48,
+    "name": "юбка нецирк черная",
+    "price": 10000,
+    "oldPrice": 15000,
+    "category": "skirts",
+    "image": "img/92764177.jpg",
+    "tags": []
+  },
+  {
+    "id": 49,
+    "name": "юбка нецирк голубая",
+    "price": 10000,
+    "oldPrice": 15000,
+    "category": "skirts",
+    "image": "img/6b01f52006498a3ae6e9fd9d07498318.jpg",
+    "tags": []
+  },
+  {
+    "id": 50,
+    "name": "юбка-волна голубой",
+    "price": 15000,
+    "oldPrice": null,
+    "category": "skirts",
+    "image": "img/90937138.jpg",
+    "tags": []
+  },
+  {
+    "id": 51,
+    "name": "юбка со шлейфом",
+    "price": 25000,
+    "oldPrice": null,
+    "category": "skirts",
+    "image": "img/72786200.jpg",
+    "tags": []
+  }
+]

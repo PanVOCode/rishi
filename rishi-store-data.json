@@ -1,0 +1,4939 @@
+{
+  "scrapedAt": "2026-04-05T20:52:02.168Z",
+  "store": "RISHI Store",
+  "baseURL": "https://rishi-store.com",
+  "pages": [
+    {
+      "name": "Home",
+      "path": "",
+      "title": "Бренд из Санкт-Петербурга. Дизайнерские джинсы. Вечерние корсеты.",
+      "url": "https://rishi-store.com/",
+      "meta": {
+        "description": "Стильная одежда из переработанных материалов",
+        "keywords": "одежда из переработанных материалов, сдать джинсы, тотал деним, джинсовая одежда, экобренды рф, одежда люкс, русский бренд, риши"
+      },
+      "products": [
+        {
+          "name": "КАТАЛОГ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/"
+        },
+        {
+          "name": "всё",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/all"
+        },
+        {
+          "name": "аксессуары",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/accessories"
+        },
+        {
+          "name": "верхняя одежда",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/coats"
+        },
+        {
+          "name": "джинсы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/jeans"
+        },
+        {
+          "name": "корсеты",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/corsets"
+        },
+        {
+          "name": "лонгсливы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "name": "платья",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/dresses"
+        },
+        {
+          "name": "рубашки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shirts"
+        },
+        {
+          "name": "толстовки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/hoodies"
+        },
+        {
+          "name": "топы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/tops"
+        },
+        {
+          "name": "юбки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/skirts"
+        },
+        {
+          "name": "мужчинам",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/menonly"
+        },
+        {
+          "name": "sale",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/sale"
+        },
+        {
+          "name": "aw 25",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/aw25"
+        },
+        {
+          "name": "´rishi x onlyme",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "name": "´rishi x bitte ruhe",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/bitte"
+        },
+        {
+          "name": "´rishi x не просто вещь",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "name": "сертификат",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/giftcard"
+        },
+        {
+          "name": "КЛИЕНТУ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/customer"
+        },
+        {
+          "name": "КОЛЛЕКЦИИ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shooting"
+        },
+        {
+          "name": "О НАС",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/about"
+        },
+        {
+          "name": "КОНТАКТЫ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/contacts"
+        }
+      ],
+      "categories": [],
+      "collections": [],
+      "links": [
+        {
+          "text": "контакты",
+          "href": "https://rishi-store.com/contacts"
+        },
+        {
+          "text": "о нас",
+          "href": "https://rishi-store.com/about"
+        },
+        {
+          "text": "коллекции",
+          "href": "https://rishi-store.com/shooting"
+        },
+        {
+          "text": "клиенту",
+          "href": "https://rishi-store.com/customer"
+        },
+        {
+          "text": "Каталог",
+          "href": "https://rishi-store.com/#"
+        },
+        {
+          "text": "КАТАЛОГ",
+          "href": "https://rishi-store.com/"
+        },
+        {
+          "text": "всё",
+          "href": "https://rishi-store.com/all"
+        },
+        {
+          "text": "аксессуары",
+          "href": "https://rishi-store.com/accessories"
+        },
+        {
+          "text": "верхняя одежда",
+          "href": "https://rishi-store.com/coats"
+        },
+        {
+          "text": "джинсы",
+          "href": "https://rishi-store.com/jeans"
+        },
+        {
+          "text": "корсеты",
+          "href": "https://rishi-store.com/corsets"
+        },
+        {
+          "text": "лонгсливы",
+          "href": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "text": "платья",
+          "href": "https://rishi-store.com/dresses"
+        },
+        {
+          "text": "рубашки",
+          "href": "https://rishi-store.com/shirts"
+        },
+        {
+          "text": "толстовки",
+          "href": "https://rishi-store.com/hoodies"
+        },
+        {
+          "text": "топы",
+          "href": "https://rishi-store.com/tops"
+        },
+        {
+          "text": "юбки",
+          "href": "https://rishi-store.com/skirts"
+        },
+        {
+          "text": "мужчинам",
+          "href": "https://rishi-store.com/menonly"
+        },
+        {
+          "text": "sale",
+          "href": "https://rishi-store.com/sale"
+        },
+        {
+          "text": "aw 25",
+          "href": "https://rishi-store.com/aw25"
+        },
+        {
+          "text": "´rishi x onlyme",
+          "href": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "text": "´rishi x bitte ruhe",
+          "href": "https://rishi-store.com/bitte"
+        },
+        {
+          "text": "´rishi x не просто вещь",
+          "href": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "text": "сертификат",
+          "href": "https://rishi-store.com/giftcard"
+        },
+        {
+          "text": "новинки",
+          "href": "https://rishi-store.com/new"
+        }
+      ],
+      "headings": [
+        {
+          "level": "H2",
+          "text": "ЗАПИСЬ В ШОУРУМ"
+        }
+      ],
+      "text": "КОНТАКТЫ\nО НАС\nКОЛЛЕКЦИИ\nКЛИЕНТУ\nКАТАЛОГ\nсмотреть\nистория бренда\nИстория бренда начинается с выбора материала и подхода. Мы превратили апсайклинг из хаотичного кастома в систему, где конструкторы, дизайнеры и технологи собирают пэчворк-полотна в продуманные изделия.\n\nДеним — материал вне времени. Он задаёт нашу идею: смотреть на настоящее, работать с тем, что уже существует, и делать это честно.\n\nВ эпоху гринвошинга мы остаёмся прозрачными.\nБез лозунгов — только цель: уменьшать количество лишних вещей, превращая их в одну любимую.\n\nКоманда студии — мастера кроя и производства, создающие технологичную одежду из повторно используемых материалов, переосмысляя исторические формы.\nЗАПИСЬ\nВ ШОУРУМ\nСледите за нами в соцсетях!\nСледите за нами в соцсетях!\n \nПолитиика конфиденциальности\nконтакты\nсдать джинсы\nклиенту\nо нас\nИНФОРМАЦИЯ\nподарочные сертификаты\nмужчинам\nКАТАЛОГ\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nмы в соцсетях:\nподпишетесь на рассылку\nИП Маргарита Резникова, ИНН 781453597482, ОГРНИП 320784700145371"
+    },
+    {
+      "name": "All Products",
+      "path": "/all",
+      "title": "Каталог ´RISHI",
+      "url": "https://rishi-store.com/all",
+      "meta": {
+        "description": "Авторские изделия из вторичного денима",
+        "keywords": "трикотаж распродажа скидки, распродажа женской одежды, каталоги женской одежды распродажа, интернет магазин женской одежды каталог распродажа, скидка 70 процентов, скидка 90 процентов"
+      },
+      "products": [
+        {
+          "name": "КАТАЛОГ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/all"
+        },
+        {
+          "name": "всё",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/all"
+        },
+        {
+          "name": "аксессуары",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/accessories"
+        },
+        {
+          "name": "верхняя одежда",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/coats"
+        },
+        {
+          "name": "джинсы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/jeans"
+        },
+        {
+          "name": "корсеты",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/corsets"
+        },
+        {
+          "name": "лонгсливы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "name": "платья",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/dresses"
+        },
+        {
+          "name": "рубашки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shirts"
+        },
+        {
+          "name": "толстовки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/hoodies"
+        },
+        {
+          "name": "топы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/tops"
+        },
+        {
+          "name": "юбки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/skirts"
+        },
+        {
+          "name": "мужчинам",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/menonly"
+        },
+        {
+          "name": "sale",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/sale"
+        },
+        {
+          "name": "aw 25",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/aw25"
+        },
+        {
+          "name": "´rishi x onlyme",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "name": "´rishi x bitte ruhe",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/bitte"
+        },
+        {
+          "name": "´rishi x не просто вещь",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "name": "сертификат",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/giftcard"
+        },
+        {
+          "name": "КЛИЕНТУ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/customer"
+        },
+        {
+          "name": "КОЛЛЕКЦИИ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shooting"
+        },
+        {
+          "name": "О НАС",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/about"
+        },
+        {
+          "name": "КОНТАКТЫ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/contacts"
+        },
+        {
+          "name": "Артикул:",
+          "price": "р.р.",
+          "image": null,
+          "link": "https://rishi-store.com/all#order"
+        }
+      ],
+      "categories": [],
+      "collections": [],
+      "links": [
+        {
+          "text": "контакты",
+          "href": "https://rishi-store.com/contacts"
+        },
+        {
+          "text": "о нас",
+          "href": "https://rishi-store.com/about"
+        },
+        {
+          "text": "коллекции",
+          "href": "https://rishi-store.com/shooting"
+        },
+        {
+          "text": "клиенту",
+          "href": "https://rishi-store.com/customer"
+        },
+        {
+          "text": "Каталог",
+          "href": "https://rishi-store.com/all#"
+        },
+        {
+          "text": "КАТАЛОГ",
+          "href": "https://rishi-store.com/all"
+        },
+        {
+          "text": "аксессуары",
+          "href": "https://rishi-store.com/accessories"
+        },
+        {
+          "text": "верхняя одежда",
+          "href": "https://rishi-store.com/coats"
+        },
+        {
+          "text": "джинсы",
+          "href": "https://rishi-store.com/jeans"
+        },
+        {
+          "text": "корсеты",
+          "href": "https://rishi-store.com/corsets"
+        },
+        {
+          "text": "лонгсливы",
+          "href": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "text": "платья",
+          "href": "https://rishi-store.com/dresses"
+        },
+        {
+          "text": "рубашки",
+          "href": "https://rishi-store.com/shirts"
+        },
+        {
+          "text": "толстовки",
+          "href": "https://rishi-store.com/hoodies"
+        },
+        {
+          "text": "топы",
+          "href": "https://rishi-store.com/tops"
+        },
+        {
+          "text": "юбки",
+          "href": "https://rishi-store.com/skirts"
+        },
+        {
+          "text": "мужчинам",
+          "href": "https://rishi-store.com/menonly"
+        },
+        {
+          "text": "sale",
+          "href": "https://rishi-store.com/sale"
+        },
+        {
+          "text": "aw 25",
+          "href": "https://rishi-store.com/aw25"
+        },
+        {
+          "text": "´rishi x onlyme",
+          "href": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "text": "´rishi x bitte ruhe",
+          "href": "https://rishi-store.com/bitte"
+        },
+        {
+          "text": "´rishi x не просто вещь",
+          "href": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "text": "сертификат",
+          "href": "https://rishi-store.com/giftcard"
+        },
+        {
+          "text": "новинки",
+          "href": "https://rishi-store.com/new"
+        }
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "ВСЁ"
+        }
+      ],
+      "text": "КОНТАКТЫ\nО НАС\nКОЛЛЕКЦИИ\nКЛИЕНТУ\nКАТАЛОГ\nподарочные сертификаты\nмужчинам\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nКатегории\nновинки\nприобрести подарочный сертификат\nВСЁ\nПолитиика конфиденциальности\nконтакты\nсдать джинсы\nклиенту\nо нас\nИНФОРМАЦИЯ\nподарочные сертификаты\nмужчинам\nКАТАЛОГ\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nмы в соцсетях:\nподпишетесь на рассылку\nИП Маргарита Резникова, ИНН 781453597482, ОГРНИП 320784700145371"
+    },
+    {
+      "name": "Jeans",
+      "path": "/jeans",
+      "title": "Джинсы",
+      "url": "https://rishi-store.com/jeans",
+      "meta": {
+        "description": "Пэчворк джинсы из вторичного денима",
+        "keywords": "трикотаж распродажа скидки, распродажа женской одежды, каталоги женской одежды распродажа, интернет магазин женской одежды каталог распродажа, скидка 70 процентов, скидка 90 процентов"
+      },
+      "products": [
+        {
+          "name": "КАТАЛОГ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/jeans"
+        },
+        {
+          "name": "всё",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/all"
+        },
+        {
+          "name": "аксессуары",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/accessories"
+        },
+        {
+          "name": "верхняя одежда",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/coats"
+        },
+        {
+          "name": "джинсы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/jeans"
+        },
+        {
+          "name": "корсеты",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/corsets"
+        },
+        {
+          "name": "лонгсливы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "name": "платья",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/dresses"
+        },
+        {
+          "name": "рубашки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shirts"
+        },
+        {
+          "name": "толстовки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/hoodies"
+        },
+        {
+          "name": "топы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/tops"
+        },
+        {
+          "name": "юбки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/skirts"
+        },
+        {
+          "name": "мужчинам",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/menonly"
+        },
+        {
+          "name": "sale",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/sale"
+        },
+        {
+          "name": "aw 25",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/aw25"
+        },
+        {
+          "name": "´rishi x onlyme",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "name": "´rishi x bitte ruhe",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/bitte"
+        },
+        {
+          "name": "´rishi x не просто вещь",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "name": "сертификат",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/giftcard"
+        },
+        {
+          "name": "КЛИЕНТУ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/customer"
+        },
+        {
+          "name": "КОЛЛЕКЦИИ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shooting"
+        },
+        {
+          "name": "О НАС",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/about"
+        },
+        {
+          "name": "КОНТАКТЫ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/contacts"
+        },
+        {
+          "name": "Артикул:",
+          "price": "р.р.",
+          "image": null,
+          "link": "https://rishi-store.com/jeans#order"
+        }
+      ],
+      "categories": [],
+      "collections": [],
+      "links": [
+        {
+          "text": "контакты",
+          "href": "https://rishi-store.com/contacts"
+        },
+        {
+          "text": "о нас",
+          "href": "https://rishi-store.com/about"
+        },
+        {
+          "text": "коллекции",
+          "href": "https://rishi-store.com/shooting"
+        },
+        {
+          "text": "клиенту",
+          "href": "https://rishi-store.com/customer"
+        },
+        {
+          "text": "Каталог",
+          "href": "https://rishi-store.com/jeans#"
+        },
+        {
+          "text": "КАТАЛОГ",
+          "href": "https://rishi-store.com/jeans"
+        },
+        {
+          "text": "всё",
+          "href": "https://rishi-store.com/all"
+        },
+        {
+          "text": "аксессуары",
+          "href": "https://rishi-store.com/accessories"
+        },
+        {
+          "text": "верхняя одежда",
+          "href": "https://rishi-store.com/coats"
+        },
+        {
+          "text": "корсеты",
+          "href": "https://rishi-store.com/corsets"
+        },
+        {
+          "text": "лонгсливы",
+          "href": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "text": "платья",
+          "href": "https://rishi-store.com/dresses"
+        },
+        {
+          "text": "рубашки",
+          "href": "https://rishi-store.com/shirts"
+        },
+        {
+          "text": "толстовки",
+          "href": "https://rishi-store.com/hoodies"
+        },
+        {
+          "text": "топы",
+          "href": "https://rishi-store.com/tops"
+        },
+        {
+          "text": "юбки",
+          "href": "https://rishi-store.com/skirts"
+        },
+        {
+          "text": "мужчинам",
+          "href": "https://rishi-store.com/menonly"
+        },
+        {
+          "text": "sale",
+          "href": "https://rishi-store.com/sale"
+        },
+        {
+          "text": "aw 25",
+          "href": "https://rishi-store.com/aw25"
+        },
+        {
+          "text": "´rishi x onlyme",
+          "href": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "text": "´rishi x bitte ruhe",
+          "href": "https://rishi-store.com/bitte"
+        },
+        {
+          "text": "´rishi x не просто вещь",
+          "href": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "text": "сертификат",
+          "href": "https://rishi-store.com/giftcard"
+        },
+        {
+          "text": "новинки",
+          "href": "https://rishi-store.com/new"
+        }
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "ДЖИНСЫ"
+        }
+      ],
+      "text": "КОНТАКТЫ\nО НАС\nКОЛЛЕКЦИИ\nКЛИЕНТУ\nКАТАЛОГ\nподарочные сертификаты\nмужчинам\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nКатегории\nновинки\nприобрести подарочный сертификат\nДЖИНСЫ\nПолитиика конфиденциальности\nконтакты\nсдать джинсы\nклиенту\nо нас\nИНФОРМАЦИЯ\nподарочные сертификаты\nмужчинам\nКАТАЛОГ\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nмы в соцсетях:\nподпишетесь на рассылку\nИП Маргарита Резникова, ИНН 781453597482, ОГРНИП 320784700145371"
+    },
+    {
+      "name": "Dresses",
+      "path": "/dresses",
+      "title": "Платья",
+      "url": "https://rishi-store.com/dresses",
+      "meta": {
+        "description": "Дизайнерские платья из денима и трикотажа",
+        "keywords": "трикотаж распродажа скидки, распродажа женской одежды, каталоги женской одежды распродажа, интернет магазин женской одежды каталог распродажа, скидка 70 процентов, скидка 90 процентов"
+      },
+      "products": [
+        {
+          "name": "КАТАЛОГ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/dresses"
+        },
+        {
+          "name": "всё",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/all"
+        },
+        {
+          "name": "аксессуары",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/accessories"
+        },
+        {
+          "name": "верхняя одежда",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/coats"
+        },
+        {
+          "name": "джинсы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/jeans"
+        },
+        {
+          "name": "корсеты",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/corsets"
+        },
+        {
+          "name": "лонгсливы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "name": "платья",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/dresses"
+        },
+        {
+          "name": "рубашки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shirts"
+        },
+        {
+          "name": "толстовки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/hoodies"
+        },
+        {
+          "name": "топы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/tops"
+        },
+        {
+          "name": "юбки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/skirts"
+        },
+        {
+          "name": "мужчинам",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/menonly"
+        },
+        {
+          "name": "sale",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/sale"
+        },
+        {
+          "name": "aw 25",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/aw25"
+        },
+        {
+          "name": "´rishi x onlyme",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "name": "´rishi x bitte ruhe",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/bitte"
+        },
+        {
+          "name": "´rishi x не просто вещь",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "name": "сертификат",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/giftcard"
+        },
+        {
+          "name": "КЛИЕНТУ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/customer"
+        },
+        {
+          "name": "КОЛЛЕКЦИИ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shooting"
+        },
+        {
+          "name": "О НАС",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/about"
+        },
+        {
+          "name": "КОНТАКТЫ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/contacts"
+        },
+        {
+          "name": "Артикул:",
+          "price": "р.р.",
+          "image": null,
+          "link": "https://rishi-store.com/dresses#order"
+        }
+      ],
+      "categories": [],
+      "collections": [],
+      "links": [
+        {
+          "text": "контакты",
+          "href": "https://rishi-store.com/contacts"
+        },
+        {
+          "text": "о нас",
+          "href": "https://rishi-store.com/about"
+        },
+        {
+          "text": "коллекции",
+          "href": "https://rishi-store.com/shooting"
+        },
+        {
+          "text": "клиенту",
+          "href": "https://rishi-store.com/customer"
+        },
+        {
+          "text": "Каталог",
+          "href": "https://rishi-store.com/dresses#"
+        },
+        {
+          "text": "КАТАЛОГ",
+          "href": "https://rishi-store.com/dresses"
+        },
+        {
+          "text": "всё",
+          "href": "https://rishi-store.com/all"
+        },
+        {
+          "text": "аксессуары",
+          "href": "https://rishi-store.com/accessories"
+        },
+        {
+          "text": "верхняя одежда",
+          "href": "https://rishi-store.com/coats"
+        },
+        {
+          "text": "джинсы",
+          "href": "https://rishi-store.com/jeans"
+        },
+        {
+          "text": "корсеты",
+          "href": "https://rishi-store.com/corsets"
+        },
+        {
+          "text": "лонгсливы",
+          "href": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "text": "рубашки",
+          "href": "https://rishi-store.com/shirts"
+        },
+        {
+          "text": "толстовки",
+          "href": "https://rishi-store.com/hoodies"
+        },
+        {
+          "text": "топы",
+          "href": "https://rishi-store.com/tops"
+        },
+        {
+          "text": "юбки",
+          "href": "https://rishi-store.com/skirts"
+        },
+        {
+          "text": "мужчинам",
+          "href": "https://rishi-store.com/menonly"
+        },
+        {
+          "text": "sale",
+          "href": "https://rishi-store.com/sale"
+        },
+        {
+          "text": "aw 25",
+          "href": "https://rishi-store.com/aw25"
+        },
+        {
+          "text": "´rishi x onlyme",
+          "href": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "text": "´rishi x bitte ruhe",
+          "href": "https://rishi-store.com/bitte"
+        },
+        {
+          "text": "´rishi x не просто вещь",
+          "href": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "text": "сертификат",
+          "href": "https://rishi-store.com/giftcard"
+        },
+        {
+          "text": "новинки",
+          "href": "https://rishi-store.com/new"
+        }
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "ПЛАТЬЯ"
+        }
+      ],
+      "text": "КОНТАКТЫ\nО НАС\nКОЛЛЕКЦИИ\nКЛИЕНТУ\nКАТАЛОГ\nПЛАТЬЯ\n \n \n \n \n \n \nПолитиика конфиденциальности\nконтакты\nсдать джинсы\nклиенту\nо нас\nИНФОРМАЦИЯ\nподарочные сертификаты\nмужчинам\nКАТАЛОГ\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nмы в соцсетях:\nподпишетесь на рассылку\nИП Маргарита Резникова, ИНН 781453597482, ОГРНИП 320784700145371\nПОДПИСАТЬСЯ"
+    },
+    {
+      "name": "Shirts",
+      "path": "/shirts",
+      "title": "Рубашки",
+      "url": "https://rishi-store.com/shirts",
+      "meta": {
+        "description": "Рубашки из хлопка и крапивы",
+        "keywords": "трикотаж распродажа скидки, распродажа женской одежды, каталоги женской одежды распродажа, интернет магазин женской одежды каталог распродажа, скидка 70 процентов, скидка 90 процентов"
+      },
+      "products": [
+        {
+          "name": "КАТАЛОГ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shirts"
+        },
+        {
+          "name": "всё",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/all"
+        },
+        {
+          "name": "аксессуары",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/accessories"
+        },
+        {
+          "name": "верхняя одежда",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/coats"
+        },
+        {
+          "name": "джинсы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/jeans"
+        },
+        {
+          "name": "корсеты",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/corsets"
+        },
+        {
+          "name": "лонгсливы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "name": "платья",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/dresses"
+        },
+        {
+          "name": "рубашки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shirts"
+        },
+        {
+          "name": "толстовки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/hoodies"
+        },
+        {
+          "name": "топы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/tops"
+        },
+        {
+          "name": "юбки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/skirts"
+        },
+        {
+          "name": "мужчинам",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/menonly"
+        },
+        {
+          "name": "sale",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/sale"
+        },
+        {
+          "name": "aw 25",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/aw25"
+        },
+        {
+          "name": "´rishi x onlyme",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "name": "´rishi x bitte ruhe",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/bitte"
+        },
+        {
+          "name": "´rishi x не просто вещь",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "name": "сертификат",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/giftcard"
+        },
+        {
+          "name": "КЛИЕНТУ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/customer"
+        },
+        {
+          "name": "КОЛЛЕКЦИИ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shooting"
+        },
+        {
+          "name": "О НАС",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/about"
+        },
+        {
+          "name": "КОНТАКТЫ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/contacts"
+        },
+        {
+          "name": "Артикул:",
+          "price": "р.р.",
+          "image": null,
+          "link": "https://rishi-store.com/shirts#order"
+        }
+      ],
+      "categories": [],
+      "collections": [],
+      "links": [
+        {
+          "text": "контакты",
+          "href": "https://rishi-store.com/contacts"
+        },
+        {
+          "text": "о нас",
+          "href": "https://rishi-store.com/about"
+        },
+        {
+          "text": "коллекции",
+          "href": "https://rishi-store.com/shooting"
+        },
+        {
+          "text": "клиенту",
+          "href": "https://rishi-store.com/customer"
+        },
+        {
+          "text": "Каталог",
+          "href": "https://rishi-store.com/shirts#"
+        },
+        {
+          "text": "КАТАЛОГ",
+          "href": "https://rishi-store.com/shirts"
+        },
+        {
+          "text": "всё",
+          "href": "https://rishi-store.com/all"
+        },
+        {
+          "text": "аксессуары",
+          "href": "https://rishi-store.com/accessories"
+        },
+        {
+          "text": "верхняя одежда",
+          "href": "https://rishi-store.com/coats"
+        },
+        {
+          "text": "джинсы",
+          "href": "https://rishi-store.com/jeans"
+        },
+        {
+          "text": "корсеты",
+          "href": "https://rishi-store.com/corsets"
+        },
+        {
+          "text": "лонгсливы",
+          "href": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "text": "платья",
+          "href": "https://rishi-store.com/dresses"
+        },
+        {
+          "text": "толстовки",
+          "href": "https://rishi-store.com/hoodies"
+        },
+        {
+          "text": "топы",
+          "href": "https://rishi-store.com/tops"
+        },
+        {
+          "text": "юбки",
+          "href": "https://rishi-store.com/skirts"
+        },
+        {
+          "text": "мужчинам",
+          "href": "https://rishi-store.com/menonly"
+        },
+        {
+          "text": "sale",
+          "href": "https://rishi-store.com/sale"
+        },
+        {
+          "text": "aw 25",
+          "href": "https://rishi-store.com/aw25"
+        },
+        {
+          "text": "´rishi x onlyme",
+          "href": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "text": "´rishi x bitte ruhe",
+          "href": "https://rishi-store.com/bitte"
+        },
+        {
+          "text": "´rishi x не просто вещь",
+          "href": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "text": "сертификат",
+          "href": "https://rishi-store.com/giftcard"
+        },
+        {
+          "text": "новинки",
+          "href": "https://rishi-store.com/new"
+        }
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "РУБАШКИ"
+        }
+      ],
+      "text": "КОНТАКТЫ\nО НАС\nКОЛЛЕКЦИИ\nКЛИЕНТУ\nКАТАЛОГ\nподарочные сертификаты\nмужчинам\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nКатегории\nновинки\nприобрести подарочный сертификат\nРУБАШКИ\nПолитиика конфиденциальности\nконтакты\nсдать джинсы\nклиенту\nо нас\nИНФОРМАЦИЯ\nподарочные сертификаты\nмужчинам\nКАТАЛОГ\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nмы в соцсетях:\nподпишетесь на рассылку\nИП Маргарита Резникова, ИНН 781453597482, ОГРНИП 320784700145371"
+    },
+    {
+      "name": "Tops",
+      "path": "/tops",
+      "title": "Топы из денима",
+      "url": "https://rishi-store.com/tops",
+      "meta": {
+        "description": "Авторские топы и боди",
+        "keywords": "трикотаж распродажа скидки, распродажа женской одежды, каталоги женской одежды распродажа, интернет магазин женской одежды каталог распродажа, скидка 70 процентов, скидка 90 процентов"
+      },
+      "products": [
+        {
+          "name": "КАТАЛОГ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/tops"
+        },
+        {
+          "name": "всё",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/all"
+        },
+        {
+          "name": "аксессуары",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/accessories"
+        },
+        {
+          "name": "верхняя одежда",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/coats"
+        },
+        {
+          "name": "джинсы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/jeans"
+        },
+        {
+          "name": "корсеты",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/corsets"
+        },
+        {
+          "name": "лонгсливы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "name": "платья",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/dresses"
+        },
+        {
+          "name": "рубашки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shirts"
+        },
+        {
+          "name": "толстовки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/hoodies"
+        },
+        {
+          "name": "топы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/tops"
+        },
+        {
+          "name": "юбки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/skirts"
+        },
+        {
+          "name": "мужчинам",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/menonly"
+        },
+        {
+          "name": "sale",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/sale"
+        },
+        {
+          "name": "aw 25",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/aw25"
+        },
+        {
+          "name": "´rishi x onlyme",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "name": "´rishi x bitte ruhe",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/bitte"
+        },
+        {
+          "name": "´rishi x не просто вещь",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "name": "сертификат",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/giftcard"
+        },
+        {
+          "name": "КЛИЕНТУ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/customer"
+        },
+        {
+          "name": "КОЛЛЕКЦИИ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shooting"
+        },
+        {
+          "name": "О НАС",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/about"
+        },
+        {
+          "name": "КОНТАКТЫ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/contacts"
+        },
+        {
+          "name": "Артикул:",
+          "price": "р.р.",
+          "image": null,
+          "link": "https://rishi-store.com/tops#order"
+        }
+      ],
+      "categories": [],
+      "collections": [],
+      "links": [
+        {
+          "text": "контакты",
+          "href": "https://rishi-store.com/contacts"
+        },
+        {
+          "text": "о нас",
+          "href": "https://rishi-store.com/about"
+        },
+        {
+          "text": "коллекции",
+          "href": "https://rishi-store.com/shooting"
+        },
+        {
+          "text": "клиенту",
+          "href": "https://rishi-store.com/customer"
+        },
+        {
+          "text": "Каталог",
+          "href": "https://rishi-store.com/tops#"
+        },
+        {
+          "text": "КАТАЛОГ",
+          "href": "https://rishi-store.com/tops"
+        },
+        {
+          "text": "всё",
+          "href": "https://rishi-store.com/all"
+        },
+        {
+          "text": "аксессуары",
+          "href": "https://rishi-store.com/accessories"
+        },
+        {
+          "text": "верхняя одежда",
+          "href": "https://rishi-store.com/coats"
+        },
+        {
+          "text": "джинсы",
+          "href": "https://rishi-store.com/jeans"
+        },
+        {
+          "text": "корсеты",
+          "href": "https://rishi-store.com/corsets"
+        },
+        {
+          "text": "лонгсливы",
+          "href": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "text": "платья",
+          "href": "https://rishi-store.com/dresses"
+        },
+        {
+          "text": "рубашки",
+          "href": "https://rishi-store.com/shirts"
+        },
+        {
+          "text": "толстовки",
+          "href": "https://rishi-store.com/hoodies"
+        },
+        {
+          "text": "юбки",
+          "href": "https://rishi-store.com/skirts"
+        },
+        {
+          "text": "мужчинам",
+          "href": "https://rishi-store.com/menonly"
+        },
+        {
+          "text": "sale",
+          "href": "https://rishi-store.com/sale"
+        },
+        {
+          "text": "aw 25",
+          "href": "https://rishi-store.com/aw25"
+        },
+        {
+          "text": "´rishi x onlyme",
+          "href": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "text": "´rishi x bitte ruhe",
+          "href": "https://rishi-store.com/bitte"
+        },
+        {
+          "text": "´rishi x не просто вещь",
+          "href": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "text": "сертификат",
+          "href": "https://rishi-store.com/giftcard"
+        },
+        {
+          "text": "новинки",
+          "href": "https://rishi-store.com/new"
+        }
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "ТОПЫ"
+        }
+      ],
+      "text": "КОНТАКТЫ\nО НАС\nКОЛЛЕКЦИИ\nКЛИЕНТУ\nКАТАЛОГ\nТОПЫ\nПолитиика конфиденциальности\nконтакты\nсдать джинсы\nклиенту\nо нас\nИНФОРМАЦИЯ\nподарочные сертификаты\nмужчинам\nКАТАЛОГ\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nмы в соцсетях:\nподпишетесь на рассылку\nИП Маргарита Резникова, ИНН 781453597482, ОГРНИП 320784700145371\nПОДПИСАТЬСЯ"
+    },
+    {
+      "name": "Hoodies",
+      "path": "/hoodies",
+      "title": "Толстовки",
+      "url": "https://rishi-store.com/hoodies",
+      "meta": {
+        "description": "Уникальные джинсовые зип-худи и толстовки",
+        "keywords": "трикотаж распродажа скидки, распродажа женской одежды, каталоги женской одежды распродажа, интернет магазин женской одежды каталог распродажа, скидка 70 процентов, скидка 90 процентов"
+      },
+      "products": [
+        {
+          "name": "КАТАЛОГ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/hoodies"
+        },
+        {
+          "name": "всё",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/all"
+        },
+        {
+          "name": "аксессуары",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/accessories"
+        },
+        {
+          "name": "верхняя одежда",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/coats"
+        },
+        {
+          "name": "джинсы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/jeans"
+        },
+        {
+          "name": "корсеты",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/corsets"
+        },
+        {
+          "name": "лонгсливы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "name": "платья",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/dresses"
+        },
+        {
+          "name": "рубашки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shirts"
+        },
+        {
+          "name": "толстовки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/hoodies"
+        },
+        {
+          "name": "топы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/tops"
+        },
+        {
+          "name": "юбки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/skirts"
+        },
+        {
+          "name": "мужчинам",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/menonly"
+        },
+        {
+          "name": "sale",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/sale"
+        },
+        {
+          "name": "aw 25",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/aw25"
+        },
+        {
+          "name": "´rishi x onlyme",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "name": "´rishi x bitte ruhe",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/bitte"
+        },
+        {
+          "name": "´rishi x не просто вещь",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "name": "сертификат",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/giftcard"
+        },
+        {
+          "name": "КЛИЕНТУ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/customer"
+        },
+        {
+          "name": "КОЛЛЕКЦИИ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shooting"
+        },
+        {
+          "name": "О НАС",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/about"
+        },
+        {
+          "name": "КОНТАКТЫ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/contacts"
+        },
+        {
+          "name": "Артикул:",
+          "price": "р.р.",
+          "image": null,
+          "link": "https://rishi-store.com/hoodies#order"
+        }
+      ],
+      "categories": [],
+      "collections": [],
+      "links": [
+        {
+          "text": "контакты",
+          "href": "https://rishi-store.com/contacts"
+        },
+        {
+          "text": "о нас",
+          "href": "https://rishi-store.com/about"
+        },
+        {
+          "text": "коллекции",
+          "href": "https://rishi-store.com/shooting"
+        },
+        {
+          "text": "клиенту",
+          "href": "https://rishi-store.com/customer"
+        },
+        {
+          "text": "Каталог",
+          "href": "https://rishi-store.com/hoodies#"
+        },
+        {
+          "text": "КАТАЛОГ",
+          "href": "https://rishi-store.com/hoodies"
+        },
+        {
+          "text": "всё",
+          "href": "https://rishi-store.com/all"
+        },
+        {
+          "text": "аксессуары",
+          "href": "https://rishi-store.com/accessories"
+        },
+        {
+          "text": "верхняя одежда",
+          "href": "https://rishi-store.com/coats"
+        },
+        {
+          "text": "джинсы",
+          "href": "https://rishi-store.com/jeans"
+        },
+        {
+          "text": "корсеты",
+          "href": "https://rishi-store.com/corsets"
+        },
+        {
+          "text": "лонгсливы",
+          "href": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "text": "платья",
+          "href": "https://rishi-store.com/dresses"
+        },
+        {
+          "text": "рубашки",
+          "href": "https://rishi-store.com/shirts"
+        },
+        {
+          "text": "топы",
+          "href": "https://rishi-store.com/tops"
+        },
+        {
+          "text": "юбки",
+          "href": "https://rishi-store.com/skirts"
+        },
+        {
+          "text": "мужчинам",
+          "href": "https://rishi-store.com/menonly"
+        },
+        {
+          "text": "sale",
+          "href": "https://rishi-store.com/sale"
+        },
+        {
+          "text": "aw 25",
+          "href": "https://rishi-store.com/aw25"
+        },
+        {
+          "text": "´rishi x onlyme",
+          "href": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "text": "´rishi x bitte ruhe",
+          "href": "https://rishi-store.com/bitte"
+        },
+        {
+          "text": "´rishi x не просто вещь",
+          "href": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "text": "сертификат",
+          "href": "https://rishi-store.com/giftcard"
+        },
+        {
+          "text": "новинки",
+          "href": "https://rishi-store.com/new"
+        }
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "ТОЛСТОВКИ"
+        }
+      ],
+      "text": "КОНТАКТЫ\nО НАС\nКОЛЛЕКЦИИ\nКЛИЕНТУ\nКАТАЛОГ\nподарочные сертификаты\nмужчинам\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nКатегории\nновинки\nприобрести подарочный сертификат\nТОЛСТОВКИ\nПолитиика конфиденциальности\nконтакты\nсдать джинсы\nклиенту\nо нас\nИНФОРМАЦИЯ\nподарочные сертификаты\nмужчинам\nКАТАЛОГ\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nмы в соцсетях:\nподпишетесь на рассылку\nИП Маргарита Резникова, ИНН 781453597482, ОГРНИП 320784700145371\nПОДПИСАТЬСЯ"
+    },
+    {
+      "name": "Longsleeves",
+      "path": "/longsleaves",
+      "title": "Лонгсливы ´RISHI",
+      "url": "https://rishi-store.com/longsleaves",
+      "meta": {
+        "description": "Трикотажные лонгсливы с декоративными элементами",
+        "keywords": "трикотаж распродажа скидки, распродажа женской одежды, каталоги женской одежды распродажа, интернет магазин женской одежды каталог распродажа, скидка 70 процентов, скидка 90 процентов"
+      },
+      "products": [
+        {
+          "name": "КАТАЛОГ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "name": "всё",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/all"
+        },
+        {
+          "name": "аксессуары",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/accessories"
+        },
+        {
+          "name": "верхняя одежда",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/coats"
+        },
+        {
+          "name": "джинсы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/jeans"
+        },
+        {
+          "name": "корсеты",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/corsets"
+        },
+        {
+          "name": "лонгсливы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "name": "платья",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/dresses"
+        },
+        {
+          "name": "рубашки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shirts"
+        },
+        {
+          "name": "толстовки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/hoodies"
+        },
+        {
+          "name": "топы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/tops"
+        },
+        {
+          "name": "юбки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/skirts"
+        },
+        {
+          "name": "мужчинам",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/menonly"
+        },
+        {
+          "name": "sale",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/sale"
+        },
+        {
+          "name": "aw 25",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/aw25"
+        },
+        {
+          "name": "´rishi x onlyme",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "name": "´rishi x bitte ruhe",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/bitte"
+        },
+        {
+          "name": "´rishi x не просто вещь",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "name": "сертификат",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/giftcard"
+        },
+        {
+          "name": "КЛИЕНТУ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/customer"
+        },
+        {
+          "name": "КОЛЛЕКЦИИ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shooting"
+        },
+        {
+          "name": "О НАС",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/about"
+        },
+        {
+          "name": "КОНТАКТЫ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/contacts"
+        },
+        {
+          "name": "Артикул:",
+          "price": "р.р.",
+          "image": null,
+          "link": "https://rishi-store.com/longsleaves#order"
+        }
+      ],
+      "categories": [],
+      "collections": [],
+      "links": [
+        {
+          "text": "контакты",
+          "href": "https://rishi-store.com/contacts"
+        },
+        {
+          "text": "о нас",
+          "href": "https://rishi-store.com/about"
+        },
+        {
+          "text": "коллекции",
+          "href": "https://rishi-store.com/shooting"
+        },
+        {
+          "text": "клиенту",
+          "href": "https://rishi-store.com/customer"
+        },
+        {
+          "text": "Каталог",
+          "href": "https://rishi-store.com/longsleaves#"
+        },
+        {
+          "text": "КАТАЛОГ",
+          "href": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "text": "всё",
+          "href": "https://rishi-store.com/all"
+        },
+        {
+          "text": "аксессуары",
+          "href": "https://rishi-store.com/accessories"
+        },
+        {
+          "text": "верхняя одежда",
+          "href": "https://rishi-store.com/coats"
+        },
+        {
+          "text": "джинсы",
+          "href": "https://rishi-store.com/jeans"
+        },
+        {
+          "text": "корсеты",
+          "href": "https://rishi-store.com/corsets"
+        },
+        {
+          "text": "платья",
+          "href": "https://rishi-store.com/dresses"
+        },
+        {
+          "text": "рубашки",
+          "href": "https://rishi-store.com/shirts"
+        },
+        {
+          "text": "толстовки",
+          "href": "https://rishi-store.com/hoodies"
+        },
+        {
+          "text": "топы",
+          "href": "https://rishi-store.com/tops"
+        },
+        {
+          "text": "юбки",
+          "href": "https://rishi-store.com/skirts"
+        },
+        {
+          "text": "мужчинам",
+          "href": "https://rishi-store.com/menonly"
+        },
+        {
+          "text": "sale",
+          "href": "https://rishi-store.com/sale"
+        },
+        {
+          "text": "aw 25",
+          "href": "https://rishi-store.com/aw25"
+        },
+        {
+          "text": "´rishi x onlyme",
+          "href": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "text": "´rishi x bitte ruhe",
+          "href": "https://rishi-store.com/bitte"
+        },
+        {
+          "text": "´rishi x не просто вещь",
+          "href": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "text": "сертификат",
+          "href": "https://rishi-store.com/giftcard"
+        },
+        {
+          "text": "новинки",
+          "href": "https://rishi-store.com/new"
+        }
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "ЛОНГСЛИВЫ"
+        }
+      ],
+      "text": "КОНТАКТЫ\nО НАС\nКОЛЛЕКЦИИ\nКЛИЕНТУ\nКАТАЛОГ\nподарочные сертификаты\nмужчинам\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nКатегории\nновинки\nприобрести подарочный сертификат\nЛОНГСЛИВЫ\nПолитиика конфиденциальности\nконтакты\nсдать джинсы\nклиенту\nо нас\nИНФОРМАЦИЯ\nподарочные сертификаты\nмужчинам\nКАТАЛОГ\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nмы в соцсетях:\nподпишетесь на рассылку\nИП Маргарита Резникова, ИНН 781453597482, ОГРНИП 320784700145371\nПОДПИСАТЬСЯ"
+    },
+    {
+      "name": "Corsets",
+      "path": "/corsets",
+      "title": "Корсеты",
+      "url": "https://rishi-store.com/corsets",
+      "meta": {
+        "description": "Джинсовые корсеты",
+        "keywords": "трикотаж магазин одежды, одежда из бамбука,длинное трикотажное платье, легкое платье черное, тонкий лонгслив, трикотажная одежда"
+      },
+      "products": [
+        {
+          "name": "КАТАЛОГ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/corsets"
+        },
+        {
+          "name": "всё",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/all"
+        },
+        {
+          "name": "аксессуары",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/accessories"
+        },
+        {
+          "name": "верхняя одежда",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/coats"
+        },
+        {
+          "name": "джинсы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/jeans"
+        },
+        {
+          "name": "корсеты",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/corsets"
+        },
+        {
+          "name": "лонгсливы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "name": "платья",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/dresses"
+        },
+        {
+          "name": "рубашки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shirts"
+        },
+        {
+          "name": "толстовки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/hoodies"
+        },
+        {
+          "name": "топы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/tops"
+        },
+        {
+          "name": "юбки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/skirts"
+        },
+        {
+          "name": "мужчинам",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/menonly"
+        },
+        {
+          "name": "sale",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/sale"
+        },
+        {
+          "name": "aw 25",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/aw25"
+        },
+        {
+          "name": "´rishi x onlyme",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "name": "´rishi x bitte ruhe",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/bitte"
+        },
+        {
+          "name": "´rishi x не просто вещь",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "name": "сертификат",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/giftcard"
+        },
+        {
+          "name": "КЛИЕНТУ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/customer"
+        },
+        {
+          "name": "КОЛЛЕКЦИИ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shooting"
+        },
+        {
+          "name": "О НАС",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/about"
+        },
+        {
+          "name": "КОНТАКТЫ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/contacts"
+        }
+      ],
+      "categories": [],
+      "collections": [],
+      "links": [
+        {
+          "text": "контакты",
+          "href": "https://rishi-store.com/contacts"
+        },
+        {
+          "text": "о нас",
+          "href": "https://rishi-store.com/about"
+        },
+        {
+          "text": "коллекции",
+          "href": "https://rishi-store.com/shooting"
+        },
+        {
+          "text": "клиенту",
+          "href": "https://rishi-store.com/customer"
+        },
+        {
+          "text": "Каталог",
+          "href": "https://rishi-store.com/corsets#"
+        },
+        {
+          "text": "КАТАЛОГ",
+          "href": "https://rishi-store.com/corsets"
+        },
+        {
+          "text": "всё",
+          "href": "https://rishi-store.com/all"
+        },
+        {
+          "text": "аксессуары",
+          "href": "https://rishi-store.com/accessories"
+        },
+        {
+          "text": "верхняя одежда",
+          "href": "https://rishi-store.com/coats"
+        },
+        {
+          "text": "джинсы",
+          "href": "https://rishi-store.com/jeans"
+        },
+        {
+          "text": "лонгсливы",
+          "href": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "text": "платья",
+          "href": "https://rishi-store.com/dresses"
+        },
+        {
+          "text": "рубашки",
+          "href": "https://rishi-store.com/shirts"
+        },
+        {
+          "text": "толстовки",
+          "href": "https://rishi-store.com/hoodies"
+        },
+        {
+          "text": "топы",
+          "href": "https://rishi-store.com/tops"
+        },
+        {
+          "text": "юбки",
+          "href": "https://rishi-store.com/skirts"
+        },
+        {
+          "text": "мужчинам",
+          "href": "https://rishi-store.com/menonly"
+        },
+        {
+          "text": "sale",
+          "href": "https://rishi-store.com/sale"
+        },
+        {
+          "text": "aw 25",
+          "href": "https://rishi-store.com/aw25"
+        },
+        {
+          "text": "´rishi x onlyme",
+          "href": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "text": "´rishi x bitte ruhe",
+          "href": "https://rishi-store.com/bitte"
+        },
+        {
+          "text": "´rishi x не просто вещь",
+          "href": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "text": "сертификат",
+          "href": "https://rishi-store.com/giftcard"
+        },
+        {
+          "text": "новинки",
+          "href": "https://rishi-store.com/new"
+        }
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "КОРСЕТЫ"
+        }
+      ],
+      "text": "КОНТАКТЫ\nО НАС\nКОЛЛЕКЦИИ\nКЛИЕНТУ\nКАТАЛОГ\nподарочные сертификаты\nмужчинам\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nКатегории\nновинки\nприобрести подарочный сертификат\nКОРСЕТЫ\nПолитиика конфиденциальности\nконтакты\nсдать джинсы\nклиенту\nо нас\nИНФОРМАЦИЯ\nподарочные сертификаты\nмужчинам\nКАТАЛОГ\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nмы в соцсетях:\nподпишетесь на рассылку\nИП Маргарита Резникова, ИНН 781453597482, ОГРНИП 320784700145371"
+    },
+    {
+      "name": "Skirts",
+      "path": "/skirts",
+      "title": "Юбки из денима",
+      "url": "https://rishi-store.com/skirts",
+      "meta": {
+        "description": "Необычные юбки из кусочков денима. Джинсовые юбки",
+        "keywords": "трикотаж распродажа скидки, распродажа женской одежды, каталоги женской одежды распродажа, интернет магазин женской одежды каталог распродажа, скидка 70 процентов, скидка 90 процентов"
+      },
+      "products": [
+        {
+          "name": "КАТАЛОГ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/skirts"
+        },
+        {
+          "name": "всё",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/all"
+        },
+        {
+          "name": "аксессуары",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/accessories"
+        },
+        {
+          "name": "верхняя одежда",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/coats"
+        },
+        {
+          "name": "джинсы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/jeans"
+        },
+        {
+          "name": "корсеты",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/corsets"
+        },
+        {
+          "name": "лонгсливы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "name": "платья",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/dresses"
+        },
+        {
+          "name": "рубашки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shirts"
+        },
+        {
+          "name": "толстовки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/hoodies"
+        },
+        {
+          "name": "топы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/tops"
+        },
+        {
+          "name": "юбки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/skirts"
+        },
+        {
+          "name": "мужчинам",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/menonly"
+        },
+        {
+          "name": "sale",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/sale"
+        },
+        {
+          "name": "aw 25",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/aw25"
+        },
+        {
+          "name": "´rishi x onlyme",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "name": "´rishi x bitte ruhe",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/bitte"
+        },
+        {
+          "name": "´rishi x не просто вещь",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "name": "сертификат",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/giftcard"
+        },
+        {
+          "name": "КЛИЕНТУ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/customer"
+        },
+        {
+          "name": "КОЛЛЕКЦИИ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shooting"
+        },
+        {
+          "name": "О НАС",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/about"
+        },
+        {
+          "name": "КОНТАКТЫ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/contacts"
+        }
+      ],
+      "categories": [],
+      "collections": [],
+      "links": [
+        {
+          "text": "контакты",
+          "href": "https://rishi-store.com/contacts"
+        },
+        {
+          "text": "о нас",
+          "href": "https://rishi-store.com/about"
+        },
+        {
+          "text": "коллекции",
+          "href": "https://rishi-store.com/shooting"
+        },
+        {
+          "text": "клиенту",
+          "href": "https://rishi-store.com/customer"
+        },
+        {
+          "text": "Каталог",
+          "href": "https://rishi-store.com/skirts#"
+        },
+        {
+          "text": "КАТАЛОГ",
+          "href": "https://rishi-store.com/skirts"
+        },
+        {
+          "text": "всё",
+          "href": "https://rishi-store.com/all"
+        },
+        {
+          "text": "аксессуары",
+          "href": "https://rishi-store.com/accessories"
+        },
+        {
+          "text": "верхняя одежда",
+          "href": "https://rishi-store.com/coats"
+        },
+        {
+          "text": "джинсы",
+          "href": "https://rishi-store.com/jeans"
+        },
+        {
+          "text": "корсеты",
+          "href": "https://rishi-store.com/corsets"
+        },
+        {
+          "text": "лонгсливы",
+          "href": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "text": "платья",
+          "href": "https://rishi-store.com/dresses"
+        },
+        {
+          "text": "рубашки",
+          "href": "https://rishi-store.com/shirts"
+        },
+        {
+          "text": "толстовки",
+          "href": "https://rishi-store.com/hoodies"
+        },
+        {
+          "text": "топы",
+          "href": "https://rishi-store.com/tops"
+        },
+        {
+          "text": "мужчинам",
+          "href": "https://rishi-store.com/menonly"
+        },
+        {
+          "text": "sale",
+          "href": "https://rishi-store.com/sale"
+        },
+        {
+          "text": "aw 25",
+          "href": "https://rishi-store.com/aw25"
+        },
+        {
+          "text": "´rishi x onlyme",
+          "href": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "text": "´rishi x bitte ruhe",
+          "href": "https://rishi-store.com/bitte"
+        },
+        {
+          "text": "´rishi x не просто вещь",
+          "href": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "text": "сертификат",
+          "href": "https://rishi-store.com/giftcard"
+        },
+        {
+          "text": "новинки",
+          "href": "https://rishi-store.com/new"
+        }
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "ЮБКИ"
+        }
+      ],
+      "text": "КОНТАКТЫ\nО НАС\nКОЛЛЕКЦИИ\nКЛИЕНТУ\nКАТАЛОГ\nподарочные сертификаты\nмужчинам\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nКатегории\nновинки\nприобрести подарочный сертификат\nЮБКИ\nПолитиика конфиденциальности\nконтакты\nсдать джинсы\nклиенту\nо нас\nИНФОРМАЦИЯ\nподарочные сертификаты\nмужчинам\nКАТАЛОГ\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nмы в соцсетях:\nподпишетесь на рассылку\nИП Маргарита Резникова, ИНН 781453597482, ОГРНИП 320784700145371"
+    },
+    {
+      "name": "Accessories",
+      "path": "/accessories",
+      "title": "Аксессуары",
+      "url": "https://rishi-store.com/accessories",
+      "meta": {
+        "description": "Уникальные аксессуары из денима",
+        "keywords": "трикотаж магазин одежды, одежда из бамбука,длинное трикотажное платье, легкое платье черное, тонкий лонгслив, трикотажная одежда"
+      },
+      "products": [
+        {
+          "name": "КАТАЛОГ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/accessories"
+        },
+        {
+          "name": "всё",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/all"
+        },
+        {
+          "name": "аксессуары",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/accessories"
+        },
+        {
+          "name": "верхняя одежда",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/coats"
+        },
+        {
+          "name": "джинсы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/jeans"
+        },
+        {
+          "name": "корсеты",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/corsets"
+        },
+        {
+          "name": "лонгсливы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "name": "платья",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/dresses"
+        },
+        {
+          "name": "рубашки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shirts"
+        },
+        {
+          "name": "толстовки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/hoodies"
+        },
+        {
+          "name": "топы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/tops"
+        },
+        {
+          "name": "юбки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/skirts"
+        },
+        {
+          "name": "мужчинам",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/menonly"
+        },
+        {
+          "name": "sale",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/sale"
+        },
+        {
+          "name": "aw 25",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/aw25"
+        },
+        {
+          "name": "´rishi x onlyme",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "name": "´rishi x bitte ruhe",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/bitte"
+        },
+        {
+          "name": "´rishi x не просто вещь",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "name": "сертификат",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/giftcard"
+        },
+        {
+          "name": "КЛИЕНТУ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/customer"
+        },
+        {
+          "name": "КОЛЛЕКЦИИ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shooting"
+        },
+        {
+          "name": "О НАС",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/about"
+        },
+        {
+          "name": "КОНТАКТЫ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/contacts"
+        }
+      ],
+      "categories": [],
+      "collections": [],
+      "links": [
+        {
+          "text": "контакты",
+          "href": "https://rishi-store.com/contacts"
+        },
+        {
+          "text": "о нас",
+          "href": "https://rishi-store.com/about"
+        },
+        {
+          "text": "коллекции",
+          "href": "https://rishi-store.com/shooting"
+        },
+        {
+          "text": "клиенту",
+          "href": "https://rishi-store.com/customer"
+        },
+        {
+          "text": "Каталог",
+          "href": "https://rishi-store.com/accessories#"
+        },
+        {
+          "text": "КАТАЛОГ",
+          "href": "https://rishi-store.com/accessories"
+        },
+        {
+          "text": "всё",
+          "href": "https://rishi-store.com/all"
+        },
+        {
+          "text": "верхняя одежда",
+          "href": "https://rishi-store.com/coats"
+        },
+        {
+          "text": "джинсы",
+          "href": "https://rishi-store.com/jeans"
+        },
+        {
+          "text": "корсеты",
+          "href": "https://rishi-store.com/corsets"
+        },
+        {
+          "text": "лонгсливы",
+          "href": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "text": "платья",
+          "href": "https://rishi-store.com/dresses"
+        },
+        {
+          "text": "рубашки",
+          "href": "https://rishi-store.com/shirts"
+        },
+        {
+          "text": "толстовки",
+          "href": "https://rishi-store.com/hoodies"
+        },
+        {
+          "text": "топы",
+          "href": "https://rishi-store.com/tops"
+        },
+        {
+          "text": "юбки",
+          "href": "https://rishi-store.com/skirts"
+        },
+        {
+          "text": "мужчинам",
+          "href": "https://rishi-store.com/menonly"
+        },
+        {
+          "text": "sale",
+          "href": "https://rishi-store.com/sale"
+        },
+        {
+          "text": "aw 25",
+          "href": "https://rishi-store.com/aw25"
+        },
+        {
+          "text": "´rishi x onlyme",
+          "href": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "text": "´rishi x bitte ruhe",
+          "href": "https://rishi-store.com/bitte"
+        },
+        {
+          "text": "´rishi x не просто вещь",
+          "href": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "text": "сертификат",
+          "href": "https://rishi-store.com/giftcard"
+        },
+        {
+          "text": "новинки",
+          "href": "https://rishi-store.com/new"
+        }
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "АКСЕССУАРЫ"
+        }
+      ],
+      "text": "КОНТАКТЫ\nО НАС\nКОЛЛЕКЦИИ\nКЛИЕНТУ\nКАТАЛОГ\nподарочные сертификаты\nмужчинам\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nКатегории\nновинки\nприобрести подарочный сертификат\nАКСЕССУАРЫ\nПолитиика конфиденциальности\nконтакты\nсдать джинсы\nклиенту\nо нас\nИНФОРМАЦИЯ\nподарочные сертификаты\nмужчинам\nКАТАЛОГ\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nмы в соцсетях:\nподпишетесь на рассылку\nИП Маргарита Резникова, ИНН 781453597482, ОГРНИП 320784700145371"
+    },
+    {
+      "name": "AW 25",
+      "path": "/aw25",
+      "title": "AW 25",
+      "url": "https://rishi-store.com/aw25",
+      "meta": {
+        "description": "",
+        "keywords": "Деним, коллекция денима, новая коллекция"
+      },
+      "products": [
+        {
+          "name": "КАТАЛОГ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/aw25"
+        },
+        {
+          "name": "всё",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/all"
+        },
+        {
+          "name": "аксессуары",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/accessories"
+        },
+        {
+          "name": "верхняя одежда",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/coats"
+        },
+        {
+          "name": "джинсы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/jeans"
+        },
+        {
+          "name": "корсеты",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/corsets"
+        },
+        {
+          "name": "лонгсливы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "name": "платья",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/dresses"
+        },
+        {
+          "name": "рубашки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shirts"
+        },
+        {
+          "name": "толстовки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/hoodies"
+        },
+        {
+          "name": "топы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/tops"
+        },
+        {
+          "name": "юбки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/skirts"
+        },
+        {
+          "name": "мужчинам",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/menonly"
+        },
+        {
+          "name": "sale",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/sale"
+        },
+        {
+          "name": "aw 25",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/aw25"
+        },
+        {
+          "name": "´rishi x onlyme",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "name": "´rishi x bitte ruhe",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/bitte"
+        },
+        {
+          "name": "´rishi x не просто вещь",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "name": "сертификат",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/giftcard"
+        },
+        {
+          "name": "КЛИЕНТУ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/customer"
+        },
+        {
+          "name": "КОЛЛЕКЦИИ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shooting"
+        },
+        {
+          "name": "О НАС",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/about"
+        },
+        {
+          "name": "КОНТАКТЫ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/contacts"
+        }
+      ],
+      "categories": [],
+      "collections": [],
+      "links": [
+        {
+          "text": "контакты",
+          "href": "https://rishi-store.com/contacts"
+        },
+        {
+          "text": "о нас",
+          "href": "https://rishi-store.com/about"
+        },
+        {
+          "text": "коллекции",
+          "href": "https://rishi-store.com/shooting"
+        },
+        {
+          "text": "клиенту",
+          "href": "https://rishi-store.com/customer"
+        },
+        {
+          "text": "Каталог",
+          "href": "https://rishi-store.com/aw25#"
+        },
+        {
+          "text": "КАТАЛОГ",
+          "href": "https://rishi-store.com/aw25"
+        },
+        {
+          "text": "всё",
+          "href": "https://rishi-store.com/all"
+        },
+        {
+          "text": "аксессуары",
+          "href": "https://rishi-store.com/accessories"
+        },
+        {
+          "text": "верхняя одежда",
+          "href": "https://rishi-store.com/coats"
+        },
+        {
+          "text": "джинсы",
+          "href": "https://rishi-store.com/jeans"
+        },
+        {
+          "text": "корсеты",
+          "href": "https://rishi-store.com/corsets"
+        },
+        {
+          "text": "лонгсливы",
+          "href": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "text": "платья",
+          "href": "https://rishi-store.com/dresses"
+        },
+        {
+          "text": "рубашки",
+          "href": "https://rishi-store.com/shirts"
+        },
+        {
+          "text": "толстовки",
+          "href": "https://rishi-store.com/hoodies"
+        },
+        {
+          "text": "топы",
+          "href": "https://rishi-store.com/tops"
+        },
+        {
+          "text": "юбки",
+          "href": "https://rishi-store.com/skirts"
+        },
+        {
+          "text": "мужчинам",
+          "href": "https://rishi-store.com/menonly"
+        },
+        {
+          "text": "sale",
+          "href": "https://rishi-store.com/sale"
+        },
+        {
+          "text": "´rishi x onlyme",
+          "href": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "text": "´rishi x bitte ruhe",
+          "href": "https://rishi-store.com/bitte"
+        },
+        {
+          "text": "´rishi x не просто вещь",
+          "href": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "text": "сертификат",
+          "href": "https://rishi-store.com/giftcard"
+        },
+        {
+          "text": "новинки",
+          "href": "https://rishi-store.com/new"
+        }
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "AW 25"
+        }
+      ],
+      "text": "КОНТАКТЫ\nО НАС\nКОЛЛЕКЦИИ\nКЛИЕНТУ\nКАТАЛОГ\nподарочные сертификаты\nмужчинам\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nКатегории\nновинки\nприобрести подарочный сертификат\nAW 25\nПолитиика конфиденциальности\nконтакты\nсдать джинсы\nклиенту\nо нас\nИНФОРМАЦИЯ\nподарочные сертификаты\nмужчинам\nКАТАЛОГ\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nмы в соцсетях:\nподпишетесь на рассылку\nИП Маргарита Резникова, ИНН 781453597482, ОГРНИП 320784700145371"
+    },
+    {
+      "name": "RISHI x ONLY ME",
+      "path": "/rishixonlyme",
+      "title": "Коллаборация ´RISHI x ONLY ME",
+      "url": "https://rishi-store.com/rishixonlyme",
+      "meta": {
+        "description": "Лимитированный дроп с этичным брендом Only Me",
+        "keywords": "трикотаж распродажа скидки, распродажа женской одежды, каталоги женской одежды распродажа, интернет магазин женской одежды каталог распродажа, скидка 70 процентов, скидка 90 процентов"
+      },
+      "products": [
+        {
+          "name": "КАТАЛОГ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "name": "всё",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/all"
+        },
+        {
+          "name": "аксессуары",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/accessories"
+        },
+        {
+          "name": "верхняя одежда",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/coats"
+        },
+        {
+          "name": "джинсы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/jeans"
+        },
+        {
+          "name": "корсеты",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/corsets"
+        },
+        {
+          "name": "лонгсливы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "name": "платья",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/dresses"
+        },
+        {
+          "name": "рубашки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shirts"
+        },
+        {
+          "name": "толстовки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/hoodies"
+        },
+        {
+          "name": "топы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/tops"
+        },
+        {
+          "name": "юбки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/skirts"
+        },
+        {
+          "name": "мужчинам",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/menonly"
+        },
+        {
+          "name": "sale",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/sale"
+        },
+        {
+          "name": "aw 25",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/aw25"
+        },
+        {
+          "name": "´rishi x onlyme",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "name": "´rishi x bitte ruhe",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/bitte"
+        },
+        {
+          "name": "´rishi x не просто вещь",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "name": "сертификат",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/giftcard"
+        },
+        {
+          "name": "КЛИЕНТУ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/customer"
+        },
+        {
+          "name": "КОЛЛЕКЦИИ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shooting"
+        },
+        {
+          "name": "О НАС",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/about"
+        },
+        {
+          "name": "КОНТАКТЫ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/contacts"
+        }
+      ],
+      "categories": [],
+      "collections": [],
+      "links": [
+        {
+          "text": "контакты",
+          "href": "https://rishi-store.com/contacts"
+        },
+        {
+          "text": "о нас",
+          "href": "https://rishi-store.com/about"
+        },
+        {
+          "text": "коллекции",
+          "href": "https://rishi-store.com/shooting"
+        },
+        {
+          "text": "клиенту",
+          "href": "https://rishi-store.com/customer"
+        },
+        {
+          "text": "Каталог",
+          "href": "https://rishi-store.com/rishixonlyme#"
+        },
+        {
+          "text": "КАТАЛОГ",
+          "href": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "text": "всё",
+          "href": "https://rishi-store.com/all"
+        },
+        {
+          "text": "аксессуары",
+          "href": "https://rishi-store.com/accessories"
+        },
+        {
+          "text": "верхняя одежда",
+          "href": "https://rishi-store.com/coats"
+        },
+        {
+          "text": "джинсы",
+          "href": "https://rishi-store.com/jeans"
+        },
+        {
+          "text": "корсеты",
+          "href": "https://rishi-store.com/corsets"
+        },
+        {
+          "text": "лонгсливы",
+          "href": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "text": "платья",
+          "href": "https://rishi-store.com/dresses"
+        },
+        {
+          "text": "рубашки",
+          "href": "https://rishi-store.com/shirts"
+        },
+        {
+          "text": "толстовки",
+          "href": "https://rishi-store.com/hoodies"
+        },
+        {
+          "text": "топы",
+          "href": "https://rishi-store.com/tops"
+        },
+        {
+          "text": "юбки",
+          "href": "https://rishi-store.com/skirts"
+        },
+        {
+          "text": "мужчинам",
+          "href": "https://rishi-store.com/menonly"
+        },
+        {
+          "text": "sale",
+          "href": "https://rishi-store.com/sale"
+        },
+        {
+          "text": "aw 25",
+          "href": "https://rishi-store.com/aw25"
+        },
+        {
+          "text": "´rishi x bitte ruhe",
+          "href": "https://rishi-store.com/bitte"
+        },
+        {
+          "text": "´rishi x не просто вещь",
+          "href": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "text": "сертификат",
+          "href": "https://rishi-store.com/giftcard"
+        },
+        {
+          "text": "новинки",
+          "href": "https://rishi-store.com/new"
+        }
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "´RISHI x ONLY ME"
+        }
+      ],
+      "text": "КОНТАКТЫ\nО НАС\nКОЛЛЕКЦИИ\nКЛИЕНТУ\nКАТАЛОГ\nподарочные сертификаты\nмужчинам\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nКатегории\nновинки\nприобрести подарочный сертификат\n´RISHI x ONLY ME\nПолитиика конфиденциальности\nконтакты\nсдать джинсы\nклиенту\nо нас\nИНФОРМАЦИЯ\nподарочные сертификаты\nмужчинам\nКАТАЛОГ\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nмы в соцсетях:\nподпишетесь на рассылку\nИП Маргарита Резникова, ИНН 781453597482, ОГРНИП 320784700145371"
+    },
+    {
+      "name": "RISHI x bitte ruhe",
+      "path": "/bitte",
+      "title": "'RISHI x BITTE RUHE",
+      "url": "https://rishi-store.com/bitte",
+      "meta": {
+        "description": "коллаборация 'RISHI x BITTE RUHE",
+        "keywords": "трикотаж распродажа скидки, распродажа женской одежды, каталоги женской одежды распродажа, интернет магазин женской одежды каталог распродажа, скидка 70 процентов, скидка 90 процентов"
+      },
+      "products": [
+        {
+          "name": "КАТАЛОГ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/bitte"
+        },
+        {
+          "name": "всё",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/all"
+        },
+        {
+          "name": "аксессуары",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/accessories"
+        },
+        {
+          "name": "верхняя одежда",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/coats"
+        },
+        {
+          "name": "джинсы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/jeans"
+        },
+        {
+          "name": "корсеты",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/corsets"
+        },
+        {
+          "name": "лонгсливы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "name": "платья",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/dresses"
+        },
+        {
+          "name": "рубашки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shirts"
+        },
+        {
+          "name": "толстовки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/hoodies"
+        },
+        {
+          "name": "топы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/tops"
+        },
+        {
+          "name": "юбки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/skirts"
+        },
+        {
+          "name": "мужчинам",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/menonly"
+        },
+        {
+          "name": "sale",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/sale"
+        },
+        {
+          "name": "aw 25",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/aw25"
+        },
+        {
+          "name": "´rishi x onlyme",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "name": "´rishi x bitte ruhe",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/bitte"
+        },
+        {
+          "name": "´rishi x не просто вещь",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "name": "сертификат",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/giftcard"
+        },
+        {
+          "name": "КЛИЕНТУ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/customer"
+        },
+        {
+          "name": "КОЛЛЕКЦИИ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shooting"
+        },
+        {
+          "name": "О НАС",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/about"
+        },
+        {
+          "name": "КОНТАКТЫ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/contacts"
+        }
+      ],
+      "categories": [],
+      "collections": [],
+      "links": [
+        {
+          "text": "контакты",
+          "href": "https://rishi-store.com/contacts"
+        },
+        {
+          "text": "о нас",
+          "href": "https://rishi-store.com/about"
+        },
+        {
+          "text": "коллекции",
+          "href": "https://rishi-store.com/shooting"
+        },
+        {
+          "text": "клиенту",
+          "href": "https://rishi-store.com/customer"
+        },
+        {
+          "text": "Каталог",
+          "href": "https://rishi-store.com/bitte#"
+        },
+        {
+          "text": "КАТАЛОГ",
+          "href": "https://rishi-store.com/bitte"
+        },
+        {
+          "text": "всё",
+          "href": "https://rishi-store.com/all"
+        },
+        {
+          "text": "аксессуары",
+          "href": "https://rishi-store.com/accessories"
+        },
+        {
+          "text": "верхняя одежда",
+          "href": "https://rishi-store.com/coats"
+        },
+        {
+          "text": "джинсы",
+          "href": "https://rishi-store.com/jeans"
+        },
+        {
+          "text": "корсеты",
+          "href": "https://rishi-store.com/corsets"
+        },
+        {
+          "text": "лонгсливы",
+          "href": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "text": "платья",
+          "href": "https://rishi-store.com/dresses"
+        },
+        {
+          "text": "рубашки",
+          "href": "https://rishi-store.com/shirts"
+        },
+        {
+          "text": "толстовки",
+          "href": "https://rishi-store.com/hoodies"
+        },
+        {
+          "text": "топы",
+          "href": "https://rishi-store.com/tops"
+        },
+        {
+          "text": "юбки",
+          "href": "https://rishi-store.com/skirts"
+        },
+        {
+          "text": "мужчинам",
+          "href": "https://rishi-store.com/menonly"
+        },
+        {
+          "text": "sale",
+          "href": "https://rishi-store.com/sale"
+        },
+        {
+          "text": "aw 25",
+          "href": "https://rishi-store.com/aw25"
+        },
+        {
+          "text": "´rishi x onlyme",
+          "href": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "text": "´rishi x не просто вещь",
+          "href": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "text": "сертификат",
+          "href": "https://rishi-store.com/giftcard"
+        },
+        {
+          "text": "новинки",
+          "href": "https://rishi-store.com/new"
+        }
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "´RISHI x BITTE RUHE"
+        }
+      ],
+      "text": "КОНТАКТЫ\nО НАС\nКОЛЛЕКЦИИ\nКЛИЕНТУ\nКАТАЛОГ\nподарочные сертификаты\nмужчинам\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nКатегории\nновинки\nприобрести подарочный сертификат\n´RISHI x BITTE RUHE\nПолитиика конфиденциальности\nконтакты\nсдать джинсы\nклиенту\nо нас\nИНФОРМАЦИЯ\nподарочные сертификаты\nмужчинам\nКАТАЛОГ\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nмы в соцсетях:\nподпишетесь на рассылку\nИП Маргарита Резникова, ИНН 781453597482, ОГРНИП 320784700145371"
+    },
+    {
+      "name": "RISHI x Не просто вещь",
+      "path": "/neprostovesh",
+      "title": "Коллаборация ´RISHI x НЕ ПРОСТО ВЕЩЬ",
+      "url": "https://rishi-store.com/neprostovesh",
+      "meta": {
+        "description": "Сумки в коллаборации с брендом-поставщиком денима",
+        "keywords": "трикотаж распродажа скидки, распродажа женской одежды, каталоги женской одежды распродажа, интернет магазин женской одежды каталог распродажа, скидка 70 процентов, скидка 90 процентов"
+      },
+      "products": [
+        {
+          "name": "КАТАЛОГ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "name": "всё",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/all"
+        },
+        {
+          "name": "аксессуары",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/accessories"
+        },
+        {
+          "name": "верхняя одежда",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/coats"
+        },
+        {
+          "name": "джинсы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/jeans"
+        },
+        {
+          "name": "корсеты",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/corsets"
+        },
+        {
+          "name": "лонгсливы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "name": "платья",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/dresses"
+        },
+        {
+          "name": "рубашки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shirts"
+        },
+        {
+          "name": "толстовки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/hoodies"
+        },
+        {
+          "name": "топы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/tops"
+        },
+        {
+          "name": "юбки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/skirts"
+        },
+        {
+          "name": "мужчинам",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/menonly"
+        },
+        {
+          "name": "sale",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/sale"
+        },
+        {
+          "name": "aw 25",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/aw25"
+        },
+        {
+          "name": "´rishi x onlyme",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "name": "´rishi x bitte ruhe",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/bitte"
+        },
+        {
+          "name": "´rishi x не просто вещь",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "name": "сертификат",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/giftcard"
+        },
+        {
+          "name": "КЛИЕНТУ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/customer"
+        },
+        {
+          "name": "КОЛЛЕКЦИИ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shooting"
+        },
+        {
+          "name": "О НАС",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/about"
+        },
+        {
+          "name": "КОНТАКТЫ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/contacts"
+        }
+      ],
+      "categories": [],
+      "collections": [],
+      "links": [
+        {
+          "text": "контакты",
+          "href": "https://rishi-store.com/contacts"
+        },
+        {
+          "text": "о нас",
+          "href": "https://rishi-store.com/about"
+        },
+        {
+          "text": "коллекции",
+          "href": "https://rishi-store.com/shooting"
+        },
+        {
+          "text": "клиенту",
+          "href": "https://rishi-store.com/customer"
+        },
+        {
+          "text": "Каталог",
+          "href": "https://rishi-store.com/neprostovesh#"
+        },
+        {
+          "text": "КАТАЛОГ",
+          "href": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "text": "всё",
+          "href": "https://rishi-store.com/all"
+        },
+        {
+          "text": "аксессуары",
+          "href": "https://rishi-store.com/accessories"
+        },
+        {
+          "text": "верхняя одежда",
+          "href": "https://rishi-store.com/coats"
+        },
+        {
+          "text": "джинсы",
+          "href": "https://rishi-store.com/jeans"
+        },
+        {
+          "text": "корсеты",
+          "href": "https://rishi-store.com/corsets"
+        },
+        {
+          "text": "лонгсливы",
+          "href": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "text": "платья",
+          "href": "https://rishi-store.com/dresses"
+        },
+        {
+          "text": "рубашки",
+          "href": "https://rishi-store.com/shirts"
+        },
+        {
+          "text": "толстовки",
+          "href": "https://rishi-store.com/hoodies"
+        },
+        {
+          "text": "топы",
+          "href": "https://rishi-store.com/tops"
+        },
+        {
+          "text": "юбки",
+          "href": "https://rishi-store.com/skirts"
+        },
+        {
+          "text": "мужчинам",
+          "href": "https://rishi-store.com/menonly"
+        },
+        {
+          "text": "sale",
+          "href": "https://rishi-store.com/sale"
+        },
+        {
+          "text": "aw 25",
+          "href": "https://rishi-store.com/aw25"
+        },
+        {
+          "text": "´rishi x onlyme",
+          "href": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "text": "´rishi x bitte ruhe",
+          "href": "https://rishi-store.com/bitte"
+        },
+        {
+          "text": "сертификат",
+          "href": "https://rishi-store.com/giftcard"
+        },
+        {
+          "text": "новинки",
+          "href": "https://rishi-store.com/new"
+        }
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "´RISHI x НЕ ПРОСТО ВЕЩЬ"
+        }
+      ],
+      "text": "КОНТАКТЫ\nО НАС\nКОЛЛЕКЦИИ\nКЛИЕНТУ\nКАТАЛОГ\nподарочные сертификаты\nмужчинам\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nКатегории\nновинки\nприобрести подарочный сертификат\n´RISHI x НЕ ПРОСТО ВЕЩЬ\nПолитиика конфиденциальности\nконтакты\nсдать джинсы\nклиенту\nо нас\nИНФОРМАЦИЯ\nподарочные сертификаты\nмужчинам\nКАТАЛОГ\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nмы в соцсетях:\nподпишетесь на рассылку\nИП Маргарита Резникова, ИНН 781453597482, ОГРНИП 320784700145371"
+    },
+    {
+      "name": "Sale",
+      "path": "/sale",
+      "title": "Сейл 'RISHI - Большая распродажа женской одежды. Архивные коллекции.",
+      "url": "https://rishi-store.com/sale",
+      "meta": {
+        "description": "Скидки 70% на лонгсливы, юбки и аксессуары",
+        "keywords": "трикотаж распродажа скидки, распродажа женской одежды, каталоги женской одежды распродажа, интернет магазин женской одежды каталог распродажа, скидка 70 процентов, скидка 90 процентов"
+      },
+      "products": [
+        {
+          "name": "КАТАЛОГ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/sale"
+        },
+        {
+          "name": "всё",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/all"
+        },
+        {
+          "name": "аксессуары",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/accessories"
+        },
+        {
+          "name": "верхняя одежда",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/coats"
+        },
+        {
+          "name": "джинсы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/jeans"
+        },
+        {
+          "name": "корсеты",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/corsets"
+        },
+        {
+          "name": "лонгсливы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "name": "платья",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/dresses"
+        },
+        {
+          "name": "рубашки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shirts"
+        },
+        {
+          "name": "толстовки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/hoodies"
+        },
+        {
+          "name": "топы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/tops"
+        },
+        {
+          "name": "юбки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/skirts"
+        },
+        {
+          "name": "мужчинам",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/menonly"
+        },
+        {
+          "name": "sale",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/sale"
+        },
+        {
+          "name": "aw 25",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/aw25"
+        },
+        {
+          "name": "´rishi x onlyme",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "name": "´rishi x bitte ruhe",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/bitte"
+        },
+        {
+          "name": "´rishi x не просто вещь",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "name": "сертификат",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/giftcard"
+        },
+        {
+          "name": "КЛИЕНТУ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/customer"
+        },
+        {
+          "name": "КОЛЛЕКЦИИ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shooting"
+        },
+        {
+          "name": "О НАС",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/about"
+        },
+        {
+          "name": "КОНТАКТЫ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/contacts"
+        }
+      ],
+      "categories": [],
+      "collections": [],
+      "links": [
+        {
+          "text": "контакты",
+          "href": "https://rishi-store.com/contacts"
+        },
+        {
+          "text": "о нас",
+          "href": "https://rishi-store.com/about"
+        },
+        {
+          "text": "коллекции",
+          "href": "https://rishi-store.com/shooting"
+        },
+        {
+          "text": "клиенту",
+          "href": "https://rishi-store.com/customer"
+        },
+        {
+          "text": "Каталог",
+          "href": "https://rishi-store.com/sale#"
+        },
+        {
+          "text": "КАТАЛОГ",
+          "href": "https://rishi-store.com/sale"
+        },
+        {
+          "text": "всё",
+          "href": "https://rishi-store.com/all"
+        },
+        {
+          "text": "аксессуары",
+          "href": "https://rishi-store.com/accessories"
+        },
+        {
+          "text": "верхняя одежда",
+          "href": "https://rishi-store.com/coats"
+        },
+        {
+          "text": "джинсы",
+          "href": "https://rishi-store.com/jeans"
+        },
+        {
+          "text": "корсеты",
+          "href": "https://rishi-store.com/corsets"
+        },
+        {
+          "text": "лонгсливы",
+          "href": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "text": "платья",
+          "href": "https://rishi-store.com/dresses"
+        },
+        {
+          "text": "рубашки",
+          "href": "https://rishi-store.com/shirts"
+        },
+        {
+          "text": "толстовки",
+          "href": "https://rishi-store.com/hoodies"
+        },
+        {
+          "text": "топы",
+          "href": "https://rishi-store.com/tops"
+        },
+        {
+          "text": "юбки",
+          "href": "https://rishi-store.com/skirts"
+        },
+        {
+          "text": "мужчинам",
+          "href": "https://rishi-store.com/menonly"
+        },
+        {
+          "text": "aw 25",
+          "href": "https://rishi-store.com/aw25"
+        },
+        {
+          "text": "´rishi x onlyme",
+          "href": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "text": "´rishi x bitte ruhe",
+          "href": "https://rishi-store.com/bitte"
+        },
+        {
+          "text": "´rishi x не просто вещь",
+          "href": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "text": "сертификат",
+          "href": "https://rishi-store.com/giftcard"
+        },
+        {
+          "text": "новинки",
+          "href": "https://rishi-store.com/new"
+        }
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "SALE"
+        }
+      ],
+      "text": "КОНТАКТЫ\nО НАС\nКОЛЛЕКЦИИ\nКЛИЕНТУ\nКАТАЛОГ\nподарочные сертификаты\nмужчинам\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nКатегории\nновинки\nприобрести подарочный сертификат\nSALE\nПолитиика конфиденциальности\nконтакты\nсдать джинсы\nклиенту\nо нас\nИНФОРМАЦИЯ\nподарочные сертификаты\nмужчинам\nКАТАЛОГ\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nмы в соцсетях:\nподпишетесь на рассылку\nИП Маргарита Резникова, ИНН 781453597482, ОГРНИП 320784700145371"
+    },
+    {
+      "name": "New Arrivals",
+      "path": "/new",
+      "title": "Каталог ´RISHI",
+      "url": "https://rishi-store.com/new",
+      "meta": {
+        "description": "Авторские изделия из вторичного денима",
+        "keywords": "трикотаж распродажа скидки, распродажа женской одежды, каталоги женской одежды распродажа, интернет магазин женской одежды каталог распродажа, скидка 70 процентов, скидка 90 процентов"
+      },
+      "products": [
+        {
+          "name": "КАТАЛОГ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/new"
+        },
+        {
+          "name": "всё",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/all"
+        },
+        {
+          "name": "аксессуары",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/accessories"
+        },
+        {
+          "name": "верхняя одежда",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/coats"
+        },
+        {
+          "name": "джинсы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/jeans"
+        },
+        {
+          "name": "корсеты",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/corsets"
+        },
+        {
+          "name": "лонгсливы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "name": "платья",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/dresses"
+        },
+        {
+          "name": "рубашки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shirts"
+        },
+        {
+          "name": "толстовки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/hoodies"
+        },
+        {
+          "name": "топы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/tops"
+        },
+        {
+          "name": "юбки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/skirts"
+        },
+        {
+          "name": "мужчинам",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/menonly"
+        },
+        {
+          "name": "sale",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/sale"
+        },
+        {
+          "name": "aw 25",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/aw25"
+        },
+        {
+          "name": "´rishi x onlyme",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "name": "´rishi x bitte ruhe",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/bitte"
+        },
+        {
+          "name": "´rishi x не просто вещь",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "name": "сертификат",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/giftcard"
+        },
+        {
+          "name": "КЛИЕНТУ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/customer"
+        },
+        {
+          "name": "КОЛЛЕКЦИИ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shooting"
+        },
+        {
+          "name": "О НАС",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/about"
+        },
+        {
+          "name": "КОНТАКТЫ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/contacts"
+        }
+      ],
+      "categories": [],
+      "collections": [],
+      "links": [
+        {
+          "text": "контакты",
+          "href": "https://rishi-store.com/contacts"
+        },
+        {
+          "text": "о нас",
+          "href": "https://rishi-store.com/about"
+        },
+        {
+          "text": "коллекции",
+          "href": "https://rishi-store.com/shooting"
+        },
+        {
+          "text": "клиенту",
+          "href": "https://rishi-store.com/customer"
+        },
+        {
+          "text": "Каталог",
+          "href": "https://rishi-store.com/new#"
+        },
+        {
+          "text": "КАТАЛОГ",
+          "href": "https://rishi-store.com/new"
+        },
+        {
+          "text": "всё",
+          "href": "https://rishi-store.com/all"
+        },
+        {
+          "text": "аксессуары",
+          "href": "https://rishi-store.com/accessories"
+        },
+        {
+          "text": "верхняя одежда",
+          "href": "https://rishi-store.com/coats"
+        },
+        {
+          "text": "джинсы",
+          "href": "https://rishi-store.com/jeans"
+        },
+        {
+          "text": "корсеты",
+          "href": "https://rishi-store.com/corsets"
+        },
+        {
+          "text": "лонгсливы",
+          "href": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "text": "платья",
+          "href": "https://rishi-store.com/dresses"
+        },
+        {
+          "text": "рубашки",
+          "href": "https://rishi-store.com/shirts"
+        },
+        {
+          "text": "толстовки",
+          "href": "https://rishi-store.com/hoodies"
+        },
+        {
+          "text": "топы",
+          "href": "https://rishi-store.com/tops"
+        },
+        {
+          "text": "юбки",
+          "href": "https://rishi-store.com/skirts"
+        },
+        {
+          "text": "мужчинам",
+          "href": "https://rishi-store.com/menonly"
+        },
+        {
+          "text": "sale",
+          "href": "https://rishi-store.com/sale"
+        },
+        {
+          "text": "aw 25",
+          "href": "https://rishi-store.com/aw25"
+        },
+        {
+          "text": "´rishi x onlyme",
+          "href": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "text": "´rishi x bitte ruhe",
+          "href": "https://rishi-store.com/bitte"
+        },
+        {
+          "text": "´rishi x не просто вещь",
+          "href": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "text": "сертификат",
+          "href": "https://rishi-store.com/giftcard"
+        }
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "НОВИНКИ"
+        }
+      ],
+      "text": "КОНТАКТЫ\nО НАС\nКОЛЛЕКЦИИ\nКЛИЕНТУ\nКАТАЛОГ\nподарочные сертификаты\nмужчинам\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nКатегории\nновинки\nприобрести подарочный сертификат\nНОВИНКИ\nПолитиика конфиденциальности\nконтакты\nсдать джинсы\nклиенту\nо нас\nИНФОРМАЦИЯ\nподарочные сертификаты\nмужчинам\nКАТАЛОГ\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nмы в соцсетях:\nподпишетесь на рассылку\nИП Маргарита Резникова, ИНН 781453597482, ОГРНИП 320784700145371"
+    },
+    {
+      "name": "About",
+      "path": "/about",
+      "title": "о 'RISHI",
+      "url": "https://rishi-store.com/about",
+      "meta": {
+        "description": "Петербургский бренд устойчивой дизайнерской одежды",
+        "keywords": ""
+      },
+      "products": [
+        {
+          "name": "КАТАЛОГ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/about"
+        },
+        {
+          "name": "всё",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/all"
+        },
+        {
+          "name": "аксессуары",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/accessories"
+        },
+        {
+          "name": "верхняя одежда",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/coats"
+        },
+        {
+          "name": "джинсы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/jeans"
+        },
+        {
+          "name": "корсеты",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/corsets"
+        },
+        {
+          "name": "лонгсливы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "name": "платья",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/dresses"
+        },
+        {
+          "name": "рубашки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shirts"
+        },
+        {
+          "name": "толстовки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/hoodies"
+        },
+        {
+          "name": "топы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/tops"
+        },
+        {
+          "name": "юбки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/skirts"
+        },
+        {
+          "name": "мужчинам",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/menonly"
+        },
+        {
+          "name": "sale",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/sale"
+        },
+        {
+          "name": "aw 25",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/aw25"
+        },
+        {
+          "name": "´rishi x onlyme",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "name": "´rishi x bitte ruhe",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/bitte"
+        },
+        {
+          "name": "´rishi x не просто вещь",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "name": "сертификат",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/giftcard"
+        },
+        {
+          "name": "КЛИЕНТУ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/customer"
+        },
+        {
+          "name": "КОЛЛЕКЦИИ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shooting"
+        },
+        {
+          "name": "О НАС",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/about"
+        },
+        {
+          "name": "КОНТАКТЫ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/contacts"
+        }
+      ],
+      "categories": [],
+      "collections": [],
+      "links": [
+        {
+          "text": "контакты",
+          "href": "https://rishi-store.com/contacts"
+        },
+        {
+          "text": "о нас",
+          "href": "https://rishi-store.com/about"
+        },
+        {
+          "text": "коллекции",
+          "href": "https://rishi-store.com/shooting"
+        },
+        {
+          "text": "клиенту",
+          "href": "https://rishi-store.com/customer"
+        },
+        {
+          "text": "Каталог",
+          "href": "https://rishi-store.com/about#"
+        },
+        {
+          "text": "всё",
+          "href": "https://rishi-store.com/all"
+        },
+        {
+          "text": "аксессуары",
+          "href": "https://rishi-store.com/accessories"
+        },
+        {
+          "text": "верхняя одежда",
+          "href": "https://rishi-store.com/coats"
+        },
+        {
+          "text": "джинсы",
+          "href": "https://rishi-store.com/jeans"
+        },
+        {
+          "text": "корсеты",
+          "href": "https://rishi-store.com/corsets"
+        },
+        {
+          "text": "лонгсливы",
+          "href": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "text": "платья",
+          "href": "https://rishi-store.com/dresses"
+        },
+        {
+          "text": "рубашки",
+          "href": "https://rishi-store.com/shirts"
+        },
+        {
+          "text": "толстовки",
+          "href": "https://rishi-store.com/hoodies"
+        },
+        {
+          "text": "топы",
+          "href": "https://rishi-store.com/tops"
+        },
+        {
+          "text": "юбки",
+          "href": "https://rishi-store.com/skirts"
+        },
+        {
+          "text": "мужчинам",
+          "href": "https://rishi-store.com/menonly"
+        },
+        {
+          "text": "sale",
+          "href": "https://rishi-store.com/sale"
+        },
+        {
+          "text": "aw 25",
+          "href": "https://rishi-store.com/aw25"
+        },
+        {
+          "text": "´rishi x onlyme",
+          "href": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "text": "´rishi x bitte ruhe",
+          "href": "https://rishi-store.com/bitte"
+        },
+        {
+          "text": "´rishi x не просто вещь",
+          "href": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "text": "сертификат",
+          "href": "https://rishi-store.com/giftcard"
+        },
+        {
+          "text": "новинки",
+          "href": "https://rishi-store.com/new"
+        }
+      ],
+      "headings": [],
+      "text": "КОНТАКТЫ\nО НАС\nКОЛЛЕКЦИИ\nКЛИЕНТУ\nКАТАЛОГ\nподарочные сертификаты\nмужчинам\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nКатегории\nновинки\nприобрести подарочный сертификат\nБренд начинает свою историю с выбора подхода и выбора материала.\nВ среде производства апсайклинг из хаотичного кастома старой одежды становится упорядоченной работой конструкторов, дизайнеров и технологов. Индивидуальность, необходимая в жанре, сохраняется за счет творческой работы по сбору пэчворк полотен.\n\nДеним, по словам арт-директора Риты Резниковой, вневременный материал. Так что идеология бренда заключается в том, чтобы смотреть вокруг. Сосредоточиться на настоящем, вместо того, чтобы смотреть вперед и пытаться опережать время.\n\nБренд прозрачен в своих инициативах в эпоху гринвошинга. Мы отказываемся от концепций «осознанность», «новая жизнь» — в пользу рациональной концепции — снизить количество ненужных вещей и превратить их в одну любимую.\n\nДизайн-студия: 3 портные, 3 закройщика, 3 дизайнера. Мастер производства, руководитель производства, конструктор, технолог.\n\nМы создаем технологичную одежду из вторично используемых материалов, переосмысляя исторический крой.\n\n\nПолитиика конфиденциальности\nконтакты\nсдать джинсы\nклиенту\nо нас\nИНФОРМАЦИЯ\nподарочные сертификаты\nмужчинам\nКАТАЛОГ\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nмы в соцсетях:\nподпишетесь на рассылку\nИП Маргарита Резникова, ИНН 781453597482, ОГРНИП 320784700145371\nПОДПИСАТЬСЯ"
+    },
+    {
+      "name": "Contacts",
+      "path": "/contacts",
+      "title": "Контакты 'RISHI. Дизайн-студия на Чкаловском 15А",
+      "url": "https://rishi-store.com/contacts",
+      "meta": {
+        "description": "Связь с нами и адреса точек продаж",
+        "keywords": ""
+      },
+      "products": [
+        {
+          "name": "КАТАЛОГ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/contacts"
+        },
+        {
+          "name": "всё",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/all"
+        },
+        {
+          "name": "аксессуары",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/accessories"
+        },
+        {
+          "name": "верхняя одежда",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/coats"
+        },
+        {
+          "name": "джинсы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/jeans"
+        },
+        {
+          "name": "корсеты",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/corsets"
+        },
+        {
+          "name": "лонгсливы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "name": "платья",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/dresses"
+        },
+        {
+          "name": "рубашки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shirts"
+        },
+        {
+          "name": "толстовки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/hoodies"
+        },
+        {
+          "name": "топы",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/tops"
+        },
+        {
+          "name": "юбки",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/skirts"
+        },
+        {
+          "name": "мужчинам",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/menonly"
+        },
+        {
+          "name": "sale",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/sale"
+        },
+        {
+          "name": "aw 25",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/aw25"
+        },
+        {
+          "name": "´rishi x onlyme",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "name": "´rishi x bitte ruhe",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/bitte"
+        },
+        {
+          "name": "´rishi x не просто вещь",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "name": "сертификат",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/giftcard"
+        },
+        {
+          "name": "КЛИЕНТУ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/customer"
+        },
+        {
+          "name": "КОЛЛЕКЦИИ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/shooting"
+        },
+        {
+          "name": "О НАС",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/about"
+        },
+        {
+          "name": "КОНТАКТЫ",
+          "price": null,
+          "image": null,
+          "link": "https://rishi-store.com/contacts"
+        }
+      ],
+      "categories": [],
+      "collections": [],
+      "links": [
+        {
+          "text": "контакты",
+          "href": "https://rishi-store.com/contacts"
+        },
+        {
+          "text": "о нас",
+          "href": "https://rishi-store.com/about"
+        },
+        {
+          "text": "коллекции",
+          "href": "https://rishi-store.com/shooting"
+        },
+        {
+          "text": "клиенту",
+          "href": "https://rishi-store.com/customer"
+        },
+        {
+          "text": "Каталог",
+          "href": "https://rishi-store.com/contacts#"
+        },
+        {
+          "text": "всё",
+          "href": "https://rishi-store.com/all"
+        },
+        {
+          "text": "аксессуары",
+          "href": "https://rishi-store.com/accessories"
+        },
+        {
+          "text": "верхняя одежда",
+          "href": "https://rishi-store.com/coats"
+        },
+        {
+          "text": "джинсы",
+          "href": "https://rishi-store.com/jeans"
+        },
+        {
+          "text": "корсеты",
+          "href": "https://rishi-store.com/corsets"
+        },
+        {
+          "text": "лонгсливы",
+          "href": "https://rishi-store.com/longsleaves"
+        },
+        {
+          "text": "платья",
+          "href": "https://rishi-store.com/dresses"
+        },
+        {
+          "text": "рубашки",
+          "href": "https://rishi-store.com/shirts"
+        },
+        {
+          "text": "толстовки",
+          "href": "https://rishi-store.com/hoodies"
+        },
+        {
+          "text": "топы",
+          "href": "https://rishi-store.com/tops"
+        },
+        {
+          "text": "юбки",
+          "href": "https://rishi-store.com/skirts"
+        },
+        {
+          "text": "мужчинам",
+          "href": "https://rishi-store.com/menonly"
+        },
+        {
+          "text": "sale",
+          "href": "https://rishi-store.com/sale"
+        },
+        {
+          "text": "aw 25",
+          "href": "https://rishi-store.com/aw25"
+        },
+        {
+          "text": "´rishi x onlyme",
+          "href": "https://rishi-store.com/rishixonlyme"
+        },
+        {
+          "text": "´rishi x bitte ruhe",
+          "href": "https://rishi-store.com/bitte"
+        },
+        {
+          "text": "´rishi x не просто вещь",
+          "href": "https://rishi-store.com/neprostovesh"
+        },
+        {
+          "text": "сертификат",
+          "href": "https://rishi-store.com/giftcard"
+        },
+        {
+          "text": "новинки",
+          "href": "https://rishi-store.com/new"
+        }
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "ПО ЛЮБЫМ ВОПРОСАМИ ПРЕДЛОЖЕНИЯМ"
+        },
+        {
+          "level": "H2",
+          "text": "ЗАПИСЬ НА ПОСЕЩЕНИЕ ШОУРУМА"
+        },
+        {
+          "level": "H2",
+          "text": "ГДЕ МОЖНО КУПИТЬ НАШУ ОДЕЖДУ?8storeСанкт Петербург, Казанская улица 8-10R3Санкт Петербург, м. Садовая. пер.Бойцова, 4KU+BAМосква, Земляной Вал 41с1Универмаг ХлебныйМосква, м. «Дмитровская». Новодмитровская ул. 1с1Charity ShopМосква, адреса магазинов на сайтеGALLERIA Russian brandsПермь, iMALL, Петропавловская ул. 73АЕкатеринбург, Нескучная ул. 3DNK43131Владивосток, 1-ая Морская, 16аonlinelamoda, Яндекс Маркет"
+        }
+      ],
+      "text": "КОНТАКТЫ\nО НАС\nКОЛЛЕКЦИИ\nКЛИЕНТУ\nКАТАЛОГ\nподарочные сертификаты\nмужчинам\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nКатегории\nновинки\nприобрести подарочный сертификат\nПО ЛЮБЫМ ВОПРОСАМ\nИ ПРЕДЛОЖЕНИЯМ\ninfo@rishi-store.com\n+7 (969) 718-26-25\n\nЗАПИСЬ НА ПОСЕЩЕНИЕ ШОУРУМА\nнаша дизайн-студия находится в Санкт-Петербурге\nпо адресу Чкаловский 15, лит. А.\ne-mail\nимя\nтелефон\nжелаемая дата\nжелаемое время\nОТПРАВИТЬ\nНажимая на кнопку, вы даете согласие на обработку своих персональных данных\n\nГДЕ МОЖНО КУПИТЬ НАШУ ОДЕЖДУ?\n\n\n\n\n8store\n\nСанкт Петербург, Казанская улица 8-10\n\n\n\n\nR3\n\nСанкт Петербург, м. Садовая. пер.Бойцова, 4\n\n\n\n\nKU+BA\n\nМосква, Земляной Вал 41с1\n\n\n\n\nУнивермаг Хлебный\n\nМосква, м. «Дмитровская». Новодмитровская ул. 1с1\n\n\n\n\nCharity Shop\n\nМосква, адреса магазинов на сайте\n\n\n\n\nGALLERIA Russian brands\n\nПермь, iMALL, Петропавловская ул. 73А\n\nЕкатеринбург, Нескучная ул. 3\n\n\n\n\nDNK43131\n\nВладивосток, 1-ая Морская, 16а\n\n\n\n\nonline\n\nlamoda, Яндекс Маркет\n\nПолитиика конфиденциальности\nконтакты\nсдать джинсы\nклиенту\nо нас\nИНФОРМАЦИЯ\nподарочные сертификаты\nмужчинам\nКАТАЛОГ\nюбки\nтопы\nтолстовки\nджинсы\nрубашки\nплатья\nлонгсливы\nкорсеты\nверхняя одежда\nаксессуары\n´rishi x не просто вещь\n´rishi x bitte ruhe\naw 25\n´rishi x only me\nsale\nвсё\nмы в соцсетях:\nподпишетесь на рассылку\nИП Маргарита Резникова, ИНН 781453597482, ОГРНИП 320784700145371\nПОДПИСАТЬСЯ"
+    }
+  ]
+}
