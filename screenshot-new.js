@@ -22,16 +22,41 @@ function startServer(port = 3939) {
 
 async function forceVisible(page) {
   await page.evaluate(() => {
+    // force all images eager
+    document.querySelectorAll('img').forEach(img => {
+      img.loading = 'eager';
+      if(img.dataset.src) img.src = img.dataset.src;
+    });
+    // kill ALL gsap inline styles that set opacity:0
+    document.querySelectorAll('[style*="opacity: 0"],[style*="opacity:0"]').forEach(el => {
+      el.style.removeProperty('opacity');
+      el.style.removeProperty('transform');
+    });
+    // force css animation classes
     document.querySelectorAll('.fade-up, .product-card, .collection-card, .category-card').forEach(el => el.classList.add('visible'));
-    document.querySelectorAll('img[loading="lazy"]').forEach(img => { img.loading = 'eager'; });
+    // explicitly show all hero elements
+    document.querySelectorAll(
+      '.hero-v2-photo img, .hero-v2-overlay, .hero-v2-left, .hero-v2-eyebrow, ' +
+      '.hero-v2-title, .hero-v2-sub, .hero-v2-ctas, .hero-v2-badges, .hero-v2-badge, .hero-v2-scroll'
+    ).forEach(el => {
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+      el.style.animation = 'none';
+    });
+    // trigger gsap complete if available
+    if(window.gsap) window.gsap.globalTimeline.progress(1);
   });
-  await page.waitForFunction(() => Array.from(document.images).every(img => img.complete), { timeout: 10000 }).catch(() => {});
+  // wait for images to actually load
+  await page.waitForFunction(() =>
+    Array.from(document.images).filter(img => !img.complete).length === 0,
+    { timeout: 15000 }
+  ).catch(() => {});
   await page.waitForTimeout(600);
 }
 
 async function shot(page, hash, filename, fullPage = true) {
   await page.evaluate(h => { location.hash = h; }, hash);
-  await page.waitForTimeout(800);
+  await page.waitForTimeout(1200);
   await forceVisible(page);
   await page.screenshot({ path: `screenshots/${filename}`, fullPage });
   console.log(`✓ ${filename}`);
@@ -49,8 +74,13 @@ async function run() {
 
   const context = await browser.newContext({ viewport: { width: 1440, height: 900 } });
   const page = await context.newPage();
-  await page.goto('http://localhost:3939/', { waitUntil: 'domcontentloaded' });
-  await page.waitForTimeout(1500);
+
+  // Capture console messages from the page
+  page.on('console', msg => console.log('📱 PAGE LOG:', msg.text()));
+  page.on('pageerror', err => console.error('❌ PAGE ERROR:', err));
+
+  await page.goto('http://localhost:3939/', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(2500);
 
   await shot(page, '#/', 'spa-home-hero.png', false);
   await shot(page, '#/', 'spa-home-full.png', true);
@@ -58,6 +88,7 @@ async function run() {
   await shot(page, '#/catalog', 'spa-catalog.png', true);
   await shot(page, '#/about', 'spa-about.png', true);
   await shot(page, '#/contacts', 'spa-contacts.png', true);
+  await shot(page, '#/product-1', 'spa-product.png', true);
 
   // Mobile home
   await page.setViewportSize({ width: 390, height: 844 });
