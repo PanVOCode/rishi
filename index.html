@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RISHI — Апсайкл мода</title>
+
+    <!-- Font preloads for better performance -->
+    <link rel="preload" href="fonts/ScotchModern-Display.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/TT_Firs_Neue_Normal.woff" as="font" type="font/woff" crossorigin>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @font-face {
@@ -440,7 +445,7 @@
             return `
                 <div class="bg-gray-50 rounded overflow-hidden group hover:shadow-xl transition-all duration-300">
                     <div class="relative overflow-hidden bg-white h-64">
-                        <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-108" loading="lazy">
+                        <img src="${product.image}" alt="${product.name}" width="300" height="300" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-108" loading="lazy">
 
                         <!-- Action buttons overlay -->
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
@@ -571,7 +576,7 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                             <!-- Image -->
                             <div class="bg-gray-50 rounded overflow-hidden h-96 md:h-full">
-                                <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover" loading="lazy">
+                                <img src="${product.image}" alt="${product.name}" width="500" height="600" class="w-full h-full object-cover" loading="lazy">
                             </div>
 
                             <!-- Info -->
@@ -641,7 +646,7 @@
                                 <div class="lg:col-span-2 space-y-4">
                                     ${state.cart.map(item => `
                                         <div class="flex gap-4 p-4 border rounded">
-                                            <img src="${item.image}" alt="${item.name}" class="w-24 h-24 object-cover rounded" loading="lazy">
+                                            <img src="${item.image}" alt="${item.name}" width="96" height="96" class="w-24 h-24 object-cover rounded" loading="lazy">
                                             <div class="flex-1">
                                                 <h3 class="font-semibold"><a href="#product-${item.id}" class="hover:text-amber-600">${item.name}</a></h3>
                                                 <p class="text-sm text-gray-600 mt-1">${CATEGORIES[item.category]?.name || item.category}</p>
@@ -1029,7 +1034,7 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
                             <!-- Image -->
                             <div class="bg-gray-50 rounded overflow-hidden h-80 md:h-full">
-                                <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover" loading="lazy">
+                                <img src="${product.image}" alt="${product.name}" width="500" height="600" class="w-full h-full object-cover" loading="lazy">
                             </div>
 
                             <!-- Info -->
