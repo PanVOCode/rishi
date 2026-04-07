@@ -171,6 +171,29 @@
             transition: all 0.2s ease;
             box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1);
         }
+
+        /* Quick View Modal */
+        .modal-overlay {
+            transition: opacity 0.3s ease;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-content {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            transform: scale(0.95) translateY(20px);
+            opacity: 0;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -245,6 +268,7 @@
             searchQuery: '',
             menuOpen: false,
             sortBy: 'name',
+            quickViewId: null,
             selectedFilters: {
                 category: null,
                 priceMin: 0,
@@ -417,7 +441,15 @@
                 <div class="bg-gray-50 rounded overflow-hidden group hover:shadow-xl transition-all duration-300">
                     <div class="relative overflow-hidden bg-white h-64">
                         <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-108" loading="lazy">
-                        <button onclick="window.app.toggleWishlist(${product.id})" class="absolute top-3 right-3 bg-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-amber-100 hover:scale-110 transition-all duration-200 shadow hover:shadow-md">
+
+                        <!-- Action buttons overlay -->
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <button onclick="window.app.openQuickView(${product.id})" class="bg-white text-black px-6 py-2 rounded font-semibold hover:bg-amber-400 transition-colors transform -translate-y-2 group-hover:translate-y-0">
+                                Просмотр
+                            </button>
+                        </div>
+
+                        <button onclick="window.app.toggleWishlist(${product.id})" class="absolute top-3 right-3 bg-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-amber-100 hover:scale-110 transition-all duration-200 shadow hover:shadow-md z-10">
                             <span class="text-lg transform transition-transform duration-300 ${inWishlist ? 'scale-110' : ''}">${inWishlist ? '❤️' : '🤍'}</span>
                         </button>
                     </div>
@@ -981,6 +1013,69 @@
             `;
         }
 
+        function renderQuickViewModal() {
+            if (!state.quickViewId) return '';
+            const product = PRODUCTS.find(p => p.id === state.quickViewId);
+            if (!product) return '';
+
+            const inWishlist = isInWishlist(product.id);
+            const inCart = state.cart.find(item => item.id === product.id);
+
+            return `
+                <div class="modal-overlay ${state.quickViewId ? 'active' : ''} fixed inset-0 bg-black/50 z-50" onclick="if(event.target === this) window.app.closeQuickView()">
+                    <div class="modal-content fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg max-w-2xl w-full mx-4 max-h-screen overflow-y-auto z-50">
+                        <button onclick="window.app.closeQuickView()" class="absolute top-4 right-4 text-2xl hover:text-amber-600 z-10">✕</button>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+                            <!-- Image -->
+                            <div class="bg-gray-50 rounded overflow-hidden h-80 md:h-full">
+                                <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover" loading="lazy">
+                            </div>
+
+                            <!-- Info -->
+                            <div class="space-y-4">
+                                <div>
+                                    <p class="text-sm text-gray-600 mb-1"><a href="#${product.category}" class="hover:text-black" onclick="window.app.closeQuickView()">${CATEGORIES[product.category]?.name || product.category}</a></p>
+                                    <h2 class="font-display text-2xl">${product.name}</h2>
+                                </div>
+
+                                <div class="flex items-baseline gap-3">
+                                    <span class="text-3xl font-bold text-amber-600">${formatPrice(product.price)} ₽</span>
+                                    ${product.oldPrice ? `<span class="text-gray-500 line-through">${formatPrice(product.oldPrice)} ₽</span>` : ''}
+                                </div>
+
+                                <div class="space-y-2">
+                                    ${!inCart ? `
+                                        <button onclick="window.app.addToCart(${product.id}); window.app.closeQuickView();" class="w-full bg-black text-white py-2 rounded font-semibold hover:bg-gray-800 transition-colors">
+                                            Добавить в корзину
+                                        </button>
+                                    ` : `
+                                        <button onclick="window.app.removeFromCart(${product.id}); window.app.closeQuickView();" class="w-full bg-red-600 text-white py-2 rounded font-semibold hover:bg-red-700 transition-colors">
+                                            Удалить из корзины
+                                        </button>
+                                    `}
+
+                                    <button onclick="window.app.toggleWishlist(${product.id})" class="w-full border-2 border-black py-2 rounded font-semibold hover:bg-black hover:text-white transition-colors">
+                                        ${inWishlist ? '❤️ В избранном' : '🤍 Добавить в избранное'}
+                                    </button>
+                                </div>
+
+                                <div class="bg-gray-50 p-4 rounded text-sm space-y-2">
+                                    <p class="flex items-center gap-2"><span>♻️</span> 100% апсайкл</p>
+                                    <p class="flex items-center gap-2"><span>✋</span> Ручная работа</p>
+                                    <p class="flex items-center gap-2"><span>🚚</span> Доставка РФ</p>
+                                </div>
+
+                                <a href="#product-${product.id}" onclick="window.app.closeQuickView()" class="block text-center text-amber-600 hover:text-amber-700 font-semibold transition-colors">
+                                    Полный просмотр →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
         function renderHeader() {
             const cartCount = getCartCount();
             return `
@@ -1058,7 +1153,7 @@
                 content = '<div class="pt-32 text-center text-gray-600">Страница не найдена</div>';
             }
 
-            app.innerHTML = renderHeader() + content + renderFooter();
+            app.innerHTML = renderHeader() + content + renderFooter() + renderQuickViewModal();
 
             // Attach event listeners
             const searchInput = document.getElementById('searchInput');
@@ -1114,6 +1209,16 @@
             toggleWishlist,
             toggleMenu: () => {
                 state.menuOpen = !state.menuOpen;
+                render();
+            },
+            openQuickView: (id) => {
+                state.quickViewId = id;
+                document.body.style.overflow = 'hidden';
+                render();
+            },
+            closeQuickView: () => {
+                state.quickViewId = null;
+                document.body.style.overflow = 'auto';
                 render();
             },
             setFilter: (key, value) => {
