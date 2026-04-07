@@ -244,6 +244,7 @@
             wishlist: JSON.parse(localStorage.getItem('rishi_wishlist') || '[]'),
             searchQuery: '',
             menuOpen: false,
+            sortBy: 'name',
             selectedFilters: {
                 category: null,
                 priceMin: 0,
@@ -437,12 +438,21 @@
         }
 
         function renderCatalog() {
-            const filtered = PRODUCTS.filter(p => {
+            let filtered = PRODUCTS.filter(p => {
                 const matchCategory = !state.selectedFilters.category || p.category === state.selectedFilters.category;
                 const matchPrice = p.price >= state.selectedFilters.priceMin && p.price <= state.selectedFilters.priceMax;
                 const matchSearch = !state.searchQuery || p.name.toLowerCase().includes(state.searchQuery.toLowerCase());
                 return matchCategory && matchPrice && matchSearch;
             });
+
+            // Sort
+            if (state.sortBy === 'price-asc') {
+                filtered.sort((a, b) => a.price - b.price);
+            } else if (state.sortBy === 'price-desc') {
+                filtered.sort((a, b) => b.price - a.price);
+            } else if (state.sortBy === 'name') {
+                filtered.sort((a, b) => a.name.localeCompare(b.name, 'ru'));
+            }
 
             return `
                 <div class="min-h-screen bg-white pt-32">
@@ -485,9 +495,19 @@
                             </div>
                         </div>
 
-                        <!-- Results -->
-                        <div class="mb-6 text-gray-600">
-                            Найдено товаров: <strong>${filtered.length}</strong>
+                        <!-- Results & Sort -->
+                        <div class="mb-6 flex justify-between items-center flex-wrap gap-4">
+                            <div class="text-gray-600">
+                                Найдено товаров: <strong>${filtered.length}</strong>
+                            </div>
+                            <div class="flex gap-2">
+                                <label class="text-sm text-gray-600">Сортировка:</label>
+                                <select id="sortSelect" class="px-3 py-1 border border-gray-300 rounded text-sm hover:border-amber-400 focus:outline-none focus:border-amber-400 bg-white cursor-pointer">
+                                    <option value="name" ${state.sortBy === 'name' ? 'selected' : ''}>По названию (А-Я)</option>
+                                    <option value="price-asc" ${state.sortBy === 'price-asc' ? 'selected' : ''}>По цене (↑)</option>
+                                    <option value="price-desc" ${state.sortBy === 'price-desc' ? 'selected' : ''}>По цене (↓)</option>
+                                </select>
+                            </div>
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -893,6 +913,74 @@
             `;
         }
 
+        function renderFooter() {
+            return `
+                <footer class="bg-black text-white py-16 px-4">
+                    <div class="max-w-7xl mx-auto">
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                            <!-- Brand -->
+                            <div>
+                                <h3 class="font-display text-2xl mb-4">RISHI</h3>
+                                <p class="text-gray-400 text-sm leading-relaxed">
+                                    Апсайкл мода для тех, кто любит планету и стиль.
+                                </p>
+                                <div class="flex gap-4 mt-6">
+                                    <a href="#" class="text-xl hover:text-amber-400 transition-colors">📷</a>
+                                    <a href="#" class="text-xl hover:text-amber-400 transition-colors">💬</a>
+                                    <a href="#" class="text-xl hover:text-amber-400 transition-colors">🔗</a>
+                                    <a href="#" class="text-xl hover:text-amber-400 transition-colors">▶️</a>
+                                </div>
+                            </div>
+
+                            <!-- Shop -->
+                            <div>
+                                <h4 class="font-semibold mb-4">Магазин</h4>
+                                <ul class="space-y-2 text-sm text-gray-400">
+                                    <li><a href="#catalog" class="hover:text-amber-400 transition-colors">Все товары</a></li>
+                                    <li><a href="#jeans" class="hover:text-amber-400 transition-colors">Джинсы</a></li>
+                                    <li><a href="#corsets" class="hover:text-amber-400 transition-colors">Корсеты</a></li>
+                                    <li><a href="#collections" class="hover:text-amber-400 transition-colors">Коллекции</a></li>
+                                    <li><a href="#cart" class="hover:text-amber-400 transition-colors">Корзина</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Company -->
+                            <div>
+                                <h4 class="font-semibold mb-4">Компания</h4>
+                                <ul class="space-y-2 text-sm text-gray-400">
+                                    <li><a href="#about" class="hover:text-amber-400 transition-colors">О бренде</a></li>
+                                    <li><a href="#contacts" class="hover:text-amber-400 transition-colors">Контакты</a></li>
+                                    <li><a href="#" class="hover:text-amber-400 transition-colors">Политика</a></li>
+                                    <li><a href="#" class="hover:text-amber-400 transition-colors">FAQ</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Subscribe -->
+                            <div>
+                                <h4 class="font-semibold mb-4">Подписка</h4>
+                                <p class="text-sm text-gray-400 mb-4">Получайте обновления о новых коллекциях</p>
+                                <div class="flex gap-2">
+                                    <input type="email" placeholder="Ваш email" class="flex-1 px-3 py-2 rounded text-black text-sm focus:outline-none focus:ring-2 focus:ring-amber-400">
+                                    <button class="bg-amber-400 text-black px-4 py-2 rounded font-semibold hover:bg-amber-300 transition-colors">→</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="border-t border-gray-800 pt-8">
+                            <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                                <p>&copy; 2026 RISHI. Все права защищены.</p>
+                                <div class="flex gap-6 mt-4 md:mt-0">
+                                    <a href="#" class="hover:text-amber-400 transition-colors">Политика конфиденциальности</a>
+                                    <a href="#" class="hover:text-amber-400 transition-colors">Условия использования</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            `;
+        }
+
         function renderHeader() {
             const cartCount = getCartCount();
             return `
@@ -970,7 +1058,7 @@
                 content = '<div class="pt-32 text-center text-gray-600">Страница не найдена</div>';
             }
 
-            app.innerHTML = renderHeader() + content;
+            app.innerHTML = renderHeader() + content + renderFooter();
 
             // Attach event listeners
             const searchInput = document.getElementById('searchInput');
@@ -985,6 +1073,14 @@
             if (priceRange) {
                 priceRange.addEventListener('input', (e) => {
                     state.selectedFilters.priceMax = parseInt(e.target.value);
+                    render();
+                });
+            }
+
+            const sortSelect = document.getElementById('sortSelect');
+            if (sortSelect) {
+                sortSelect.addEventListener('change', (e) => {
+                    state.sortBy = e.target.value;
                     render();
                 });
             }
