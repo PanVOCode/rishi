@@ -52,6 +52,125 @@
         .scrollbar-hide::-webkit-scrollbar {
             display: none;
         }
+
+        .mobile-menu {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .mobile-menu-overlay {
+            transition: opacity 0.3s ease;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .animate-fade-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .animate-fade-scale {
+            animation: fadeInScale 0.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        .animate-fade-up:nth-child(1) { animation-delay: 0.1s; }
+        .animate-fade-up:nth-child(2) { animation-delay: 0.2s; }
+        .animate-fade-up:nth-child(3) { animation-delay: 0.3s; }
+        .animate-fade-up:nth-child(4) { animation-delay: 0.4s; }
+        .animate-fade-up:nth-child(5) { animation-delay: 0.5s; }
+        .animate-fade-up:nth-child(6) { animation-delay: 0.6s; }
+
+        /* Micro-interactions */
+        button, a {
+            transition: all 0.2s ease;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        a:hover {
+            transition: color 0.2s ease;
+        }
+
+        /* Card hover effects */
+        .group {
+            transition: all 0.3s ease;
+        }
+
+        .group:hover {
+            transform: translateY(-4px);
+        }
+
+        /* Product card image zoom */
+        .group img {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .group:hover img {
+            transform: scale(1.08);
+        }
+
+        /* Smooth notification appearance */
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .notification-appear {
+            animation: slideInRight 0.3s ease-out;
+        }
+
+        /* Smooth page transitions */
+        .page-content {
+            animation: fadeInUp 0.4s ease-out;
+        }
+
+        /* Input focus styles */
+        input:focus, textarea:focus {
+            transition: all 0.2s ease;
+            box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -124,6 +243,7 @@
             cart: JSON.parse(localStorage.getItem('rishi_cart') || '[]'),
             wishlist: JSON.parse(localStorage.getItem('rishi_wishlist') || '[]'),
             searchQuery: '',
+            menuOpen: false,
             selectedFilters: {
                 category: null,
                 priceMin: 0,
@@ -190,10 +310,15 @@
 
         function showNotification(msg) {
             const notif = document.createElement('div');
-            notif.className = 'fixed top-24 right-4 bg-black text-white px-4 py-2 rounded z-50';
+            notif.className = 'fixed top-24 right-4 bg-black text-white px-6 py-3 rounded z-50 font-semibold notification-appear';
             notif.textContent = msg;
             document.body.appendChild(notif);
-            setTimeout(() => notif.remove(), 2000);
+            setTimeout(() => {
+                notif.style.opacity = '0';
+                notif.style.transform = 'translateX(100px)';
+                notif.style.transition = 'all 0.3s ease';
+                setTimeout(() => notif.remove(), 300);
+            }, 1700);
         }
 
         // ============ PAGE RENDERERS ============
@@ -288,21 +413,21 @@
         function renderProductCard(product) {
             const inWishlist = isInWishlist(product.id);
             return `
-                <div class="bg-gray-50 rounded overflow-hidden group hover:shadow-lg transition-shadow">
+                <div class="bg-gray-50 rounded overflow-hidden group hover:shadow-xl transition-all duration-300">
                     <div class="relative overflow-hidden bg-white h-64">
-                        <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform" loading="lazy">
-                        <button onclick="window.app.toggleWishlist(${product.id})" class="absolute top-3 right-3 bg-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-200 transition">
-                            <span class="text-lg">${inWishlist ? '❤️' : '🤍'}</span>
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-108" loading="lazy">
+                        <button onclick="window.app.toggleWishlist(${product.id})" class="absolute top-3 right-3 bg-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-amber-100 hover:scale-110 transition-all duration-200 shadow hover:shadow-md">
+                            <span class="text-lg transform transition-transform duration-300 ${inWishlist ? 'scale-110' : ''}">${inWishlist ? '❤️' : '🤍'}</span>
                         </button>
                     </div>
                     <div class="p-4">
-                        <a href="#${product.category}" class="text-sm text-gray-600 hover:text-black">${CATEGORIES[product.category]?.name || product.category}</a>
+                        <a href="#${product.category}" class="text-sm text-gray-600 hover:text-amber-600 transition-colors duration-200">${CATEGORIES[product.category]?.name || product.category}</a>
                         <h3 class="font-semibold text-sm leading-tight mt-2 line-clamp-2">
-                            <a href="#product-${product.id}" class="hover:text-amber-600">${product.name}</a>
+                            <a href="#product-${product.id}" class="hover:text-amber-600 transition-colors duration-200">${product.name}</a>
                         </h3>
                         <div class="flex justify-between items-center mt-4">
-                            <span class="text-lg font-bold">${formatPrice(product.price)} ₽</span>
-                            <button onclick="window.app.addToCart(${product.id})" class="bg-black text-white px-3 py-1 rounded text-sm hover:bg-gray-800">
+                            <span class="text-lg font-bold text-amber-600">${formatPrice(product.price)} ₽</span>
+                            <button onclick="window.app.addToCart(${product.id})" class="bg-black text-white px-3 py-1.5 rounded text-sm hover:bg-amber-600 hover:scale-105 transition-all duration-200 active:scale-95 font-semibold">
                                 В корзину
                             </button>
                         </div>
@@ -611,6 +736,163 @@
             `;
         }
 
+        function renderContacts() {
+            return `
+                <div class="min-h-screen bg-white pt-32">
+                    <div class="max-w-4xl mx-auto px-4">
+                        <h1 class="font-display text-5xl mb-8">Контакты</h1>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+                            <!-- Contact Info -->
+                            <div class="space-y-8">
+                                <div>
+                                    <h2 class="font-display text-2xl mb-3">Напишите нам</h2>
+                                    <p class="text-gray-600 mb-2">Email:</p>
+                                    <a href="mailto:hello@rishi.store" class="text-amber-600 hover:underline text-lg">hello@rishi.store</a>
+                                </div>
+
+                                <div>
+                                    <h2 class="font-display text-2xl mb-3">Позвоните нам</h2>
+                                    <p class="text-gray-600 mb-2">Телефон:</p>
+                                    <a href="tel:+79990000000" class="text-amber-600 hover:underline text-lg">+7 (999) 000-00-00</a>
+                                    <p class="text-gray-500 text-sm mt-1">Пн-Пт: 10:00 - 18:00</p>
+                                </div>
+
+                                <div>
+                                    <h2 class="font-display text-2xl mb-3">Адрес</h2>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        RISHI Studio<br>
+                                        Москва, Россия<br>
+                                        <br>
+                                        Открыты по предварительной записи
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h2 class="font-display text-2xl mb-3">Социальные сети</h2>
+                                    <div class="flex gap-6">
+                                        <a href="#" class="text-2xl hover:text-amber-600">📷</a>
+                                        <a href="#" class="text-2xl hover:text-amber-600">💬</a>
+                                        <a href="#" class="text-2xl hover:text-amber-600">🔗</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Contact Form -->
+                            <div class="bg-gray-50 p-8 rounded">
+                                <h2 class="font-display text-2xl mb-6">Свяжитесь с нами</h2>
+                                <form class="space-y-4">
+                                    <div>
+                                        <input type="text" placeholder="Ваше имя" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-amber-400">
+                                    </div>
+                                    <div>
+                                        <input type="email" placeholder="Email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-amber-400">
+                                    </div>
+                                    <div>
+                                        <textarea placeholder="Сообщение" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-amber-400"></textarea>
+                                    </div>
+                                    <button type="submit" class="w-full bg-black text-white py-2 rounded font-semibold hover:bg-gray-800">
+                                        Отправить
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Section -->
+                        <div class="border-t pt-16">
+                            <h2 class="font-display text-3xl mb-8">Часто задаваемые вопросы</h2>
+                            <div class="space-y-6">
+                                <div class="border-b pb-6">
+                                    <h3 class="font-semibold text-lg mb-2">Как долго доставка?</h3>
+                                    <p class="text-gray-600">Доставка по России занимает 3-7 рабочих дней в зависимости от вашего региона.</p>
+                                </div>
+                                <div class="border-b pb-6">
+                                    <h3 class="font-semibold text-lg mb-2">Какой размер мне подойдет?</h3>
+                                    <p class="text-gray-600">Каждый предмет уникален по размеру. Рекомендуем уточнить детали перед покупкой.</p>
+                                </div>
+                                <div class="border-b pb-6">
+                                    <h3 class="font-semibold text-lg mb-2">Возврат и обмен?</h3>
+                                    <p class="text-gray-600">Мы принимаем возвраты в течение 30 дней. Свяжитесь с нами для оформления.</p>
+                                </div>
+                                <div class="pb-6">
+                                    <h3 class="font-semibold text-lg mb-2">Что делать если товар не подойдет?</h3>
+                                    <p class="text-gray-600">Напишите нам на hello@rishi.store, и мы поможем найти идеальный вариант.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderCollections() {
+            return `
+                <div class="min-h-screen bg-white pt-32">
+                    <div class="max-w-7xl mx-auto px-4">
+                        <h1 class="font-display text-5xl mb-8">Коллекции</h1>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <!-- Collection 1 -->
+                            <div class="bg-gray-50 rounded overflow-hidden hover:shadow-lg transition-shadow">
+                                <div class="bg-gradient-to-br from-amber-200 to-amber-400 h-64 flex items-center justify-center text-6xl">
+                                    ♻️
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="font-display text-2xl mb-3">Апсайкл Essentials</h3>
+                                    <p class="text-gray-600 mb-4">Классические предметы из переработанного денима. Простота, функциональность и красота.</p>
+                                    <a href="#catalog" class="inline-block bg-black text-white px-6 py-2 rounded hover:bg-gray-800">
+                                        Смотреть
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Collection 2 -->
+                            <div class="bg-gray-50 rounded overflow-hidden hover:shadow-lg transition-shadow">
+                                <div class="bg-gradient-to-br from-pink-300 to-red-400 h-64 flex items-center justify-center text-6xl">
+                                    ✨
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="font-display text-2xl mb-3">Statement Pieces</h3>
+                                    <p class="text-gray-600 mb-4">Броские изделия, которые привлекают внимание. Для тех, кто не боится выделиться.</p>
+                                    <a href="#catalog" class="inline-block bg-black text-white px-6 py-2 rounded hover:bg-gray-800">
+                                        Смотреть
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Collection 3 -->
+                            <div class="bg-gray-50 rounded overflow-hidden hover:shadow-lg transition-shadow">
+                                <div class="bg-gradient-to-br from-blue-300 to-indigo-400 h-64 flex items-center justify-center text-6xl">
+                                    🎨
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="font-display text-2xl mb-3">Limited Edition</h3>
+                                    <p class="text-gray-600 mb-4">Уникальные находки в единственном экземпляре. Каждая вещь — это искусство.</p>
+                                    <a href="#catalog" class="inline-block bg-black text-white px-6 py-2 rounded hover:bg-gray-800">
+                                        Смотреть
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Collection 4 -->
+                            <div class="bg-gray-50 rounded overflow-hidden hover:shadow-lg transition-shadow">
+                                <div class="bg-gradient-to-br from-green-300 to-emerald-400 h-64 flex items-center justify-center text-6xl">
+                                    👥
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="font-display text-2xl mb-3">Capsule Unisex</h3>
+                                    <p class="text-gray-600 mb-4">Универсальные вещи для всех. Свободные силуэты, нейтральные цвета, общий стиль.</p>
+                                    <a href="#catalog" class="inline-block bg-black text-white px-6 py-2 rounded hover:bg-gray-800">
+                                        Смотреть
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
         function renderHeader() {
             const cartCount = getCartCount();
             return `
@@ -619,15 +901,16 @@
                         <!-- Logo -->
                         <a href="#home" class="font-display text-2xl font-bold hover:text-amber-600">RISHI</a>
 
-                        <!-- Nav -->
+                        <!-- Nav Desktop -->
                         <nav class="hidden md:flex gap-8">
                             <a href="#home" class="hover:text-amber-600">Главная</a>
                             <a href="#catalog" class="hover:text-amber-600">Каталог</a>
                             <a href="#about" class="hover:text-amber-600">О бренде</a>
+                            <a href="#contacts" class="hover:text-amber-600">Контакты</a>
                         </nav>
 
                         <!-- Icons -->
-                        <div class="flex items-center gap-6">
+                        <div class="flex items-center gap-4 md:gap-6">
                             <a href="#wishlist" class="relative hover:text-amber-600">
                                 <span class="text-xl">❤️</span>
                                 ${state.wishlist.length > 0 ? `<span class="absolute -top-2 -right-2 bg-amber-400 text-black text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">${state.wishlist.length}</span>` : ''}
@@ -636,9 +919,26 @@
                                 <span class="text-xl">🛒</span>
                                 ${cartCount > 0 ? `<span class="absolute -top-2 -right-2 bg-amber-400 text-black text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">${cartCount}</span>` : ''}
                             </a>
+                            <!-- Burger Menu Mobile -->
+                            <button onclick="window.app.toggleMenu()" class="md:hidden text-2xl">☰</button>
                         </div>
                     </div>
                 </header>
+
+                <!-- Mobile Menu Overlay -->
+                <div class="mobile-menu-overlay ${state.menuOpen ? 'active' : ''} fixed inset-0 bg-black/50 z-30 md:hidden" onclick="window.app.toggleMenu()"></div>
+
+                <!-- Mobile Menu -->
+                <nav class="mobile-menu ${state.menuOpen ? 'active' : ''} fixed left-0 top-24 h-screen w-64 bg-white z-30 md:hidden flex flex-col p-6 gap-4">
+                    <a href="#home" onclick="window.app.toggleMenu()" class="text-lg font-semibold hover:text-amber-600">Главная</a>
+                    <a href="#catalog" onclick="window.app.toggleMenu()" class="text-lg font-semibold hover:text-amber-600">Каталог</a>
+                    <a href="#jeans" onclick="window.app.toggleMenu()" class="text-lg font-semibold hover:text-amber-600">Джинсы</a>
+                    <a href="#corsets" onclick="window.app.toggleMenu()" class="text-lg font-semibold hover:text-amber-600">Корсеты</a>
+                    <a href="#dresses" onclick="window.app.toggleMenu()" class="text-lg font-semibold hover:text-amber-600">Платья</a>
+                    <a href="#coats" onclick="window.app.toggleMenu()" class="text-lg font-semibold hover:text-amber-600">Куртки</a>
+                    <a href="#about" onclick="window.app.toggleMenu()" class="text-lg font-semibold hover:text-amber-600">О бренде</a>
+                    <a href="#contacts" onclick="window.app.toggleMenu()" class="text-lg font-semibold hover:text-amber-600">Контакты</a>
+                </nav>
             `;
         }
 
@@ -662,6 +962,10 @@
                 content = renderWishlist();
             } else if (hash === 'about') {
                 content = renderAbout();
+            } else if (hash === 'contacts') {
+                content = renderContacts();
+            } else if (hash === 'collections') {
+                content = renderCollections();
             } else {
                 content = '<div class="pt-32 text-center text-gray-600">Страница не найдена</div>';
             }
@@ -684,6 +988,27 @@
                     render();
                 });
             }
+
+            // Setup Intersection Observer for animations
+            setTimeout(() => {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.remove('animate-fade-up', 'animate-fade-scale');
+                            entry.target.offsetHeight; // trigger reflow
+                            entry.target.classList.add('animate-fade-up');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                // Observe product cards and sections
+                document.querySelectorAll('.grid > div, section > *').forEach(el => {
+                    if (el.querySelector('img') || el.classList.contains('text-center')) {
+                        observer.observe(el);
+                    }
+                });
+            }, 100);
         }
 
         // ============ APP OBJECT ============
@@ -691,6 +1016,10 @@
             addToCart,
             removeFromCart,
             toggleWishlist,
+            toggleMenu: () => {
+                state.menuOpen = !state.menuOpen;
+                render();
+            },
             setFilter: (key, value) => {
                 state.selectedFilters[key] = value;
                 render();
